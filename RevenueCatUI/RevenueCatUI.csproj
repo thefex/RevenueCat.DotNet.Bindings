@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-ios</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+        <SupportedOSPlatformVersion>14.2</SupportedOSPlatformVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>RevenueCatUI.DotNet.Bindings</PackageId>
+        <Version>5.49.3</Version>
+        <Authors>Przemysław Raciborski [thefex]</Authors>
+        <Description>.net-ios bindings for RevenueCatUI. This package is not affiliated with RevenueCat at all.</Description>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <NativeReference Include="RevenueCatUI.xcframework">
+            <Kind>Framework</Kind>
+            <SmartLink>False</SmartLink>
+        </NativeReference>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\RevenueCat\RevenueCat.csproj" />
+    </ItemGroup>
+</Project>
