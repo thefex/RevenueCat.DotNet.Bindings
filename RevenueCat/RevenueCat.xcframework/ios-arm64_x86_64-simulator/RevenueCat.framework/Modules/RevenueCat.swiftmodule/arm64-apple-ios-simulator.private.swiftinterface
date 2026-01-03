@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RevenueCat
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AdServices
 import Combine
 import CommonCrypto
@@ -18,6 +18,225 @@ import _StoreKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+@_spi(Experimental) @objc(RCMediatorName) final public class MediatorName : ObjectiveC.NSObject, Swift.Codable {
+  @_spi(Experimental) @objc final public let rawValue: Swift.String
+  @_spi(Experimental) @objc public init(rawValue: Swift.String)
+  @_spi(Experimental) @objc public static let adMob: RevenueCat.MediatorName
+  @_spi(Experimental) @objc public static let appLovin: RevenueCat.MediatorName
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) @objc(RCAdFailedToLoad) final public class AdFailedToLoad : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @_spi(Experimental) @objc final public var networkName: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var placement: Swift.String? {
+    get
+  }
+  @_spi(Experimental) @objc final public var adUnitId: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc final public var mediatorErrorCode: Foundation.NSNumber? {
+    @_spi(Experimental) @objc get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) final public var mediatorErrorCodeValue: Swift.Int? {
+    @_spi(Experimental) get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Swift.Int?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) @objc(RCAdLoaded) final public class AdLoaded : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @_spi(Experimental) @objc final public var networkName: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var placement: Swift.String? {
+    get
+  }
+  @_spi(Experimental) @objc final public var adUnitId: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var impressionId: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) @objc(RCAdDisplayed) final public class AdDisplayed : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @_spi(Experimental) @objc final public var networkName: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var placement: Swift.String? {
+    get
+  }
+  @_spi(Experimental) @objc final public var adUnitId: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var impressionId: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) @objc(RCAdOpened) final public class AdOpened : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @_spi(Experimental) @objc final public var networkName: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var placement: Swift.String? {
+    get
+  }
+  @_spi(Experimental) @objc final public var adUnitId: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var impressionId: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) @objc(RCAdRevenue) final public class AdRevenue : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @_spi(Experimental) @objc final public var networkName: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var placement: Swift.String? {
+    get
+  }
+  @_spi(Experimental) @objc final public var adUnitId: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var impressionId: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var revenueMicros: Swift.Int {
+    get
+  }
+  @_spi(Experimental) @objc final public var currency: Swift.String {
+    get
+  }
+  @_spi(Experimental) @objc final public var precision: RevenueCat.AdRevenue.Precision {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
+  #endif
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(Experimental) extension RevenueCat.AdRevenue {
+  @_spi(Experimental) @objc(RCAdRevenuePrecision) final public class Precision : ObjectiveC.NSObject, Swift.Codable {
+    @_spi(Experimental) @objc final public let rawValue: Swift.String
+    @_spi(Experimental) @objc public init(rawValue: Swift.String)
+    @_spi(Experimental) @objc public static let exact: RevenueCat.AdRevenue.Precision
+    @_spi(Experimental) @objc public static let publisherDefined: RevenueCat.AdRevenue.Precision
+    @_spi(Experimental) @objc public static let estimated: RevenueCat.AdRevenue.Precision
+    @_spi(Experimental) @objc public static let unknown: RevenueCat.AdRevenue.Precision
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+    #endif
+    @_spi(Experimental) @objc override final public var hash: Swift.Int {
+      @_spi(Experimental) @objc get
+    }
+    @_spi(Experimental) @objc deinit
+    @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+    @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@_spi(Experimental) @_hasMissingDesignatedInitializers @available(iOS 15.0, tvOS 15.0, macOS 12.0, watchOS 8.0, *)
+@objc(RCAdTracker) final public class AdTracker : ObjectiveC.NSObject {
+  @_spi(Experimental) final public func trackAdFailedToLoad(_ data: RevenueCat.AdFailedToLoad) async
+  @_spi(Experimental) final public func trackAdLoaded(_ data: RevenueCat.AdLoaded) async
+  @_spi(Experimental) final public func trackAdDisplayed(_ data: RevenueCat.AdDisplayed) async
+  @_spi(Experimental) final public func trackAdOpened(_ data: RevenueCat.AdOpened) async
+  @_spi(Experimental) final public func trackAdRevenue(_ data: RevenueCat.AdRevenue) async
+  @_spi(Experimental) @objc final public func trackAdFailedToLoad(_ data: RevenueCat.AdFailedToLoad, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc final public func trackAdLoaded(_ data: RevenueCat.AdLoaded, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc final public func trackAdDisplayed(_ data: RevenueCat.AdDisplayed, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc final public func trackAdOpened(_ data: RevenueCat.AdOpened, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc final public func trackAdRevenue(_ data: RevenueCat.AdRevenue, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc deinit
+}
 public struct AppleReceipt : Swift.Equatable {
   public let environment: RevenueCat.AppleReceipt.Environment
   public let bundleId: Swift.String
@@ -152,6 +371,9 @@ extension RevenueCat.Attribution {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func setCreative(_ creative: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setAppsFlyerConversionData(_ data: [Swift.AnyHashable : Any]?)
   #endif
 }
 extension RevenueCat.Attribution : @unchecked Swift.Sendable {
@@ -498,6 +720,10 @@ extension RevenueCat.Configuration {
       @_spi(Internal) case supportTicketFailed
       @_spi(Internal) case submitTicket
       @_spi(Internal) case characterCount
+      @_spi(Internal) case promoOfferButtonRegularPrice
+      @_spi(Internal) case promoOfferButtonFreeTrial
+      @_spi(Internal) case promoOfferButtonRecurringDiscount
+      @_spi(Internal) case promoOfferButtonUpfrontPayment
       @_spi(Internal) public var defaultValue: Swift.String {
         @_spi(Internal) get
       }
@@ -1399,6 +1625,30 @@ extension RevenueCat.ErrorCode : Foundation.CustomNSError {
     get
   }
 }
+public struct ExitOffer : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+  public let offeringId: Swift.String
+  public init(offeringId: Swift.String)
+  public static func == (a: RevenueCat.ExitOffer, b: RevenueCat.ExitOffer) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExitOffers : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+  public let dismiss: RevenueCat.ExitOffer?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(dismiss: RevenueCat.ExitOffer? = nil)
+  #endif
+  public static func == (a: RevenueCat.ExitOffers, b: RevenueCat.ExitOffers) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_spi(Internal) @_hasMissingDesignatedInitializers @available(iOS 15.0, macOS 12.0, tvOS 15.0, visionOS 1.0, watchOS 8.0, *)
 final public class FileRepository : RevenueCat.FileRepositoryType, @unchecked Swift.Sendable {
   @_spi(Internal) public static let shared: RevenueCat.FileRepository
@@ -1536,6 +1786,24 @@ extension RevenueCat.IntroEligibility : Swift.Sendable {
   @_spi(Internal) public let seconds: Swift.Int
   @_spi(Internal) public init(years: Swift.Int, months: Swift.Int, weeks: Swift.Int, days: Swift.Int, hours: Swift.Int, minutes: Swift.Int, seconds: Swift.Int)
   @_spi(Internal) public static func == (a: RevenueCat.ISODuration, b: RevenueCat.ISODuration) -> Swift.Bool
+}
+@_spi(Internal) extension Foundation.Locale {
+  @_spi(Internal) public func matchesLanguage(_ rhs: Foundation.Locale) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) public var rc_currencyCode: Swift.String? {
+    @_spi(Internal) get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) public var rc_languageCode: Swift.String? {
+    @_spi(Internal) get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) public var removingRegion: Foundation.Locale? {
+    @_spi(Internal) get
+  }
+  #endif
 }
 public typealias VerboseLogHandler = (_ level: RevenueCat.LogLevel, _ message: Swift.String, _ file: Swift.String?, _ function: Swift.String?, _ line: Swift.UInt) -> Swift.Void
 public typealias LogHandler = (_ level: RevenueCat.LogLevel, _ message: Swift.String) -> Swift.Void
@@ -2965,8 +3233,11 @@ public struct PaywallComponentsData : Swift.Codable, Swift.Equatable, Swift.Send
   public var componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig
   public var componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary]
   public var defaultLocale: Swift.String
+  public var exitOffers: RevenueCat.ExitOffers?
   public var errorInfo: [Swift.String : RevenueCat.PaywallComponentsData.EquatableError]?
-  public init(templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String, exitOffers: RevenueCat.ExitOffers? = nil)
+  #endif
   public static func == (a: RevenueCat.PaywallComponentsData, b: RevenueCat.PaywallComponentsData) -> Swift.Bool
 }
 extension RevenueCat.PaywallComponentsData {
@@ -3051,6 +3322,7 @@ public struct PaywallData {
     get
   }
   public var defaultLocale: Swift.String?
+  public var exitOffers: RevenueCat.ExitOffers?
 }
 public protocol PaywallLocalizedConfiguration {
   var title: Swift.String { get }
@@ -4421,6 +4693,10 @@ public typealias StartPurchaseBlock = (@escaping RevenueCat.PurchaseCompletedBlo
     @_spi(Experimental) @objc get
   }
   #endif
+  @_spi(Experimental) @available(iOS 15.0, tvOS 15.0, macOS 12.0, watchOS 8.0, *)
+  @objc final public var adTracker: RevenueCat.AdTracker {
+    @_spi(Experimental) @objc get
+  }
   @_spi(Internal) final public let subscriptionHistoryTracker: RevenueCat.SubscriptionHistoryTracker
   @objc deinit
 }
@@ -5613,6 +5889,7 @@ extension RevenueCat.SubscriptionPeriod : Swift.Encodable {
 public struct TestStoreProduct {
   public var localizedTitle: Swift.String
   public var price: Foundation.Decimal
+  public var currencyCode: Swift.String?
   public var localizedPriceString: Swift.String
   public var localizedPricePerDay: Swift.String?
   public var localizedPricePerWeek: Swift.String?
@@ -5628,7 +5905,11 @@ public struct TestStoreProduct {
   public var discounts: [RevenueCat.StoreProductDiscount]
   public var locale: Foundation.Locale
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use init(localizedTitle:price:currencyCode:localizedPriceString:productIdentifier:productType:localizedDescription:subscriptionGroupIdentifier:subscriptionPeriod:isFamilyShareable:introductoryDiscount:discounts:locale:) instead")
   public init(localizedTitle: Swift.String, price: Foundation.Decimal, localizedPriceString: Swift.String, productIdentifier: Swift.String, productType: RevenueCat.StoreProduct.ProductType, localizedDescription: Swift.String, subscriptionGroupIdentifier: Swift.String? = nil, subscriptionPeriod: RevenueCat.SubscriptionPeriod? = nil, isFamilyShareable: Swift.Bool = false, introductoryDiscount: RevenueCat.TestStoreProductDiscount? = nil, discounts: [RevenueCat.TestStoreProductDiscount] = [], locale: Foundation.Locale = .current)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(localizedTitle: Swift.String, price: Foundation.Decimal, currencyCode: Swift.String, localizedPriceString: Swift.String, productIdentifier: Swift.String, productType: RevenueCat.StoreProduct.ProductType, localizedDescription: Swift.String, subscriptionGroupIdentifier: Swift.String? = nil, subscriptionPeriod: RevenueCat.SubscriptionPeriod? = nil, isFamilyShareable: Swift.Bool = false, introductoryDiscount: RevenueCat.TestStoreProductDiscount? = nil, discounts: [RevenueCat.TestStoreProductDiscount] = [], locale: Foundation.Locale)
   #endif
 }
 extension RevenueCat.TestStoreProduct {

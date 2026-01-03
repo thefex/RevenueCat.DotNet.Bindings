@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RevenueCat
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AdServices
 import Combine
 import CommonCrypto
@@ -152,6 +152,9 @@ extension RevenueCat.Attribution {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func setCreative(_ creative: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setAppsFlyerConversionData(_ data: [Swift.AnyHashable : Any]?)
   #endif
 }
 extension RevenueCat.Attribution : @unchecked Swift.Sendable {
@@ -921,6 +924,30 @@ extension RevenueCat.ErrorCode : Foundation.CustomNSError {
   public var errorUserInfo: [Swift.String : Any] {
     get
   }
+}
+public struct ExitOffer : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+  public let offeringId: Swift.String
+  public init(offeringId: Swift.String)
+  public static func == (a: RevenueCat.ExitOffer, b: RevenueCat.ExitOffer) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExitOffers : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+  public let dismiss: RevenueCat.ExitOffer?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(dismiss: RevenueCat.ExitOffer? = nil)
+  #endif
+  public static func == (a: RevenueCat.ExitOffers, b: RevenueCat.ExitOffers) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension RevenueCat.AppleReceipt {
   public struct InAppPurchase : Swift.Equatable {
@@ -2436,8 +2463,11 @@ public struct PaywallComponentsData : Swift.Codable, Swift.Equatable, Swift.Send
   public var componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig
   public var componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary]
   public var defaultLocale: Swift.String
+  public var exitOffers: RevenueCat.ExitOffers?
   public var errorInfo: [Swift.String : RevenueCat.PaywallComponentsData.EquatableError]?
-  public init(templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String, exitOffers: RevenueCat.ExitOffers? = nil)
+  #endif
   public static func == (a: RevenueCat.PaywallComponentsData, b: RevenueCat.PaywallComponentsData) -> Swift.Bool
 }
 extension RevenueCat.PaywallComponentsData {
@@ -2522,6 +2552,7 @@ public struct PaywallData {
     get
   }
   public var defaultLocale: Swift.String?
+  public var exitOffers: RevenueCat.ExitOffers?
 }
 public protocol PaywallLocalizedConfiguration {
   var title: Swift.String { get }
@@ -5017,6 +5048,7 @@ extension RevenueCat.SubscriptionPeriod : Swift.Encodable {
 public struct TestStoreProduct {
   public var localizedTitle: Swift.String
   public var price: Foundation.Decimal
+  public var currencyCode: Swift.String?
   public var localizedPriceString: Swift.String
   public var localizedPricePerDay: Swift.String?
   public var localizedPricePerWeek: Swift.String?
@@ -5032,7 +5064,11 @@ public struct TestStoreProduct {
   public var discounts: [RevenueCat.StoreProductDiscount]
   public var locale: Foundation.Locale
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "Use init(localizedTitle:price:currencyCode:localizedPriceString:productIdentifier:productType:localizedDescription:subscriptionGroupIdentifier:subscriptionPeriod:isFamilyShareable:introductoryDiscount:discounts:locale:) instead")
   public init(localizedTitle: Swift.String, price: Foundation.Decimal, localizedPriceString: Swift.String, productIdentifier: Swift.String, productType: RevenueCat.StoreProduct.ProductType, localizedDescription: Swift.String, subscriptionGroupIdentifier: Swift.String? = nil, subscriptionPeriod: RevenueCat.SubscriptionPeriod? = nil, isFamilyShareable: Swift.Bool = false, introductoryDiscount: RevenueCat.TestStoreProductDiscount? = nil, discounts: [RevenueCat.TestStoreProductDiscount] = [], locale: Foundation.Locale = .current)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(localizedTitle: Swift.String, price: Foundation.Decimal, currencyCode: Swift.String, localizedPriceString: Swift.String, productIdentifier: Swift.String, productType: RevenueCat.StoreProduct.ProductType, localizedDescription: Swift.String, subscriptionGroupIdentifier: Swift.String? = nil, subscriptionPeriod: RevenueCat.SubscriptionPeriod? = nil, isFamilyShareable: Swift.Bool = false, introductoryDiscount: RevenueCat.TestStoreProductDiscount? = nil, discounts: [RevenueCat.TestStoreProductDiscount] = [], locale: Foundation.Locale)
   #endif
 }
 extension RevenueCat.TestStoreProduct {

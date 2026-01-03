@@ -7,7 +7,7 @@
         <SupportedOSPlatformVersion>14.2</SupportedOSPlatformVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>RevenueCatUI.DotNet.Bindings</PackageId>
-        <Version>5.49.3</Version>
+        <Version>5.52.1</Version>
         <Authors>Przemysław Raciborski [thefex]</Authors>
         <Description>.net-ios bindings for RevenueCatUI. This package is not affiliated with RevenueCat at all.</Description>
         <Configurations>Debug;Release</Configurations>
