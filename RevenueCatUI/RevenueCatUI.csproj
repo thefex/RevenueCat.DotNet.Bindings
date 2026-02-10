@@ -7,19 +7,31 @@
         <SupportedOSPlatformVersion>14.2</SupportedOSPlatformVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>RevenueCatUI.DotNet.Bindings</PackageId>
-        <Version>5.52.1</Version>
+        <Version>5.58.0</Version>
         <Authors>Przemysław Raciborski [thefex]</Authors>
         <Description>.net-ios bindings for RevenueCatUI. This package is not affiliated with RevenueCat at all.</Description>
         <Configurations>Debug;Release</Configurations>
         <Platforms>AnyCPU</Platforms>
+        <RuntimeIdentifiers>ios-arm64; iossimulator-arm64</RuntimeIdentifiers>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <Version>5.58.0-rc1</Version>
+    </PropertyGroup>
+    
     <ItemGroup>
         <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
         <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
     </ItemGroup>
     
-    <ItemGroup>
+    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+        <NativeReference Include="RevenueCatUI-debug.xcframework">
+            <Kind>Framework</Kind>
+            <SmartLink>False</SmartLink>
+        </NativeReference>
+    </ItemGroup>
+    
+    <ItemGroup Condition="'$(Configuration)' != 'Debug'">
         <NativeReference Include="RevenueCatUI.xcframework">
             <Kind>Framework</Kind>
             <SmartLink>False</SmartLink>

@@ -12,14 +12,18 @@ namespace RevenueCat;
 [BaseType(typeof(NSObject))]
 interface RCAdDisplayed
 {
-	// @property (readonly, copy, nonatomic) NSString * _Nonnull networkName;
-	[Export ("networkName")]
+	// @property (readonly, copy, nonatomic) NSString * _Nullable networkName;
+	[NullAllowed, Export ("networkName")]
 	string NetworkName { get; }
 
 	// @property (readonly, nonatomic, strong) RCMediatorName * _Nonnull mediatorName;
 	[Export ("mediatorName", ArgumentSemantic.Strong)]
 	RCMediatorName MediatorName { get; }
 
+	// @property (readonly, nonatomic, strong) RCAdFormat * _Nonnull adFormat;
+	[Export ("adFormat", ArgumentSemantic.Strong)]
+	RCAdFormat AdFormat { get; }
+	
 	// @property (readonly, copy, nonatomic) NSString * _Nullable placement;
 	[NullAllowed, Export ("placement")]
 	string Placement { get; }
@@ -32,14 +36,14 @@ interface RCAdDisplayed
 	[Export ("impressionId")]
 	string ImpressionId { get; }
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
-	[Export ("initWithNetworkName:mediatorName:placement:adUnitId:impressionId:")]
+// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
+	[Export ("initWithNetworkName:mediatorName:adFormat:placement:adUnitId:impressionId:")]
 	[DesignatedInitializer]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, [NullAllowed] string placement, string adUnitId, string impressionId);
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, [NullAllowed] string placement, string adUnitId, string impressionId);
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
-	[Export ("initWithNetworkName:mediatorName:adUnitId:impressionId:")]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, string adUnitId, string impressionId);
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
+	[Export ("initWithNetworkName:mediatorName:adFormat:adUnitId:impressionId:")]
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, string adUnitId, string impressionId);
 
 	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 	[Export ("isEqual:")]
@@ -55,13 +59,13 @@ interface RCAdDisplayed
 [BaseType(typeof(NSObject))]
 interface RCAdFailedToLoad
 {
-	// @property (readonly, copy, nonatomic) NSString * _Nonnull networkName;
-	[Export ("networkName")]
-	string NetworkName { get; }
-
 	// @property (readonly, nonatomic, strong) RCMediatorName * _Nonnull mediatorName;
 	[Export ("mediatorName", ArgumentSemantic.Strong)]
 	RCMediatorName MediatorName { get; }
+	
+	// @property (readonly, nonatomic, strong) RCAdFormat * _Nonnull adFormat;
+	[Export ("adFormat", ArgumentSemantic.Strong)]
+	RCAdFormat AdFormat { get; }
 
 	// @property (readonly, copy, nonatomic) NSString * _Nullable placement;
 	[NullAllowed, Export ("placement")]
@@ -75,14 +79,14 @@ interface RCAdFailedToLoad
 	[NullAllowed, Export ("mediatorErrorCode", ArgumentSemantic.Strong)]
 	NSNumber MediatorErrorCode { get; }
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId mediatorErrorCode:(NSNumber * _Nullable)mediatorErrorCode __attribute__((objc_designated_initializer));
-	[Export ("initWithNetworkName:mediatorName:placement:adUnitId:mediatorErrorCode:")]
+	// -(instancetype _Nonnull)initWithMediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId mediatorErrorCode:(NSNumber * _Nullable)mediatorErrorCode __attribute__((objc_designated_initializer));
+	[Export ("initWithMediatorName:adFormat:placement:adUnitId:mediatorErrorCode:")]
 	[DesignatedInitializer]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, [NullAllowed] string placement, string adUnitId, [NullAllowed] NSNumber mediatorErrorCode);
+	NativeHandle Constructor (RCMediatorName mediatorName, RCAdFormat adFormat, [NullAllowed] string placement, string adUnitId, [NullAllowed] NSNumber mediatorErrorCode);
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adUnitId:(NSString * _Nonnull)adUnitId mediatorErrorCode:(NSNumber * _Nullable)mediatorErrorCode;
-	[Export ("initWithNetworkName:mediatorName:adUnitId:mediatorErrorCode:")]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, string adUnitId, [NullAllowed] NSNumber mediatorErrorCode);
+	// -(instancetype _Nonnull)initWithMediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat adUnitId:(NSString * _Nonnull)adUnitId mediatorErrorCode:(NSNumber * _Nullable)mediatorErrorCode;
+	[Export ("initWithMediatorName:adFormat:adUnitId:mediatorErrorCode:")]
+	NativeHandle Constructor (RCMediatorName mediatorName, RCAdFormat adFormat, string adUnitId, [NullAllowed] NSNumber mediatorErrorCode);
 
 	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 	[Export ("isEqual:")]
@@ -93,18 +97,87 @@ interface RCAdFailedToLoad
 	int Hash { get; }
 }
 
+
+// @interface RCAdFormat
+[DisableDefaultCtor]
+[BaseType(typeof(NSObject))]
+interface RCAdFormat
+{
+	// @property (readonly, copy, nonatomic) NSString * _Nonnull rawValue;
+	[Export ("rawValue")]
+	string RawValue { get; }
+
+	// -(instancetype _Nonnull)initWithRawValue:(NSString * _Nonnull)rawValue __attribute__((objc_designated_initializer));
+	[Export ("initWithRawValue:")]
+	[DesignatedInitializer]
+	NativeHandle Constructor (string rawValue);
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull other;
+	[Static]
+	[Export ("other", ArgumentSemantic.Strong)]
+	RCAdFormat Other { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull banner;
+	[Static]
+	[Export ("banner", ArgumentSemantic.Strong)]
+	RCAdFormat Banner { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull interstitial;
+	[Static]
+	[Export ("interstitial", ArgumentSemantic.Strong)]
+	RCAdFormat Interstitial { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull rewarded;
+	[Static]
+	[Export ("rewarded", ArgumentSemantic.Strong)]
+	RCAdFormat Rewarded { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull rewardedInterstitial;
+	[Static]
+	[Export ("rewardedInterstitial", ArgumentSemantic.Strong)]
+	RCAdFormat RewardedInterstitial { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull native;
+	[Static]
+	[Export ("native", ArgumentSemantic.Strong)]
+	RCAdFormat Native { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull appOpen;
+	[Static]
+	[Export ("appOpen", ArgumentSemantic.Strong)]
+	RCAdFormat AppOpen { get; }
+
+	// @property (readonly, nonatomic, strong, class) RCAdFormat * _Nonnull mrec;
+	[Static]
+	[Export ("mrec", ArgumentSemantic.Strong)]
+	RCAdFormat Mrec { get; }
+
+	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+	[Export ("isEqual:")]
+	NSObject IsEqual ([NullAllowed] NSObject @object);
+
+	// @property (readonly, nonatomic) int hash;
+	[Export ("hash")]
+	int Hash { get; }
+}
+
+
 // @interface RCAdLoaded
 [DisableDefaultCtor]
 [BaseType(typeof(NSObject))]
 interface RCAdLoaded
 {
 	// @property (readonly, copy, nonatomic) NSString * _Nonnull networkName;
-	[Export ("networkName")]
+	[NullAllowed, Export ("networkName")]
 	string NetworkName { get; }
 
 	// @property (readonly, nonatomic, strong) RCMediatorName * _Nonnull mediatorName;
 	[Export ("mediatorName", ArgumentSemantic.Strong)]
 	RCMediatorName MediatorName { get; }
+
+	// @property (readonly, nonatomic, strong) RCAdFormat * _Nonnull adFormat;
+	[Export ("adFormat", ArgumentSemantic.Strong)]
+	RCAdFormat AdFormat { get; }
 
 	// @property (readonly, copy, nonatomic) NSString * _Nullable placement;
 	[NullAllowed, Export ("placement")]
@@ -118,15 +191,15 @@ interface RCAdLoaded
 	[Export ("impressionId")]
 	string ImpressionId { get; }
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
-	[Export ("initWithNetworkName:mediatorName:placement:adUnitId:impressionId:")]
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
+	[Export ("initWithNetworkName:mediatorName:adFormat:placement:adUnitId:impressionId:")]
 	[DesignatedInitializer]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, [NullAllowed] string placement, string adUnitId, string impressionId);
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, [NullAllowed] string placement, string adUnitId, string impressionId);
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
-	[Export ("initWithNetworkName:mediatorName:adUnitId:impressionId:")]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, string adUnitId, string impressionId);
-
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
+	[Export ("initWithNetworkName:mediatorName:adFormat:adUnitId:impressionId:")]
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, string adUnitId, string impressionId);
+	
 	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 	[Export ("isEqual:")]
 	NSObject IsEqual ([NullAllowed] NSObject @object);
@@ -141,13 +214,17 @@ interface RCAdLoaded
 [BaseType(typeof(NSObject))]
 interface RCAdOpened
 {
-	// @property (readonly, copy, nonatomic) NSString * _Nonnull networkName;
-	[Export ("networkName")]
+	// @property (readonly, copy, nonatomic) NSString * _Nullable networkName;
+	[NullAllowed, Export ("networkName")]
 	string NetworkName { get; }
 
 	// @property (readonly, nonatomic, strong) RCMediatorName * _Nonnull mediatorName;
 	[Export ("mediatorName", ArgumentSemantic.Strong)]
 	RCMediatorName MediatorName { get; }
+
+	// @property (readonly, nonatomic, strong) RCAdFormat * _Nonnull adFormat;
+	[Export ("adFormat", ArgumentSemantic.Strong)]
+	RCAdFormat AdFormat { get; }
 
 	// @property (readonly, copy, nonatomic) NSString * _Nullable placement;
 	[NullAllowed, Export ("placement")]
@@ -161,14 +238,16 @@ interface RCAdOpened
 	[Export ("impressionId")]
 	string ImpressionId { get; }
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
-	[Export ("initWithNetworkName:mediatorName:placement:adUnitId:impressionId:")]
-	[DesignatedInitializer]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, [NullAllowed] string placement, string adUnitId, string impressionId);
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
-	[Export ("initWithNetworkName:mediatorName:adUnitId:impressionId:")]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, string adUnitId, string impressionId);
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId __attribute__((objc_designated_initializer));
+	[Export ("initWithNetworkName:mediatorName:adFormat:placement:adUnitId:impressionId:")]
+	[DesignatedInitializer]
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, [NullAllowed] string placement, string adUnitId, string impressionId);
+
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId;
+	[Export ("initWithNetworkName:mediatorName:adFormat:adUnitId:impressionId:")]
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, string adUnitId, string impressionId);
+
 
 	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 	[Export ("isEqual:")]
@@ -184,13 +263,17 @@ interface RCAdOpened
 [BaseType(typeof(NSObject))]
 interface RCAdRevenue
 {
-	// @property (readonly, copy, nonatomic) NSString * _Nonnull networkName;
-	[Export ("networkName")]
+	// @property (readonly, copy, nonatomic) NSString * _Nullable networkName;
+	[NullAllowed, Export ("networkName")]
 	string NetworkName { get; }
 
 	// @property (readonly, nonatomic, strong) RCMediatorName * _Nonnull mediatorName;
 	[Export ("mediatorName", ArgumentSemantic.Strong)]
 	RCMediatorName MediatorName { get; }
+
+	// @property (readonly, nonatomic, strong) RCAdFormat * _Nonnull adFormat;
+	[Export ("adFormat", ArgumentSemantic.Strong)]
+	RCAdFormat AdFormat { get; }
 
 	// @property (readonly, copy, nonatomic) NSString * _Nullable placement;
 	[NullAllowed, Export ("placement")]
@@ -216,14 +299,15 @@ interface RCAdRevenue
 	[Export ("precision", ArgumentSemantic.Strong)]
 	RCAdRevenuePrecision Precision { get; }
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId revenueMicros:(id)revenueMicros currency:(NSString * _Nonnull)currency precision:(RCAdRevenuePrecision * _Nonnull)precision __attribute__((objc_designated_initializer));
-	[Export ("initWithNetworkName:mediatorName:placement:adUnitId:impressionId:revenueMicros:currency:precision:")]
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat placement:(NSString * _Nullable)placement adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId revenueMicros:(id)revenueMicros currency:(NSString * _Nonnull)currency precision:(RCAdRevenuePrecision * _Nonnull)precision __attribute__((objc_designated_initializer));
+	[Export ("initWithNetworkName:mediatorName:adFormat:placement:adUnitId:impressionId:revenueMicros:currency:precision:")]
 	[DesignatedInitializer]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, [NullAllowed] string placement, string adUnitId, string impressionId, NSObject revenueMicros, string currency, RCAdRevenuePrecision precision);
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, [NullAllowed] string placement, string adUnitId, string impressionId, NSObject revenueMicros, string currency, RCAdRevenuePrecision precision);
 
-	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nonnull)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId revenueMicros:(id)revenueMicros currency:(NSString * _Nonnull)currency precision:(RCAdRevenuePrecision * _Nonnull)precision;
-	[Export ("initWithNetworkName:mediatorName:adUnitId:impressionId:revenueMicros:currency:precision:")]
-	NativeHandle Constructor (string networkName, RCMediatorName mediatorName, string adUnitId, string impressionId, NSObject revenueMicros, string currency, RCAdRevenuePrecision precision);
+	// -(instancetype _Nonnull)initWithNetworkName:(NSString * _Nullable)networkName mediatorName:(RCMediatorName * _Nonnull)mediatorName adFormat:(RCAdFormat * _Nonnull)adFormat adUnitId:(NSString * _Nonnull)adUnitId impressionId:(NSString * _Nonnull)impressionId revenueMicros:(id)revenueMicros currency:(NSString * _Nonnull)currency precision:(RCAdRevenuePrecision * _Nonnull)precision;
+	[Export ("initWithNetworkName:mediatorName:adFormat:adUnitId:impressionId:revenueMicros:currency:precision:")]
+	NativeHandle Constructor ([NullAllowed] string networkName, RCMediatorName mediatorName, RCAdFormat adFormat, string adUnitId, string impressionId, NSObject revenueMicros, string currency, RCAdRevenuePrecision precision);
+
 
 	// -(id)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 	[Export ("isEqual:")]
@@ -283,26 +367,27 @@ interface RCAdRevenuePrecision
 [BaseType(typeof(NSObject))]
 interface RCAdTracker
 {
-	// -(void)trackAdFailedToLoad:(RCAdFailedToLoad * _Nonnull)data completion:(void (^ _Nonnull)(void))completion;
-	[Export ("trackAdFailedToLoad:completion:")]
-	void TrackAdFailedToLoad (RCAdFailedToLoad data, Action completion);
+	// -(void)trackAdFailedToLoad:(RCAdFailedToLoad * _Nonnull)data;
+	[Export ("trackAdFailedToLoad:")]
+	void TrackAdFailedToLoad (RCAdFailedToLoad data);
 
-	// -(void)trackAdLoaded:(RCAdLoaded * _Nonnull)data completion:(void (^ _Nonnull)(void))completion;
-	[Export ("trackAdLoaded:completion:")]
-	void TrackAdLoaded (RCAdLoaded data, Action completion);
+	// -(void)trackAdLoaded:(RCAdLoaded * _Nonnull)data;
+	[Export ("trackAdLoaded:")]
+	void TrackAdLoaded (RCAdLoaded data);
 
-	// -(void)trackAdDisplayed:(RCAdDisplayed * _Nonnull)data completion:(void (^ _Nonnull)(void))completion;
-	[Export ("trackAdDisplayed:completion:")]
-	void TrackAdDisplayed (RCAdDisplayed data, Action completion);
+	// -(void)trackAdDisplayed:(RCAdDisplayed * _Nonnull)data;
+	[Export ("trackAdDisplayed:")]
+	void TrackAdDisplayed (RCAdDisplayed data);
 
-	// -(void)trackAdOpened:(RCAdOpened * _Nonnull)data completion:(void (^ _Nonnull)(void))completion;
-	[Export ("trackAdOpened:completion:")]
-	void TrackAdOpened (RCAdOpened data, Action completion);
+	// -(void)trackAdOpened:(RCAdOpened * _Nonnull)data;
+	[Export ("trackAdOpened:")]
+	void TrackAdOpened (RCAdOpened data);
 
-	// -(void)trackAdRevenue:(RCAdRevenue * _Nonnull)data completion:(void (^ _Nonnull)(void))completion;
-	[Export ("trackAdRevenue:completion:")]
-	void TrackAdRevenue (RCAdRevenue data, Action completion);
+	// -(void)trackAdRevenue:(RCAdRevenue * _Nonnull)data;
+	[Export ("trackAdRevenue:")]
+	void TrackAdRevenue (RCAdRevenue data);
 }
+ 
 
 // @interface RCMediatorName
 [DisableDefaultCtor]
@@ -413,6 +498,18 @@ interface RCMediatorName
 		// -(void)setKochavaDeviceID:(NSString * _Nullable)kochavaDeviceID;
 		[Export("setKochavaDeviceID:")]
 		void SetKochavaDeviceID([NullAllowed] string kochavaDeviceID);
+		
+		// -(void)setSolarEngineDistinctId:(NSString * _Nullable)solarEngineDistinctId;
+		[Export ("setSolarEngineDistinctId:")]
+		void SetSolarEngineDistinctId ([NullAllowed] string solarEngineDistinctId);
+
+		// -(void)setSolarEngineAccountId:(NSString * _Nullable)solarEngineAccountId;
+		[Export ("setSolarEngineAccountId:")]
+		void SetSolarEngineAccountId ([NullAllowed] string solarEngineAccountId);
+
+		// -(void)setSolarEngineVisitorId:(NSString * _Nullable)solarEngineVisitorId;
+		[Export ("setSolarEngineVisitorId:")]
+		void SetSolarEngineVisitorId ([NullAllowed] string solarEngineVisitorId);
 
 		// -(void)setMixpanelDistinctID:(NSString * _Nullable)mixpanelDistinctID;
 		[Export("setMixpanelDistinctID:")]
@@ -538,7 +635,7 @@ interface RCMediatorName
 		[Export("build")]
 		RCConfiguration Build { get; }
 	}
-	
+ 
 // @interface RCConfiguration
 	[DisableDefaultCtor]
 	[BaseType(typeof(NSObject))]
@@ -627,7 +724,12 @@ interface RCMediatorName
 		// -(instancetype _Nonnull)initWithAutoSyncPurchases:(id)autoSyncPurchases;
 		[Export("initWithAutoSyncPurchases:")]
 		NativeHandle Constructor(NSObject autoSyncPurchases);
+		
+		// -(instancetype _Nonnull)initWithAutoSyncPurchases:(id)autoSyncPurchases customEntitlementComputation:(id)customEntitlementComputation;
+		[Export ("initWithAutoSyncPurchases:customEntitlementComputation:")]
+		NativeHandle Constructor (NSObject autoSyncPurchases, NSObject customEntitlementComputation);
 	}
+
 
 // @interface RCEntitlementInfo
 	[DisableDefaultCtor]
@@ -713,8 +815,8 @@ interface RCMediatorName
 		// @property (readonly, nonatomic) enum RCVerificationResult verification;
 		[Export("verification")] RCVerificationResult Verification { get; }
 		
-	}
-	
+	} 
+
 
 // @interface RCIntroEligibility
 	[DisableDefaultCtor]
@@ -902,7 +1004,7 @@ interface RCMediatorName
 		// @property (readonly, nonatomic) int hash;
 		[Export("hash")] int Hash { get; }
 	}
-	
+	 
 
 // @interface RCPresentedOfferingContext
 	[DisableDefaultCtor]
@@ -965,8 +1067,8 @@ interface RCMediatorName
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull formatted;
 		[Export ("formatted")]
 		string Formatted { get; }
-	}
-
+	} 
+  
 // @interface RCPromotionalOffer
 	[DisableDefaultCtor]
 	[BaseType(typeof(NSObject))]
@@ -1466,6 +1568,12 @@ interface RCMediatorName
 	[BaseType(typeof(NSObject))]
 	interface RCPurchases
 	{
+		// +(RCWebPurchaseRedemption * _Nullable)parseAsWebPurchaseRedemption:(NSURL * _Nonnull)url __attribute__((warn_unused_result("")));
+		[Static]
+		[Export ("parseAsWebPurchaseRedemption:")]
+		[return: NullAllowed]
+		RCWebPurchaseRedemption ParseAsWebPurchaseRedemption (NSUrl url);
+		
 		// @required @property (readonly, copy, nonatomic) NSString * _Nonnull appUserID;
 		 [Export("appUserID")] string AppUserID { get; }
 
@@ -1731,8 +1839,11 @@ interface RCMediatorName
 		[Export("syncAttributesAndOfferingsIfNeededWithCompletionHandler:")]
 		void SyncAttributesAndOfferingsIfNeededWithCompletionHandler(Action<RCOfferings, NSError> completionHandler);
 
-		// @required -(void)redeemWebPurchaseWithWebPurchaseRedemption:(RCWebPurchaseRedemption * _Nonnull)webPurchaseRedemption completion:(void (^ _Nonnull)(RCCustomerInfo * _Nullable, NSError * _Nullable))completion;
+		// -(void)recordPurchaseForProductID:(NSString * _Nonnull)productID completion:(void (^ _Nonnull)(RCStoreTransaction * _Nullable, NSError * _Nullable))completion __attribute__((availability(watchos, introduced=8.0))) __attribute__((availability(tvos, introduced=15.0))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
+		[Export ("recordPurchaseForProductID:completion:")]
+		void RecordPurchaseForProductID (string productID, Action<RCStoreTransaction, NSError> completion);
 		
+		// @required -(void)redeemWebPurchaseWithWebPurchaseRedemption:(RCWebPurchaseRedemption * _Nonnull)webPurchaseRedemption completion:(void (^ _Nonnull)(RCCustomerInfo * _Nullable, NSError * _Nullable))completion;
 		[Export("redeemWebPurchaseWithWebPurchaseRedemption:completion:")]
 		void RedeemWebPurchaseWithWebPurchaseRedemption(RCWebPurchaseRedemption webPurchaseRedemption, Action<RCCustomerInfo, NSError> completion);
 
@@ -1755,6 +1866,14 @@ interface RCMediatorName
 		
 		[Export("setAttributes:")]
 		void SetAttributes(NSObject attributes);
+		
+		// -(void)showStoreMessagesWithCompletion:(void (^ _Nonnull)(void))completion __attribute__((availability(tvos, unavailable))) __attribute__((availability(watchos, unavailable))) __attribute__((availability(macos, unavailable))) __attribute__((availability(ios, introduced=16.0)));
+		[Export ("showStoreMessagesWithCompletion:")]
+		void ShowStoreMessagesWithCompletion (Action completion);
+
+		// -(void)showStoreMessagesForTypes:(id)types completion:(void (^ _Nonnull)(void))completion __attribute__((availability(tvos, unavailable))) __attribute__((availability(watchos, unavailable))) __attribute__((availability(macos, unavailable))) __attribute__((availability(ios, introduced=16.0)));
+		[Export ("showStoreMessagesForTypes:completion:")]
+		void ShowStoreMessagesForTypes (NSObject types, Action completion);
 
 		// @required @property (nonatomic) int allowSharingAppStoreAccount __attribute__((deprecated("")));
 		
@@ -1992,9 +2111,11 @@ interface RCMediatorName
 		[DesignatedInitializer]
 		NativeHandle Constructor(string flavor, string version);
 	}
-	
+
+
 	delegate void PurchaseCallback(RCStoreTransaction transaction, RCCustomerInfo customerInfo, NSError error, int something);
 	delegate void StartPurchaseCallback(PurchaseCallback callback);
+ 
 
 // @protocol RCPurchasesDelegate
 	[Protocol, Model]
@@ -2039,9 +2160,7 @@ interface RCMediatorName
 		[Export("default_", ArgumentSemantic.Strong)]
 		PurchasesReceiptParser Default_ { [Bind("default")] get; }
 	}
-	
-
-
+ 
 // @interface RCStoreProduct
 	[BaseType (typeof(NSObject))]
 	[DisableDefaultCtor]
@@ -2224,6 +2343,9 @@ interface RCMediatorName
 		[NullAllowed, Export("storefront", ArgumentSemantic.Strong)]
 		RCStorefront Storefront { get; }
 		
+		// @property (readonly, copy, nonatomic) NSString * _Nullable jwsRepresentation;
+		[NullAllowed, Export ("jwsRepresentation")]
+		string JwsRepresentation { get; }
 
 		// @property (readonly, nonatomic) int hash;
 		[Export("hash")] int Hash { get; }
@@ -2365,7 +2487,6 @@ interface RCMediatorName
 		[Export("discount", ArgumentSemantic.Strong)]
 		RCStoreProductDiscount Discount { get; }
 	}
-
 
 // @interface RCVirtualCurrencies
 	[DisableDefaultCtor]

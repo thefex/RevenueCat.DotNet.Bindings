@@ -33,11 +33,32 @@ import os
   @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
   @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
 }
+@_spi(Experimental) @objc(RCAdFormat) final public class AdFormat : ObjectiveC.NSObject, Swift.Codable {
+  @_spi(Experimental) @objc final public let rawValue: Swift.String
+  @_spi(Experimental) @objc public init(rawValue: Swift.String)
+  @_spi(Experimental) @objc public static let other: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let banner: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let interstitial: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let rewarded: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let rewardedInterstitial: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let native: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let appOpen: RevenueCat.AdFormat
+  @_spi(Experimental) @objc public static let mrec: RevenueCat.AdFormat
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @_spi(Experimental) @objc override final public var hash: Swift.Int {
+    @_spi(Experimental) @objc get
+  }
+  @_spi(Experimental) @objc deinit
+  @_spi(Experimental) final public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
+}
 @_spi(Experimental) @objc(RCAdFailedToLoad) final public class AdFailedToLoad : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
-  @_spi(Experimental) @objc final public var networkName: Swift.String {
+  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
     get
   }
-  @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+  @_spi(Experimental) @objc final public var adFormat: RevenueCat.AdFormat {
     get
   }
   @_spi(Experimental) @objc final public var placement: Swift.String? {
@@ -57,13 +78,13 @@ import os
   }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber?)
+  @_spi(Experimental) @objc public init(mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Swift.Int?)
+  @_spi(Experimental) convenience public init(mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, mediatorErrorCode: Swift.Int?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber? = nil)
+  @_spi(Experimental) @objc convenience public init(mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, adUnitId: Swift.String, mediatorErrorCode: Foundation.NSNumber? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
@@ -76,10 +97,13 @@ import os
   @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Experimental) @objc(RCAdLoaded) final public class AdLoaded : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
-  @_spi(Experimental) @objc final public var networkName: Swift.String {
+  @_spi(Experimental) @objc final public var networkName: Swift.String? {
     get
   }
   @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var adFormat: RevenueCat.AdFormat {
     get
   }
   @_spi(Experimental) @objc final public var placement: Swift.String? {
@@ -92,9 +116,11 @@ import os
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  @_spi(Experimental) @objc public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
   #endif
-  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
@@ -106,10 +132,13 @@ import os
   @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Experimental) @objc(RCAdDisplayed) final public class AdDisplayed : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
-  @_spi(Experimental) @objc final public var networkName: Swift.String {
+  @_spi(Experimental) @objc final public var networkName: Swift.String? {
     get
   }
   @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var adFormat: RevenueCat.AdFormat {
     get
   }
   @_spi(Experimental) @objc final public var placement: Swift.String? {
@@ -122,9 +151,11 @@ import os
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  @_spi(Experimental) @objc public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
   #endif
-  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
@@ -136,10 +167,13 @@ import os
   @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Experimental) @objc(RCAdOpened) final public class AdOpened : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
-  @_spi(Experimental) @objc final public var networkName: Swift.String {
+  @_spi(Experimental) @objc final public var networkName: Swift.String? {
     get
   }
   @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var adFormat: RevenueCat.AdFormat {
     get
   }
   @_spi(Experimental) @objc final public var placement: Swift.String? {
@@ -152,9 +186,11 @@ import os
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
+  @_spi(Experimental) @objc public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String)
   #endif
-  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, adUnitId: Swift.String, impressionId: Swift.String)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
@@ -166,10 +202,13 @@ import os
   @_spi(Experimental) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Experimental) @objc(RCAdRevenue) final public class AdRevenue : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
-  @_spi(Experimental) @objc final public var networkName: Swift.String {
+  @_spi(Experimental) @objc final public var networkName: Swift.String? {
     get
   }
   @_spi(Experimental) @objc final public var mediatorName: RevenueCat.MediatorName {
+    get
+  }
+  @_spi(Experimental) @objc final public var adFormat: RevenueCat.AdFormat {
     get
   }
   @_spi(Experimental) @objc final public var placement: Swift.String? {
@@ -191,9 +230,11 @@ import os
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_spi(Experimental) @objc public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
+  @_spi(Experimental) @objc public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, placement: Swift.String?, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
   #endif
-  @_spi(Experimental) @objc convenience public init(networkName: Swift.String, mediatorName: RevenueCat.MediatorName, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Experimental) @objc convenience public init(networkName: Swift.String?, mediatorName: RevenueCat.MediatorName, adFormat: RevenueCat.AdFormat, adUnitId: Swift.String, impressionId: Swift.String, revenueMicros: Swift.Int, currency: Swift.String, precision: RevenueCat.AdRevenue.Precision)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
@@ -225,16 +266,11 @@ import os
 }
 @_spi(Experimental) @_hasMissingDesignatedInitializers @available(iOS 15.0, tvOS 15.0, macOS 12.0, watchOS 8.0, *)
 @objc(RCAdTracker) final public class AdTracker : ObjectiveC.NSObject {
-  @_spi(Experimental) final public func trackAdFailedToLoad(_ data: RevenueCat.AdFailedToLoad) async
-  @_spi(Experimental) final public func trackAdLoaded(_ data: RevenueCat.AdLoaded) async
-  @_spi(Experimental) final public func trackAdDisplayed(_ data: RevenueCat.AdDisplayed) async
-  @_spi(Experimental) final public func trackAdOpened(_ data: RevenueCat.AdOpened) async
-  @_spi(Experimental) final public func trackAdRevenue(_ data: RevenueCat.AdRevenue) async
-  @_spi(Experimental) @objc final public func trackAdFailedToLoad(_ data: RevenueCat.AdFailedToLoad, completion: @escaping () -> Swift.Void)
-  @_spi(Experimental) @objc final public func trackAdLoaded(_ data: RevenueCat.AdLoaded, completion: @escaping () -> Swift.Void)
-  @_spi(Experimental) @objc final public func trackAdDisplayed(_ data: RevenueCat.AdDisplayed, completion: @escaping () -> Swift.Void)
-  @_spi(Experimental) @objc final public func trackAdOpened(_ data: RevenueCat.AdOpened, completion: @escaping () -> Swift.Void)
-  @_spi(Experimental) @objc final public func trackAdRevenue(_ data: RevenueCat.AdRevenue, completion: @escaping () -> Swift.Void)
+  @_spi(Experimental) @objc final public func trackAdFailedToLoad(_ data: RevenueCat.AdFailedToLoad)
+  @_spi(Experimental) @objc final public func trackAdLoaded(_ data: RevenueCat.AdLoaded)
+  @_spi(Experimental) @objc final public func trackAdDisplayed(_ data: RevenueCat.AdDisplayed)
+  @_spi(Experimental) @objc final public func trackAdOpened(_ data: RevenueCat.AdOpened)
+  @_spi(Experimental) @objc final public func trackAdRevenue(_ data: RevenueCat.AdRevenue)
   @_spi(Experimental) @objc deinit
 }
 public struct AppleReceipt : Swift.Equatable {
@@ -335,6 +371,15 @@ extension RevenueCat.Attribution {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func setKochavaDeviceID(_ kochavaDeviceID: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setSolarEngineDistinctId(_ solarEngineDistinctId: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setSolarEngineAccountId(_ solarEngineAccountId: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setSolarEngineVisitorId(_ solarEngineVisitorId: Swift.String?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func setMixpanelDistinctID(_ mixpanelDistinctID: Swift.String?)
@@ -681,6 +726,7 @@ extension RevenueCat.Configuration {
       @_spi(Internal) case storeMacAppStore
       @_spi(Internal) case storePlayStore
       @_spi(Internal) case testStore
+      @_spi(Internal) case galaxyStore
       @_spi(Internal) case storeStripe
       @_spi(Internal) case storePromotional
       @_spi(Internal) case storeAmazon
@@ -1111,6 +1157,9 @@ public typealias ProductIdentifier = Swift.String
   @objc override final public var description: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(entitlements: RevenueCat.EntitlementInfos, expirationDatesByProductId: [Swift.String : Foundation.Date] = [:], purchaseDatesByProductId: [Swift.String : Foundation.Date] = [:], allPurchasedProductIds: Swift.Set<Swift.String> = [], requestDate: Foundation.Date, firstSeen: Foundation.Date, originalAppUserId: Swift.String, originalPurchaseDate: Foundation.Date? = nil, managementURL: Foundation.URL? = nil)
+  #endif
   @objc deinit
 }
 extension RevenueCat.CustomerInfo : RevenueCat.RawDataContainer {
@@ -1398,6 +1447,7 @@ extension RevenueCat.PaywallComponent {
   @objc(RCExternal) case external = 8
   @objc(RCPaddle) case paddle = 9
   @objc(RCTestStore) case testStore = 10
+  @objc(RCGalaxy) case galaxy = 11
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -1503,6 +1553,9 @@ extension RevenueCat.PeriodType : Swift.Sendable {
   @objc override final public var hash: Swift.Int {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(identifier: Swift.String, isActive: Swift.Bool, willRenew: Swift.Bool, periodType: RevenueCat.PeriodType, latestPurchaseDate: Foundation.Date? = nil, originalPurchaseDate: Foundation.Date? = nil, expirationDate: Foundation.Date? = nil, store: RevenueCat.Store, productIdentifier: Swift.String, productPlanIdentifier: Swift.String? = nil, isSandbox: Swift.Bool, unsubscribeDetectedAt: Foundation.Date? = nil, billingIssueDetectedAt: Foundation.Date? = nil, ownershipType: RevenueCat.PurchaseOwnershipType, verification: RevenueCat.VerificationResult = .notRequested)
+  #endif
   @objc deinit
 }
 extension RevenueCat.EntitlementInfo : RevenueCat.RawDataContainer {
@@ -1524,7 +1577,7 @@ extension RevenueCat.EntitlementInfo : Swift.Identifiable {
   }
   public typealias ID = Swift.String
 }
-@_hasMissingDesignatedInitializers @objc(RCEntitlementInfos) final public class EntitlementInfos : ObjectiveC.NSObject {
+@objc(RCEntitlementInfos) final public class EntitlementInfos : ObjectiveC.NSObject {
   @objc final public let all: [Swift.String : RevenueCat.EntitlementInfo]
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public subscript(key: Swift.String) -> RevenueCat.EntitlementInfo? {
@@ -1540,6 +1593,7 @@ extension RevenueCat.EntitlementInfo : Swift.Identifiable {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
+  public init(entitlements: [Swift.String : RevenueCat.EntitlementInfo] = [:], verification: RevenueCat.VerificationResult = .notRequested)
   @objc deinit
 }
 extension RevenueCat.EntitlementInfos {
@@ -3224,11 +3278,15 @@ public struct PaywallComponentsData : Swift.Codable, Swift.Equatable, Swift.Send
     public func encode(to encoder: any Swift.Encoder) throws
     public static func == (a: RevenueCat.PaywallComponentsData.LocalizationData, b: RevenueCat.PaywallComponentsData.LocalizationData) -> Swift.Bool
   }
+  public var id: Swift.String?
   public var templateName: Swift.String
   public var assetBaseURL: Foundation.URL
   public var revision: Swift.Int {
     get
     set
+  }
+  public var zeroDecimalPlaceCountries: [Swift.String] {
+    get
   }
   public var componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig
   public var componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary]
@@ -3236,7 +3294,7 @@ public struct PaywallComponentsData : Swift.Codable, Swift.Equatable, Swift.Send
   public var exitOffers: RevenueCat.ExitOffers?
   public var errorInfo: [Swift.String : RevenueCat.PaywallComponentsData.EquatableError]?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String, exitOffers: RevenueCat.ExitOffers? = nil)
+  public init(id: Swift.String? = nil, templateName: Swift.String, assetBaseURL: Foundation.URL, componentsConfig: RevenueCat.PaywallComponentsData.ComponentsConfig, componentsLocalizations: [RevenueCat.PaywallComponent.LocaleID : RevenueCat.PaywallComponent.LocalizationDictionary], revision: Swift.Int, defaultLocaleIdentifier: Swift.String, zeroDecimalPlaceCountries: [Swift.String] = [], exitOffers: RevenueCat.ExitOffers? = nil)
   #endif
   public static func == (a: RevenueCat.PaywallComponentsData, b: RevenueCat.PaywallComponentsData) -> Swift.Bool
 }
@@ -3311,6 +3369,7 @@ extension RevenueCat.PaywallComponent {
   }
 }
 public struct PaywallData {
+  public var id: Swift.String?
   public var templateName: Swift.String
   public var config: RevenueCat.PaywallData.Configuration
   public var assetBaseURL: Foundation.URL
@@ -3558,8 +3617,12 @@ extension RevenueCat.PaywallData {
   }
 }
 extension RevenueCat.PaywallData {
-  public init(templateName: Swift.String, config: RevenueCat.PaywallData.Configuration, localization: RevenueCat.PaywallData.LocalizedConfiguration, assetBaseURL: Foundation.URL, revision: Swift.Int = 0, locale: Foundation.Locale = .current, zeroDecimalPlaceCountries: [Swift.String] = [])
-  public init(templateName: Swift.String, config: RevenueCat.PaywallData.Configuration, localizationByTier: [Swift.String : RevenueCat.PaywallData.LocalizedConfiguration], assetBaseURL: Foundation.URL, revision: Swift.Int = 0, locale: Foundation.Locale = .current, zeroDecimalPlaceCountries: [Swift.String] = [])
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String? = nil, templateName: Swift.String, config: RevenueCat.PaywallData.Configuration, localization: RevenueCat.PaywallData.LocalizedConfiguration, assetBaseURL: Foundation.URL, revision: Swift.Int = 0, locale: Foundation.Locale = .current, zeroDecimalPlaceCountries: [Swift.String] = [])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String? = nil, templateName: Swift.String, config: RevenueCat.PaywallData.Configuration, localizationByTier: [Swift.String : RevenueCat.PaywallData.LocalizedConfiguration], assetBaseURL: Foundation.URL, revision: Swift.Int = 0, locale: Foundation.Locale = .current, zeroDecimalPlaceCountries: [Swift.String] = [])
+  #endif
 }
 extension RevenueCat.PaywallData.LocalizedConfiguration.Feature : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -3698,12 +3761,25 @@ extension RevenueCat.PaywallData {
   }
   #endif
 }
+public enum ExitOfferType : Swift.String, Swift.Codable, Swift.Sendable {
+  case dismiss
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum PaywallEvent {
   public typealias ID = Foundation.UUID
   public typealias SessionID = Foundation.UUID
   case impression(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data)
   case cancel(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data)
   case close(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data)
+  case exitOffer(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data, RevenueCat.PaywallEvent.ExitOfferData)
+  case purchaseInitiated(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data)
+  case purchaseError(RevenueCat.PaywallEvent.CreationData, RevenueCat.PaywallEvent.Data)
 }
 extension RevenueCat.PaywallEvent {
   public struct CreationData {
@@ -3714,6 +3790,7 @@ extension RevenueCat.PaywallEvent {
 }
 extension RevenueCat.PaywallEvent {
   public struct Data {
+    public var paywallIdentifier: Swift.String?
     public var offeringIdentifier: Swift.String
     public var paywallRevision: Swift.Int
     public var sessionIdentifier: RevenueCat.PaywallEvent.SessionID
@@ -3727,12 +3804,29 @@ extension RevenueCat.PaywallEvent {
   }
 }
 extension RevenueCat.PaywallEvent {
+  public struct ExitOfferData {
+    public var exitOfferType: RevenueCat.ExitOfferType
+    public var exitOfferingIdentifier: Swift.String
+    public init(exitOfferType: RevenueCat.ExitOfferType, exitOfferingIdentifier: Swift.String)
+  }
+}
+extension RevenueCat.PaywallEvent {
   public var creationData: RevenueCat.PaywallEvent.CreationData {
     get
   }
   public var data: RevenueCat.PaywallEvent.Data {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var exitOfferData: RevenueCat.PaywallEvent.ExitOfferData? {
+    get
+  }
+  #endif
+}
+extension RevenueCat.PaywallEvent.Data {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) public func withPurchaseInfo(packageId: Swift.String?, productId: Swift.String?, errorCode: Swift.Int?, errorMessage: Swift.String?) -> RevenueCat.PaywallEvent.Data
+  #endif
 }
 extension RevenueCat.PaywallEvent.CreationData : Swift.Equatable, Swift.Codable, Swift.Sendable {
   public static func == (a: RevenueCat.PaywallEvent.CreationData, b: RevenueCat.PaywallEvent.CreationData) -> Swift.Bool
@@ -3741,6 +3835,11 @@ extension RevenueCat.PaywallEvent.CreationData : Swift.Equatable, Swift.Codable,
 }
 extension RevenueCat.PaywallEvent.Data : Swift.Equatable, Swift.Codable, Swift.Sendable {
   public static func == (a: RevenueCat.PaywallEvent.Data, b: RevenueCat.PaywallEvent.Data) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension RevenueCat.PaywallEvent.ExitOfferData : Swift.Equatable, Swift.Codable, Swift.Sendable {
+  public static func == (a: RevenueCat.PaywallEvent.ExitOfferData, b: RevenueCat.PaywallEvent.ExitOfferData) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -4701,6 +4800,9 @@ public typealias StartPurchaseBlock = (@escaping RevenueCat.PurchaseCompletedBlo
   @objc deinit
 }
 extension RevenueCat.Purchases {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func parseAsWebPurchaseRedemption(_ url: Foundation.URL) -> RevenueCat.WebPurchaseRedemption?
+  #endif
   @objc final public var appUserID: Swift.String {
     @objc get
   }
@@ -4837,6 +4939,10 @@ extension RevenueCat.Purchases {
   final public func recordPurchase(_ purchaseResult: StoreKit.Product.PurchaseResult) async throws -> RevenueCat.StoreTransaction?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+  @objc(recordPurchaseForProductID:completion:) final public func recordPurchase(productID: Swift.String, completion: @escaping (RevenueCat.StoreTransaction?, RevenueCat.PublicError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func redeemWebPurchase(webPurchaseRedemption: RevenueCat.WebPurchaseRedemption, completion: @escaping (RevenueCat.CustomerInfo?, RevenueCat.PublicError?) -> Swift.Void)
   #endif
   final public func redeemWebPurchase(_ webPurchaseRedemption: RevenueCat.WebPurchaseRedemption) async -> RevenueCat.WebPurchaseRedemptionResult
@@ -4916,6 +5022,7 @@ extension RevenueCat.Purchases {
 extension RevenueCat.Purchases : @unchecked Swift.Sendable {
 }
 extension RevenueCat.Purchases {
+  @_spi(Internal) final public func cachePresentedOfferingContext(_ context: RevenueCat.PresentedOfferingContext, productIdentifier: Swift.String)
   @_spi(Internal) final public var preferredLocales: [Swift.String] {
     @_spi(Internal) get
   }
@@ -4965,6 +5072,16 @@ extension RevenueCat.Purchases {
   @available(watchOS, unavailable)
   @available(tvOS, unavailable)
   final public func showStoreMessages(for types: Swift.Set<RevenueCat.StoreMessageType> = Set(StoreMessageType.allCases), completion: @escaping () -> Swift.Void)
+  @available(iOS 16.0, *)
+  @available(macOS, unavailable)
+  @available(watchOS, unavailable)
+  @available(tvOS, unavailable)
+  @objc(showStoreMessagesWithCompletion:) final public func showStoreMessages(completion: @escaping () -> Swift.Void)
+  @available(iOS 16.0, *)
+  @available(macOS, unavailable)
+  @available(watchOS, unavailable)
+  @available(tvOS, unavailable)
+  @objc(showStoreMessagesForTypes:completion:) final public func showStoreMessages(forTypes types: Foundation.NSSet, completion: @escaping () -> Swift.Void)
 }
 @objc(RCPurchasesAreCompletedBy) public enum PurchasesAreCompletedBy : Swift.Int {
   case revenueCat
@@ -4978,6 +5095,8 @@ extension RevenueCat.Purchases {
   }
 }
 extension RevenueCat.PurchasesAreCompletedBy : Swift.Sendable {
+}
+extension RevenueCat.PurchasesAreCompletedBy : Swift.Codable {
 }
 @objc(RCPurchasesDelegate) public protocol PurchasesDelegate : ObjectiveC.NSObjectProtocol {
   @available(swift, obsoleted: 1, renamed: "purchases(_:receivedUpdated:)")
@@ -5697,7 +5816,9 @@ extension RevenueCat.StoreProductDiscount {
 extension RevenueCat.StoreProductDiscount : Swift.Encodable {
   final public func encode(to encoder: any Swift.Encoder) throws
 }
-extension RevenueCat.StoreProductDiscount.PaymentMode : Swift.Encodable {
+extension RevenueCat.StoreProductDiscount.PaymentMode : Swift.Codable {
+}
+extension RevenueCat.StoreProductDiscount.DiscountType : Swift.Codable {
 }
 extension RevenueCat.StoreProductDiscount : Swift.Identifiable {
   final public var id: RevenueCat.StoreProductDiscount.Data {
@@ -5764,6 +5885,9 @@ public typealias SK2Transaction = StoreKit.Transaction
   @objc deinit
 }
 extension RevenueCat.StoreTransaction {
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(productIdentifier: Swift.String, purchaseDate: Foundation.Date, transactionIdentifier: Swift.String, quantity: Swift.Int = 1, storefront: RevenueCat.Storefront? = nil)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public var sk1Transaction: RevenueCat.SK1Transaction? {
     @objc get
@@ -5881,10 +6005,11 @@ extension RevenueCat.SubscriptionPeriod {
     @objc get
   }
 }
-extension RevenueCat.SubscriptionPeriod.Unit : Swift.Encodable {
+extension RevenueCat.SubscriptionPeriod.Unit : Swift.Codable {
 }
-extension RevenueCat.SubscriptionPeriod : Swift.Encodable {
+extension RevenueCat.SubscriptionPeriod : Swift.Codable {
   final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TestStoreProduct {
   public var localizedTitle: Swift.String
@@ -6002,13 +6127,22 @@ public struct UIConfig : Swift.Codable, Swift.Equatable, Swift.Sendable {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+  public struct CustomVariableDefinition : Swift.Codable, Swift.Equatable, Swift.Sendable {
+    public let type: Swift.String
+    public let defaultValue: Swift.String
+    public init(type: Swift.String, defaultValue: Swift.String)
+    public static func == (a: RevenueCat.UIConfig.CustomVariableDefinition, b: RevenueCat.UIConfig.CustomVariableDefinition) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
   public var app: RevenueCat.UIConfig.AppConfig
   public var localizations: [Swift.String : [Swift.String : Swift.String]]
   public var variableConfig: RevenueCat.UIConfig.VariableConfig
-  public init(app: RevenueCat.UIConfig.AppConfig, localizations: [Swift.String : [Swift.String : Swift.String]], variableConfig: RevenueCat.UIConfig.VariableConfig)
+  public var customVariables: [Swift.String : RevenueCat.UIConfig.CustomVariableDefinition]
+  public init(app: RevenueCat.UIConfig.AppConfig, localizations: [Swift.String : [Swift.String : Swift.String]], variableConfig: RevenueCat.UIConfig.VariableConfig, customVariables: [Swift.String : RevenueCat.UIConfig.CustomVariableDefinition] = [:])
+  public init(from decoder: any Swift.Decoder) throws
   public static func == (a: RevenueCat.UIConfig, b: RevenueCat.UIConfig) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension Foundation.URL {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -6177,21 +6311,24 @@ extension RevenueCat.PaywallComponent.FontSize : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.FitMode : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.BadgeStyle : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.CountdownComponent.CountFrom : Swift.RawRepresentable {}
+extension RevenueCat.ExitOfferType : Swift.Equatable {}
+extension RevenueCat.ExitOfferType : Swift.Hashable {}
+extension RevenueCat.ExitOfferType : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.PurchaseButtonComponent.Action : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.StackComponent.Overflow : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.TabsComponent.TabControl.TabControlType : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.TimelineComponent.IconAlignment : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.DisplacementStrategy : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.TransitionType : Swift.RawRepresentable {}
+extension RevenueCat.PurchasesAreCompletedBy : Swift.Equatable {}
+extension RevenueCat.PurchasesAreCompletedBy : Swift.Hashable {}
+extension RevenueCat.PurchasesAreCompletedBy : Swift.RawRepresentable {}
 extension RevenueCat.StoreProduct.ProductCategory : Swift.Equatable {}
 extension RevenueCat.StoreProduct.ProductCategory : Swift.Hashable {}
 extension RevenueCat.StoreProduct.ProductCategory : Swift.RawRepresentable {}
 extension RevenueCat.PurchaseOwnershipType : Swift.Equatable {}
 extension RevenueCat.PurchaseOwnershipType : Swift.Hashable {}
 extension RevenueCat.PurchaseOwnershipType : Swift.RawRepresentable {}
-extension RevenueCat.PurchasesAreCompletedBy : Swift.Equatable {}
-extension RevenueCat.PurchasesAreCompletedBy : Swift.Hashable {}
-extension RevenueCat.PurchasesAreCompletedBy : Swift.RawRepresentable {}
 extension RevenueCat.TestStoreProduct : Swift.Sendable {}
 extension RevenueCat.StoreProductDiscount.DiscountType : Swift.Equatable {}
 extension RevenueCat.StoreProductDiscount.DiscountType : Swift.Hashable {}

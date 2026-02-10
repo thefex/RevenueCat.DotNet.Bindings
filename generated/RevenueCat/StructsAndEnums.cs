@@ -141,7 +141,8 @@ public enum RCStore
 	Billing = 7,
 	External = 8,
 	Paddle = 9,
-	TestStore = 10
+	TestStore = 10,
+	Galaxy = 11
 }
 
 public enum RCStoreKitVersion

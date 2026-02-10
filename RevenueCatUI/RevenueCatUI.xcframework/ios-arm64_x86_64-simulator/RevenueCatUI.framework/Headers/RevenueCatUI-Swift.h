@@ -283,6 +283,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import Foundation;
+@import ObjectiveC;
+@import RevenueCat;
 @import UIKit;
 #endif
 
@@ -306,21 +308,96 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-@protocol RCPaywallViewControllerDelegate;
-@class RCOffering;
+@protocol RCCustomerCenterViewControllerDelegate;
 @class NSCoder;
 @class NSString;
+@class NSBundle;
+/// Use the Customer Center in your app to help your customers manage common support tasks.
+/// Customer Center is a self-service UI that can be added to your app to help
+/// your customers manage their subscriptions on their own. With it, you can prevent
+/// churn with pre-emptive promotional offers, capture actionable customer data with
+/// exit feedback prompts, and lower support volumes for common inquiries — all
+/// without any help from your support team.
+/// The <code>CustomerCenterViewController</code> can be used to integrate the Customer Center directly in your app with UIKit.
+/// For more information, see the <a href="https://www.revenuecat.com/docs/tools/customer-center">Customer Center docs</a>.
+SWIFT_CLASS_NAMED("CustomerCenterViewController") SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWIFT_AVAILABILITY(macos,unavailable) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@interface RCCustomerCenterViewController : UIViewController
+/// Create a view controller with a delegate for receiving callbacks.
+/// This initializer is designed for Objective-C compatibility.
+/// Swift users may prefer using the closure-based initializer instead.
+/// \param delegate The delegate to receive Customer Center callbacks.
+///
+- (nonnull instancetype)initWithDelegate:(id <RCCustomerCenterViewControllerDelegate> _Nullable)delegate OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewDidDisappear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class RCCustomerInfo;
+@class NSError;
+/// Delegate protocol for <code>CustomerCenterViewController</code>.
+/// Use this delegate for Objective-C compatibility. Swift users can alternatively use the
+/// closure-based initializer.
+SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWIFT_AVAILABILITY(macos,unavailable) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@protocol RCCustomerCenterViewControllerDelegate <NSObject>
+@optional
+/// Called when a restore operation starts.
+- (void)customerCenterViewControllerDidStartRestore:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a restore operation completes successfully.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFinishRestoringWithCustomerInfo:(RCCustomerInfo * _Nonnull)customerInfo;
+/// Called when a restore operation fails.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFailRestoringWithError:(NSError * _Nonnull)error;
+/// Called when the user navigates to the manage subscriptions screen.
+- (void)customerCenterViewControllerDidShowManageSubscriptions:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a refund request starts.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didStartRefundRequestForProductId:(NSString * _Nonnull)productId;
+/// Called when a refund request completes.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didCompleteRefundRequestForProductId:(NSString * _Nonnull)productId withStatus:(enum RCRefundRequestStatus)status;
+/// Called when a feedback survey is completed.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didCompleteFeedbackSurveyWithOptionId:(NSString * _Nonnull)optionId;
+/// Called when change plans is selected.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectChangePlansWithOptionId:(NSString * _Nonnull)optionId;
+/// Called when a custom action is selected.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectCustomActionWithIdentifier:(NSString * _Nonnull)actionIdentifier purchaseIdentifier:(NSString * _Nullable)purchaseIdentifier;
+/// Called when a promotional offer succeeds.
+- (void)customerCenterViewControllerDidSucceedWithPromotionalOffer:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when the Customer Center is dismissed.
+/// Make sure to call dismiss(animated: ) on the CustomerCenterViewController to actually dismiss
+/// the Customer Center.
+- (void)customerCenterViewControllerWasDismissed:(RCCustomerCenterViewController * _Nonnull)controller;
+@end
+
+@protocol RCPaywallViewControllerDelegate;
+@class RCOffering;
 @class RCPresentedOfferingContext;
 @class UITouch;
 @class UIEvent;
-@class NSBundle;
 /// A view controller for displaying the paywall for an <code>Offering</code>.
+/// <h2>Exit Offer Support</h2>
+/// This view controller sets itself as the <code>presentationController?.delegate</code> to intercept
+/// swipe-to-dismiss gestures for exit offer support. When an exit offer is available and the user
+/// attempts to dismiss without purchasing, the exit offer paywall will be presented instead.
+/// Exit offers take priority over any existing presentation controller delegate. If you have an
+/// existing delegate, it will be preserved and delegate methods will be forwarded to it only when
+/// exit offers are not being handled.
+/// important:
+/// If you need to set a custom <code>presentationController?.delegate</code> in a subclass,
+/// do so <em>before</em> calling <code>super.viewWillAppear(_:)</code>. This ensures your delegate is captured
+/// and forwarded. Setting it afterwards will override the exit offer handling, potentially
+/// breaking exit offer support.
 /// seealso:
 /// <code>PaywallView</code> for <code>SwiftUI</code>.
 SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallViewController : UIViewController
 /// See <code>PaywallViewControllerDelegate</code> for receiving purchase events.
 @property (nonatomic, weak) id <RCPaywallViewControllerDelegate> _Nullable delegate;
+/// Sets a string custom variable value for the given key.
+/// \param value The string value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariable:(NSString * _Nonnull)value forKey:(NSString * _Nonnull)key;
 /// Initialize a <code>PaywallViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired paywall to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -335,6 +412,7 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 - (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
 /// warning:
 /// For internal use only
@@ -393,10 +471,17 @@ SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introdu
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPresentationController;
+SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@interface RCPaywallViewController (SWIFT_EXTENSION(RevenueCatUI)) <UIAdaptivePresentationControllerDelegate>
+- (BOOL)presentationControllerShouldDismiss:(UIPresentationController * _Nonnull)presentationController SWIFT_WARN_UNUSED_RESULT;
+- (void)presentationControllerDidAttemptToDismiss:(UIPresentationController * _Nonnull)presentationController;
+- (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
+- (void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
 @class RCPackage;
-@class RCCustomerInfo;
 @class RCStoreTransaction;
-@class NSError;
 /// Delegate for <code>PaywallViewController</code>.
 SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @protocol RCPaywallViewControllerDelegate
@@ -427,6 +512,15 @@ SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,in
 - (void)paywallViewControllerWasDismissed:(RCPaywallViewController * _Nonnull)controller;
 /// For internal use only.
 - (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didChangeSizeTo:(CGSize)size;
+/// Notifies that an exit offer paywall is about to be presented.
+/// note:
+/// This is called after the original controller is dismissed and before the exit offer is presented.
+/// Use this to associate the exit offer controller with the original controller for result tracking.
+/// \param controller The original <code>PaywallViewController</code> that was dismissed.
+///
+/// \param exitOfferController The new <code>PaywallViewController</code> that will present the exit offer.
+///
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller willPresentExitOfferController:(RCPaywallViewController * _Nonnull)exitOfferController;
 @end
 
 #endif
@@ -722,6 +816,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import Foundation;
+@import ObjectiveC;
+@import RevenueCat;
 @import UIKit;
 #endif
 
@@ -745,21 +841,96 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-@protocol RCPaywallViewControllerDelegate;
-@class RCOffering;
+@protocol RCCustomerCenterViewControllerDelegate;
 @class NSCoder;
 @class NSString;
+@class NSBundle;
+/// Use the Customer Center in your app to help your customers manage common support tasks.
+/// Customer Center is a self-service UI that can be added to your app to help
+/// your customers manage their subscriptions on their own. With it, you can prevent
+/// churn with pre-emptive promotional offers, capture actionable customer data with
+/// exit feedback prompts, and lower support volumes for common inquiries — all
+/// without any help from your support team.
+/// The <code>CustomerCenterViewController</code> can be used to integrate the Customer Center directly in your app with UIKit.
+/// For more information, see the <a href="https://www.revenuecat.com/docs/tools/customer-center">Customer Center docs</a>.
+SWIFT_CLASS_NAMED("CustomerCenterViewController") SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWIFT_AVAILABILITY(macos,unavailable) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@interface RCCustomerCenterViewController : UIViewController
+/// Create a view controller with a delegate for receiving callbacks.
+/// This initializer is designed for Objective-C compatibility.
+/// Swift users may prefer using the closure-based initializer instead.
+/// \param delegate The delegate to receive Customer Center callbacks.
+///
+- (nonnull instancetype)initWithDelegate:(id <RCCustomerCenterViewControllerDelegate> _Nullable)delegate OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewDidDisappear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class RCCustomerInfo;
+@class NSError;
+/// Delegate protocol for <code>CustomerCenterViewController</code>.
+/// Use this delegate for Objective-C compatibility. Swift users can alternatively use the
+/// closure-based initializer.
+SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWIFT_AVAILABILITY(macos,unavailable) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@protocol RCCustomerCenterViewControllerDelegate <NSObject>
+@optional
+/// Called when a restore operation starts.
+- (void)customerCenterViewControllerDidStartRestore:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a restore operation completes successfully.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFinishRestoringWithCustomerInfo:(RCCustomerInfo * _Nonnull)customerInfo;
+/// Called when a restore operation fails.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFailRestoringWithError:(NSError * _Nonnull)error;
+/// Called when the user navigates to the manage subscriptions screen.
+- (void)customerCenterViewControllerDidShowManageSubscriptions:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a refund request starts.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didStartRefundRequestForProductId:(NSString * _Nonnull)productId;
+/// Called when a refund request completes.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didCompleteRefundRequestForProductId:(NSString * _Nonnull)productId withStatus:(enum RCRefundRequestStatus)status;
+/// Called when a feedback survey is completed.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didCompleteFeedbackSurveyWithOptionId:(NSString * _Nonnull)optionId;
+/// Called when change plans is selected.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectChangePlansWithOptionId:(NSString * _Nonnull)optionId;
+/// Called when a custom action is selected.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectCustomActionWithIdentifier:(NSString * _Nonnull)actionIdentifier purchaseIdentifier:(NSString * _Nullable)purchaseIdentifier;
+/// Called when a promotional offer succeeds.
+- (void)customerCenterViewControllerDidSucceedWithPromotionalOffer:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when the Customer Center is dismissed.
+/// Make sure to call dismiss(animated: ) on the CustomerCenterViewController to actually dismiss
+/// the Customer Center.
+- (void)customerCenterViewControllerWasDismissed:(RCCustomerCenterViewController * _Nonnull)controller;
+@end
+
+@protocol RCPaywallViewControllerDelegate;
+@class RCOffering;
 @class RCPresentedOfferingContext;
 @class UITouch;
 @class UIEvent;
-@class NSBundle;
 /// A view controller for displaying the paywall for an <code>Offering</code>.
+/// <h2>Exit Offer Support</h2>
+/// This view controller sets itself as the <code>presentationController?.delegate</code> to intercept
+/// swipe-to-dismiss gestures for exit offer support. When an exit offer is available and the user
+/// attempts to dismiss without purchasing, the exit offer paywall will be presented instead.
+/// Exit offers take priority over any existing presentation controller delegate. If you have an
+/// existing delegate, it will be preserved and delegate methods will be forwarded to it only when
+/// exit offers are not being handled.
+/// important:
+/// If you need to set a custom <code>presentationController?.delegate</code> in a subclass,
+/// do so <em>before</em> calling <code>super.viewWillAppear(_:)</code>. This ensures your delegate is captured
+/// and forwarded. Setting it afterwards will override the exit offer handling, potentially
+/// breaking exit offer support.
 /// seealso:
 /// <code>PaywallView</code> for <code>SwiftUI</code>.
 SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallViewController : UIViewController
 /// See <code>PaywallViewControllerDelegate</code> for receiving purchase events.
 @property (nonatomic, weak) id <RCPaywallViewControllerDelegate> _Nullable delegate;
+/// Sets a string custom variable value for the given key.
+/// \param value The string value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariable:(NSString * _Nonnull)value forKey:(NSString * _Nonnull)key;
 /// Initialize a <code>PaywallViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired paywall to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -774,6 +945,7 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 - (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
 /// warning:
 /// For internal use only
@@ -832,10 +1004,17 @@ SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introdu
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPresentationController;
+SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@interface RCPaywallViewController (SWIFT_EXTENSION(RevenueCatUI)) <UIAdaptivePresentationControllerDelegate>
+- (BOOL)presentationControllerShouldDismiss:(UIPresentationController * _Nonnull)presentationController SWIFT_WARN_UNUSED_RESULT;
+- (void)presentationControllerDidAttemptToDismiss:(UIPresentationController * _Nonnull)presentationController;
+- (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
+- (void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
 @class RCPackage;
-@class RCCustomerInfo;
 @class RCStoreTransaction;
-@class NSError;
 /// Delegate for <code>PaywallViewController</code>.
 SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @protocol RCPaywallViewControllerDelegate
@@ -866,6 +1045,15 @@ SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,in
 - (void)paywallViewControllerWasDismissed:(RCPaywallViewController * _Nonnull)controller;
 /// For internal use only.
 - (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didChangeSizeTo:(CGSize)size;
+/// Notifies that an exit offer paywall is about to be presented.
+/// note:
+/// This is called after the original controller is dismissed and before the exit offer is presented.
+/// Use this to associate the exit offer controller with the original controller for result tracking.
+/// \param controller The original <code>PaywallViewController</code> that was dismissed.
+///
+/// \param exitOfferController The new <code>PaywallViewController</code> that will present the exit offer.
+///
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller willPresentExitOfferController:(RCPaywallViewController * _Nonnull)exitOfferController;
 @end
 
 #endif

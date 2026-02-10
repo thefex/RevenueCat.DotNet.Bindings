@@ -4268,13 +4268,53 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any RevenueCatUI.CustomerCenterViewControllerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomerCenterViewControllerDelegate",
+                    "printedName": "any RevenueCatUI.CustomerCenterViewControllerDelegate",
+                    "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController(im)initWithDelegate:",
+            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC8delegateAcA0defG8Delegate_pSg_tcfc",
+            "moduleName": "RevenueCatUI",
+            "objc_name": "initWithDelegate:",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(customerCenterActionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "CustomerCenterViewController",
                 "printedName": "RevenueCatUI.CustomerCenterViewController",
-                "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC"
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
               },
               {
                 "kind": "TypeNominal",
@@ -4326,7 +4366,7 @@
                 "kind": "TypeNominal",
                 "name": "CustomerCenterViewController",
                 "printedName": "RevenueCatUI.CustomerCenterViewController",
-                "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC"
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
               },
               {
                 "kind": "TypeNominal",
@@ -4670,75 +4710,115 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController(im)viewDidLoad",
+            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC11viewDidLoadyyF",
+            "moduleName": "RevenueCatUI",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidDisappear",
+            "printedName": "viewDidDisappear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController(im)viewDidDisappear:",
+            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC16viewDidDisappearyySbF",
+            "moduleName": "RevenueCatUI",
+            "overriding": true,
+            "objc_name": "viewDidDisappear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(rootView:)",
+            "printedName": "init(nibName:bundle:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "CustomerCenterViewController",
                 "printedName": "RevenueCatUI.CustomerCenterViewController",
-                "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC"
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
               },
               {
                 "kind": "TypeNominal",
-                "name": "CustomerCenterView",
-                "printedName": "RevenueCatUI.CustomerCenterView",
-                "usr": "s:12RevenueCatUI18CustomerCenterViewV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC04rootF0AcA0deF0V_tcfc",
-            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC04rootF0AcA0deF0V_tcfc",
-            "moduleName": "RevenueCatUI",
-            "overriding": true,
-            "implicit": true,
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(coder:rootView:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "RevenueCatUI.CustomerCenterViewController?",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CustomerCenterViewController",
-                    "printedName": "RevenueCatUI.CustomerCenterViewController",
-                    "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "NSCoder",
-                "printedName": "Foundation.NSCoder",
-                "usr": "c:objc(cs)NSCoder"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CustomerCenterView",
-                "printedName": "RevenueCatUI.CustomerCenterView",
-                "usr": "s:12RevenueCatUI18CustomerCenterViewV"
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC5coder04rootF0ACSgSo7NSCoderC_AA0deF0Vtcfc",
-            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC5coder04rootF0ACSgSo7NSCoderC_AA0deF0Vtcfc",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
             "moduleName": "RevenueCatUI",
             "overriding": true,
             "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
               "Preconcurrency",
               "Custom",
               "Override"
@@ -4747,24 +4827,25 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:12RevenueCatUI28CustomerCenterViewControllerC",
+        "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController",
         "mangledName": "$s12RevenueCatUI28CustomerCenterViewControllerC",
         "moduleName": "RevenueCatUI",
         "intro_iOS": "15.0",
+        "objc_name": "RCCustomerCenterViewController",
         "declAttributes": [
           "Preconcurrency",
           "Custom",
           "AccessControl",
+          "ObjC",
           "Available",
           "Available",
           "Available",
           "Available",
           "RawDocComment"
         ],
-        "superclassUsr": "s:7SwiftUI19UIHostingControllerC",
+        "superclassUsr": "c:objc(cs)UIViewController",
         "hasMissingDesignatedInitializers": true,
         "superclassNames": [
-          "SwiftUI.UIHostingController<RevenueCatUI.CustomerCenterView>",
           "UIKit.UIViewController",
           "UIKit.UIResponder",
           "ObjectiveC.NSObject"
@@ -4839,20 +4920,485 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CustomerCenterViewControllerDelegate",
+        "printedName": "CustomerCenterViewControllerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "customerCenterViewControllerDidStartRestore",
+            "printedName": "customerCenterViewControllerDidStartRestore(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewControllerDidStartRestore:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG15DidStartRestoreyyAA0defG0CF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewControllerDidStartRestore:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didFinishRestoringWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerInfo",
+                "printedName": "RevenueCat.CustomerInfo",
+                "usr": "c:@M@RevenueCat@objc(cs)RCCustomerInfo"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didFinishRestoringWithCustomerInfo:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_22didFinishRestoringWithyAA0defG0C_0aB00D4InfoCtF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didFinishRestoringWithCustomerInfo:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didFailRestoringWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSError",
+                "printedName": "Foundation.NSError",
+                "usr": "c:objc(cs)NSError"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didFailRestoringWithError:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_20didFailRestoringWithyAA0defG0C_So7NSErrorCtF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didFailRestoringWithError:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewControllerDidShowManageSubscriptions",
+            "printedName": "customerCenterViewControllerDidShowManageSubscriptions(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewControllerDidShowManageSubscriptions:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG26DidShowManageSubscriptionsyyAA0defG0CF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewControllerDidShowManageSubscriptions:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didStartRefundRequestFor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didStartRefundRequestForProductId:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_24didStartRefundRequestForyAA0defG0C_SStF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didStartRefundRequestForProductId:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didCompleteRefundRequestFor:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RefundRequestStatus",
+                "printedName": "RevenueCat.RefundRequestStatus",
+                "usr": "c:@M@RevenueCat@E@RCRefundRequestStatus"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didCompleteRefundRequestForProductId:withStatus:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_27didCompleteRefundRequestFor4withyAA0defG0C_SS0aB00lM6StatusOtF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didCompleteRefundRequestForProductId:withStatus:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didCompleteFeedbackSurveyWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didCompleteFeedbackSurveyWithOptionId:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_29didCompleteFeedbackSurveyWithyAA0defG0C_SStF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didCompleteFeedbackSurveyWithOptionId:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didSelectChangePlansWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didSelectChangePlansWithOptionId:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_24didSelectChangePlansWithyAA0defG0C_SStF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didSelectChangePlansWithOptionId:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewController",
+            "printedName": "customerCenterViewController(_:didSelectCustomActionWith:purchaseIdentifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewController:didSelectCustomActionWithIdentifier:purchaseIdentifier:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG0_25didSelectCustomActionWith18purchaseIdentifieryAA0defG0C_S2SSgtF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewController:didSelectCustomActionWithIdentifier:purchaseIdentifier:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewControllerDidSucceedWithPromotionalOffer",
+            "printedName": "customerCenterViewControllerDidSucceedWithPromotionalOffer(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewControllerDidSucceedWithPromotionalOffer:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG30DidSucceedWithPromotionalOfferyyAA0defG0CF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewControllerDidSucceedWithPromotionalOffer:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customerCenterViewControllerWasDismissed",
+            "printedName": "customerCenterViewControllerWasDismissed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerCenterViewController",
+                "printedName": "RevenueCatUI.CustomerCenterViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCCustomerCenterViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate(im)customerCenterViewControllerWasDismissed:",
+            "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP08customerefG12WasDismissedyyAA0defG0CF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.CustomerCenterViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "customerCenterViewControllerWasDismissed:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@RevenueCatUI@objc(pl)RCCustomerCenterViewControllerDelegate",
+        "mangledName": "$s12RevenueCatUI36CustomerCenterViewControllerDelegateP",
+        "moduleName": "RevenueCatUI",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "intro_iOS": "15.0",
+        "objc_name": "RCCustomerCenterViewControllerDelegate",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
-            "name": "_UIHostingViewable",
-            "printedName": "_UIHostingViewable",
-            "usr": "s:7SwiftUI18_UIHostingViewableP",
-            "mangledName": "$s7SwiftUI18_UIHostingViewableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -4938,6 +5484,344 @@
         "moduleName": "RevenueCatUI",
         "declAttributes": [
           "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CustomVariableValue",
+        "printedName": "CustomVariableValue",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "string",
+            "printedName": "string(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomVariableValue",
+                "printedName": "RevenueCatUI.CustomVariableValue",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV6stringyACSSFZ",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV6stringyACSSFZ",
+            "moduleName": "RevenueCatUI",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV06stringF0SSvp",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV06stringF0SSvp",
+            "moduleName": "RevenueCatUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV06stringF0SSvg",
+                "mangledName": "$s12RevenueCatUI19CustomVariableValueV06stringF0SSvg",
+                "moduleName": "RevenueCatUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomVariableValue",
+                "printedName": "RevenueCatUI.CustomVariableValue",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomVariableValue",
+                "printedName": "RevenueCatUI.CustomVariableValue",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV2eeoiySbAC_ACtFZ",
+            "moduleName": "RevenueCatUI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV04hashF0Sivp",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV04hashF0Sivp",
+            "moduleName": "RevenueCatUI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV04hashF0Sivg",
+                "mangledName": "$s12RevenueCatUI19CustomVariableValueV04hashF0Sivg",
+                "moduleName": "RevenueCatUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV4hash4intoys6HasherVz_tF",
+            "moduleName": "RevenueCatUI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomVariableValue",
+                "printedName": "RevenueCatUI.CustomVariableValue",
+                "usr": "s:12RevenueCatUI19CustomVariableValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12RevenueCatUI19CustomVariableValueV13stringLiteralACSS_tcfc",
+            "mangledName": "$s12RevenueCatUI19CustomVariableValueV13stringLiteralACSS_tcfc",
+            "moduleName": "RevenueCatUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12RevenueCatUI19CustomVariableValueV",
+        "mangledName": "$s12RevenueCatUI19CustomVariableValueV",
+        "moduleName": "RevenueCatUI",
+        "intro_Macosx": "12.0",
+        "intro_iOS": "15.0",
+        "intro_tvOS": "15.0",
+        "intro_watchOS": "8.0",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
         ]
       },
       {
@@ -7062,6 +7946,20 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7074,6 +7972,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -7898,6 +8803,181 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "customVariables",
+            "printedName": "customVariables",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomVariableValue",
+                    "printedName": "RevenueCatUI.CustomVariableValue",
+                    "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvp",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvp",
+            "moduleName": "RevenueCatUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CustomVariableValue",
+                        "printedName": "RevenueCatUI.CustomVariableValue",
+                        "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvg",
+                "mangledName": "$s12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvg",
+                "moduleName": "RevenueCatUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CustomVariableValue",
+                        "printedName": "RevenueCatUI.CustomVariableValue",
+                        "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvs",
+                "mangledName": "$s12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvs",
+                "moduleName": "RevenueCatUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvM",
+                "mangledName": "$s12RevenueCatUI21PaywallViewControllerC15customVariablesSDySSAA19CustomVariableValueVGvM",
+                "moduleName": "RevenueCatUI",
+                "implicit": true,
+                "intro_Macosx": "12.0",
+                "intro_iOS": "15.0",
+                "intro_tvOS": "15.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setCustomVariable",
+            "printedName": "setCustomVariable(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCPaywallViewController(im)setCustomVariable:forKey:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC17setCustomVariable_6forKeyySS_SStF",
+            "moduleName": "RevenueCatUI",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(offering:displayCloseButton:shouldBlockTouchEvents:dismissRequestedHandler:)",
@@ -8503,6 +9583,39 @@
           },
           {
             "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(cs)RCPaywallViewController(im)viewWillAppear:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC14viewWillAppearyySbF",
+            "moduleName": "RevenueCatUI",
+            "overriding": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "viewDidDisappear",
             "printedName": "viewDidDisappear(_:)",
             "children": [
@@ -8985,6 +10098,139 @@
               "Override"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentationControllerShouldDismiss",
+            "printedName": "presentationControllerShouldDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RevenueCatUI@objc(cs)RCPaywallViewController(im)presentationControllerShouldDismiss:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC012presentationF13ShouldDismissySbSo014UIPresentationF0CF",
+            "moduleName": "RevenueCatUI",
+            "objc_name": "presentationControllerShouldDismiss:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentationControllerDidAttemptToDismiss",
+            "printedName": "presentationControllerDidAttemptToDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RevenueCatUI@objc(cs)RCPaywallViewController(im)presentationControllerDidAttemptToDismiss:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC012presentationF19DidAttemptToDismissyySo014UIPresentationF0CF",
+            "moduleName": "RevenueCatUI",
+            "objc_name": "presentationControllerDidAttemptToDismiss:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentationControllerWillDismiss",
+            "printedName": "presentationControllerWillDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RevenueCatUI@objc(cs)RCPaywallViewController(im)presentationControllerWillDismiss:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC012presentationF11WillDismissyySo014UIPresentationF0CF",
+            "moduleName": "RevenueCatUI",
+            "objc_name": "presentationControllerWillDismiss:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentationControllerDidDismiss",
+            "printedName": "presentationControllerDidDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RevenueCatUI@objc(cs)RCPaywallViewController(im)presentationControllerDidDismiss:",
+            "mangledName": "$s12RevenueCatUI21PaywallViewControllerC012presentationF10DidDismissyySo014UIPresentationF0CF",
+            "moduleName": "RevenueCatUI",
+            "objc_name": "presentationControllerDidDismiss:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -9082,6 +10328,20 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9501,6 +10761,45 @@
             "sugared_genericSig": "<Self where Self : RevenueCatUI.PaywallViewControllerDelegate>",
             "protocolReq": true,
             "objc_name": "paywallViewController:didChangeSizeTo:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "paywallViewController",
+            "printedName": "paywallViewController(_:willPresentExitOfferController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaywallViewController",
+                "printedName": "RevenueCatUI.PaywallViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCPaywallViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaywallViewController",
+                "printedName": "RevenueCatUI.PaywallViewController",
+                "usr": "c:@M@RevenueCatUI@objc(cs)RCPaywallViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RevenueCatUI@objc(pl)RCPaywallViewControllerDelegate(im)paywallViewController:willPresentExitOfferController:",
+            "mangledName": "$s12RevenueCatUI29PaywallViewControllerDelegateP07paywalleF0_020willPresentExitOfferF0yAA0deF0C_AGtF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : RevenueCatUI.PaywallViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : RevenueCatUI.PaywallViewControllerDelegate>",
+            "protocolReq": true,
+            "objc_name": "paywallViewController:willPresentExitOfferController:",
             "declAttributes": [
               "Optional",
               "ObjC",
@@ -11647,6 +12946,30 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
@@ -11737,6 +13060,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -13415,6 +14745,60 @@
             "declKind": "Func",
             "usr": "s:7SwiftUI4ViewP010RevenueCatB0E36onCustomerCenterCustomActionSelectedyQrySS_SSSgtcF",
             "mangledName": "$s7SwiftUI4ViewP010RevenueCatB0E36onCustomerCenterCustomActionSelectedyQrySS_SSSgtcF",
+            "moduleName": "RevenueCatUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customPaywallVariables",
+            "printedName": "customPaywallVariables(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomVariableValue",
+                    "printedName": "RevenueCatUI.CustomVariableValue",
+                    "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP010RevenueCatB0E22customPaywallVariablesyQrSDySSAD19CustomVariableValueVGF",
+            "mangledName": "$s7SwiftUI4ViewP010RevenueCatB0E22customPaywallVariablesyQrSDySSAD19CustomVariableValueVGF",
             "moduleName": "RevenueCatUI",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
             "sugared_genericSig": "<Self where Self : SwiftUI.View>",
@@ -17771,6 +19155,207 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "EnvironmentValues",
+        "printedName": "EnvironmentValues",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "customPaywallVariables",
+            "printedName": "customPaywallVariables",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CustomVariableValue",
+                    "printedName": "RevenueCatUI.CustomVariableValue",
+                    "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvp",
+            "mangledName": "$s7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvp",
+            "moduleName": "RevenueCatUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CustomVariableValue",
+                        "printedName": "RevenueCatUI.CustomVariableValue",
+                        "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvg",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvg",
+                "moduleName": "RevenueCatUI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : RevenueCatUI.CustomVariableValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CustomVariableValue",
+                        "printedName": "RevenueCatUI.CustomVariableValue",
+                        "usr": "s:12RevenueCatUI19CustomVariableValueV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvs",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvs",
+                "moduleName": "RevenueCatUI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvM",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV010RevenueCatB0E22customPaywallVariablesSDySSAD19CustomVariableValueVGvM",
+                "moduleName": "RevenueCatUI",
+                "implicit": true,
+                "intro_Macosx": "12.0",
+                "intro_iOS": "15.0",
+                "intro_tvOS": "15.0",
+                "intro_watchOS": "8.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SwiftUI17EnvironmentValuesV",
+        "mangledName": "$s7SwiftUI17EnvironmentValuesV",
+        "moduleName": "SwiftUICore",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Appearance",
         "printedName": "Appearance",
         "children": [
@@ -19493,6 +21078,102 @@
             "mangledName": "$ss16SendableMetatypeP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AVPlayer",
+        "printedName": "AVPlayer",
+        "declKind": "Class",
+        "usr": "c:objc(cs)AVPlayer",
+        "moduleName": "AVFoundation",
+        "isOpen": true,
+        "intro_iOS": "4.0",
+        "objc_name": "AVPlayer",
+        "declAttributes": [
+          "Preconcurrency",
+          "Available",
+          "ObjC",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Observable",
+            "printedName": "Observable",
+            "usr": "s:11Observation10ObservableP",
+            "mangledName": "$s11Observation10ObservableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -20075,9 +21756,16 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/Views\/UIKit Compatibility\/CustomerCenterViewController.swift",
       "kind": "Array",
-      "offset": 1402,
+      "offset": 1417,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/Views\/UIKit Compatibility\/CustomerCenterViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9916,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/ViewModels\/CustomerCenterViewModel.swift",
@@ -20458,6 +22146,13 @@
       "value": "\"test_store\""
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/CustomPaywallVariables.swift",
+      "kind": "Dictionary",
+      "offset": 3943,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/DisplayableColor.swift",
       "kind": "BooleanLiteral",
       "offset": 1755,
@@ -20481,7 +22176,7 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/FileImageLoader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1081,
+      "offset": 1109,
       "length": 5,
       "value": "false"
     },
@@ -20901,21 +22596,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6979,
+      "offset": 7128,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8216,
+      "offset": 8365,
       "length": 3,
       "value": "1.5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8249,
+      "offset": 8398,
       "length": 5,
       "value": "false"
     },
@@ -21188,35 +22883,42 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 2457,
+      "offset": 2447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 5125,
+      "offset": 2915,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 5614,
+      "offset": 5583,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 6090,
+      "offset": 6072,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 6875,
+      "offset": 6548,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Package+VariableDataProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7333,
       "length": 5,
       "value": "false"
     },
@@ -21293,21 +22995,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PaywallPromoOfferCache.swift",
       "kind": "Dictionary",
-      "offset": 830,
+      "offset": 874,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PaywallPromoOfferCache.swift",
       "kind": "BooleanLiteral",
-      "offset": 884,
+      "offset": 943,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 3304,
+      "offset": 3377,
       "length": 5,
       "value": "false"
     },
@@ -21411,57 +23113,85 @@
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2511,
+      "length": 64,
+      "value": "\"Custom variables can only be set before presenting the paywall\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
+      "kind": "Dictionary",
+      "offset": 2443,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2126,
+      "offset": 4576,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2172,
+      "offset": 4718,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3770,
+      "offset": 5849,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3816,
+      "offset": 5895,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5274,
+      "offset": 7493,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5320,
+      "offset": 7539,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7155,
+      "offset": 8997,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7201,
+      "offset": 9043,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10878,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10924,
       "length": 5,
       "value": "false"
     },
@@ -21531,21 +23261,28 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 3416,
+      "offset": 3415,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 4539,
+      "offset": 4071,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4760,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 19661,
+      "offset": 23749,
       "length": 5,
       "value": "false"
     },
@@ -22155,6 +23892,13 @@
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "BooleanLiteral",
       "offset": 2366,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3294,
       "length": 5,
       "value": "false"
     },
@@ -22847,49 +24591,133 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
       "kind": "StringLiteral",
-      "offset": 37966,
+      "offset": 5912,
+      "length": 7,
+      "value": "\"Coins\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "FloatLiteral",
+      "offset": 5936,
+      "length": 4,
+      "value": "4.99"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 5964,
+      "length": 5,
+      "value": "\"USD\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 6001,
+      "length": 7,
+      "value": "\"$4.99\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 6037,
+      "length": 33,
+      "value": "\"com.revenuecat.consumable_coins\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 6136,
+      "length": 11,
+      "value": "\"100 Coins\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 8738,
+      "length": 12,
+      "value": "\"consumable\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
+      "kind": "StringLiteral",
+      "offset": 38572,
       "length": 7,
       "value": "\"en_US\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
       "kind": "StringLiteral",
-      "offset": 38020,
+      "offset": 38626,
       "length": 10,
       "value": "\"offering\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
       "kind": "StringLiteral",
-      "offset": 38159,
+      "offset": 38765,
       "length": 7,
       "value": "\"$0.00\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
       "kind": "StringLiteral",
-      "offset": 39433,
+      "offset": 40039,
       "length": 7,
       "value": "\"zh_TW\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/TestData.swift",
       "kind": "StringLiteral",
-      "offset": 39487,
+      "offset": 40093,
       "length": 7,
       "value": "\"th_TH\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 1816,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 4170,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 4239,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 5328,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 5397,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 10415,
+      "offset": 11102,
       "length": 12,
       "value": "\"sans-serif\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 10489,
+      "offset": 11176,
       "length": 4,
       "value": "true"
     },
@@ -22959,7 +24787,7 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/UIConfigProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 1579,
+      "offset": 2998,
       "length": 4,
       "value": "true"
     },
@@ -22973,623 +24801,644 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4826,
+      "offset": 668,
+      "length": 9,
+      "value": "\"custom.\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
+      "kind": "Dictionary",
+      "offset": 1475,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
+      "kind": "Dictionary",
+      "offset": 1544,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
+      "kind": "StringLiteral",
+      "offset": 6881,
       "length": 5,
       "value": "\"day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4849,
+      "offset": 6904,
       "length": 7,
       "value": "\"daily\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4877,
+      "offset": 6932,
       "length": 11,
       "value": "\"day_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4905,
+      "offset": 6960,
       "length": 6,
       "value": "\"week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4930,
+      "offset": 6985,
       "length": 8,
       "value": "\"weekly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4960,
+      "offset": 7015,
       "length": 12,
       "value": "\"week_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 4990,
+      "offset": 7045,
       "length": 7,
       "value": "\"month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5017,
+      "offset": 7072,
       "length": 9,
       "value": "\"monthly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5049,
+      "offset": 7104,
       "length": 13,
       "value": "\"month_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5079,
+      "offset": 7134,
       "length": 6,
       "value": "\"year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5104,
+      "offset": 7159,
       "length": 8,
       "value": "\"yearly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5134,
+      "offset": 7189,
       "length": 12,
       "value": "\"year_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5165,
+      "offset": 7220,
       "length": 8,
       "value": "\"annual\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5194,
+      "offset": 7249,
       "length": 10,
       "value": "\"annually\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5228,
+      "offset": 7283,
       "length": 14,
       "value": "\"annual_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5264,
+      "offset": 7319,
       "length": 12,
       "value": "\"free_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5296,
+      "offset": 7351,
       "length": 9,
       "value": "\"percent\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5328,
+      "offset": 7383,
       "length": 14,
       "value": "\"num_day_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5364,
+      "offset": 7419,
       "length": 13,
       "value": "\"num_day_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5399,
+      "offset": 7454,
       "length": 13,
       "value": "\"num_day_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5434,
+      "offset": 7489,
       "length": 13,
       "value": "\"num_day_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5470,
+      "offset": 7525,
       "length": 14,
       "value": "\"num_day_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5508,
+      "offset": 7563,
       "length": 15,
       "value": "\"num_day_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5547,
+      "offset": 7602,
       "length": 15,
       "value": "\"num_week_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5585,
+      "offset": 7640,
       "length": 14,
       "value": "\"num_week_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5622,
+      "offset": 7677,
       "length": 14,
       "value": "\"num_week_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5659,
+      "offset": 7714,
       "length": 14,
       "value": "\"num_week_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5697,
+      "offset": 7752,
       "length": 15,
       "value": "\"num_week_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5737,
+      "offset": 7792,
       "length": 16,
       "value": "\"num_week_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5778,
+      "offset": 7833,
       "length": 16,
       "value": "\"num_month_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5818,
+      "offset": 7873,
       "length": 15,
       "value": "\"num_month_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5857,
+      "offset": 7912,
       "length": 15,
       "value": "\"num_month_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5896,
+      "offset": 7951,
       "length": 15,
       "value": "\"num_month_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5936,
+      "offset": 7991,
       "length": 16,
       "value": "\"num_month_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 5978,
+      "offset": 8033,
       "length": 17,
       "value": "\"num_month_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6019,
+      "offset": 8074,
       "length": 15,
       "value": "\"num_year_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6057,
+      "offset": 8112,
       "length": 14,
       "value": "\"num_year_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6094,
+      "offset": 8149,
       "length": 14,
       "value": "\"num_year_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6131,
+      "offset": 8186,
       "length": 14,
       "value": "\"num_year_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6169,
+      "offset": 8224,
       "length": 15,
       "value": "\"num_year_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6209,
+      "offset": 8264,
       "length": 16,
       "value": "\"num_year_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6250,
+      "offset": 8305,
       "length": 16,
       "value": "\"num_days_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6292,
+      "offset": 8347,
       "length": 17,
       "value": "\"num_weeks_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6336,
+      "offset": 8391,
       "length": 18,
       "value": "\"num_months_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6380,
+      "offset": 8435,
       "length": 17,
       "value": "\"num_years_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6520,
+      "offset": 8575,
       "length": 23,
       "value": "\"product.currency_code\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6577,
+      "offset": 8632,
       "length": 25,
       "value": "\"product.currency_symbol\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6630,
+      "offset": 8685,
       "length": 18,
       "value": "\"product.periodly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6673,
+      "offset": 8728,
       "length": 15,
       "value": "\"product.price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6722,
+      "offset": 8777,
       "length": 26,
       "value": "\"product.price_per_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6793,
+      "offset": 8848,
       "length": 38,
       "value": "\"product.price_per_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6862,
+      "offset": 8917,
       "length": 23,
       "value": "\"product.price_per_day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6917,
+      "offset": 8972,
       "length": 24,
       "value": "\"product.price_per_week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 6974,
+      "offset": 9029,
       "length": 25,
       "value": "\"product.price_per_month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7031,
+      "offset": 9086,
       "length": 24,
       "value": "\"product.price_per_year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7081,
+      "offset": 9136,
       "length": 16,
       "value": "\"product.period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7134,
+      "offset": 9189,
       "length": 28,
       "value": "\"product.period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7194,
+      "offset": 9249,
       "length": 24,
       "value": "\"product.period_in_days\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7251,
+      "offset": 9306,
       "length": 25,
       "value": "\"product.period_in_weeks\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7310,
+      "offset": 9365,
       "length": 26,
       "value": "\"product.period_in_months\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7369,
+      "offset": 9424,
       "length": 25,
       "value": "\"product.period_in_years\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7428,
+      "offset": 9483,
       "length": 26,
       "value": "\"product.period_with_unit\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7484,
+      "offset": 9539,
       "length": 21,
       "value": "\"product.offer_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7541,
+      "offset": 9596,
       "length": 29,
       "value": "\"product.offer_price_per_day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7607,
+      "offset": 9662,
       "length": 30,
       "value": "\"product.offer_price_per_week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7675,
+      "offset": 9730,
       "length": 31,
       "value": "\"product.offer_price_per_month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7743,
+      "offset": 9798,
       "length": 30,
       "value": "\"product.offer_price_per_year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7804,
+      "offset": 9859,
       "length": 22,
       "value": "\"product.offer_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7868,
+      "offset": 9923,
       "length": 34,
       "value": "\"product.offer_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7939,
+      "offset": 9994,
       "length": 30,
       "value": "\"product.offer_period_in_days\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8007,
+      "offset": 10062,
       "length": 31,
       "value": "\"product.offer_period_in_weeks\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8077,
+      "offset": 10132,
       "length": 32,
       "value": "\"product.offer_period_in_months\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8147,
+      "offset": 10202,
       "length": 31,
       "value": "\"product.offer_period_in_years\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8217,
+      "offset": 10272,
       "length": 32,
       "value": "\"product.offer_period_with_unit\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8281,
+      "offset": 10336,
       "length": 24,
       "value": "\"product.offer_end_date\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8344,
+      "offset": 10399,
       "length": 31,
       "value": "\"product.secondary_offer_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8415,
+      "offset": 10470,
       "length": 32,
       "value": "\"product.secondary_offer_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8498,
+      "offset": 10553,
       "length": 44,
       "value": "\"product.secondary_offer_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8578,
+      "offset": 10633,
       "length": 27,
       "value": "\"product.relative_discount\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8641,
+      "offset": 10696,
       "length": 28,
       "value": "\"product.store_product_name\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8727,
+      "offset": 10782,
       "length": 22,
       "value": "\"count_days_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8782,
+      "offset": 10837,
       "length": 25,
       "value": "\"count_days_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8838,
+      "offset": 10893,
       "length": 23,
       "value": "\"count_hours_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8895,
+      "offset": 10950,
       "length": 26,
       "value": "\"count_hours_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8954,
+      "offset": 11009,
       "length": 25,
       "value": "\"count_minutes_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9015,
+      "offset": 11070,
       "length": 28,
       "value": "\"count_minutes_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9076,
+      "offset": 11131,
       "length": 25,
       "value": "\"count_seconds_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9137,
+      "offset": 11192,
       "length": 28,
       "value": "\"count_seconds_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 35259,
+      "offset": 40824,
       "length": 27,
       "value": "\"\\{\\{\\s*(.*?)\\s*\\}\\}\""
     },
@@ -23650,6 +25499,13 @@
       "value": "16"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoAutoplayHandler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1074,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoComponentViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 7111,
@@ -23708,56 +25564,56 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 3169,
+      "offset": 3102,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 5908,
+      "offset": 5841,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 8312,
+      "offset": 8245,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "Array",
-      "offset": 11175,
+      "offset": 11108,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14363,
+      "offset": 14296,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14533,
+      "offset": 14466,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14727,
+      "offset": 14660,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/git\/swift\/revenuecatbindings\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14739,
+      "offset": 14672,
       "length": 2,
       "value": "10"
     },
