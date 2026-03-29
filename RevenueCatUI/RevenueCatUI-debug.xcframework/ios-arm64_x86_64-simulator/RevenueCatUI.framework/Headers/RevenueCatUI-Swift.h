@@ -336,6 +336,7 @@ SWIFT_CLASS_NAMED("CustomerCenterViewController") SWIFT_AVAILABILITY(watchos,una
 
 @class RCCustomerInfo;
 @class NSError;
+@class RCStoreTransaction;
 /// Delegate protocol for <code>CustomerCenterViewController</code>.
 /// Use this delegate for Objective-C compatibility. Swift users can alternatively use the
 /// closure-based initializer.
@@ -344,6 +345,9 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 @optional
 /// Called when a restore operation starts.
 - (void)customerCenterViewControllerDidStartRestore:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a restore operation is about to start.
+/// The <code>resume</code> closure must be called with <code>true</code> to proceed or <code>false</code> to cancel.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didInitiateRestoreWithResume:(void (^ _Nonnull)(BOOL))resume;
 /// Called when a restore operation completes successfully.
 - (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFinishRestoringWithCustomerInfo:(RCCustomerInfo * _Nonnull)customerInfo;
 /// Called when a restore operation fails.
@@ -361,7 +365,18 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 /// Called when a custom action is selected.
 - (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectCustomActionWithIdentifier:(NSString * _Nonnull)actionIdentifier purchaseIdentifier:(NSString * _Nullable)purchaseIdentifier;
 /// Called when a promotional offer succeeds.
+/// note:
+/// Prefer <code>customerCenterViewController(_:didSucceedWithPromotionalOffer:customerInfo:transaction:)</code>
+/// which also provides purchase details. If both methods are implemented, both will be called
+/// on a successful promotional offer purchase.
 - (void)customerCenterViewControllerDidSucceedWithPromotionalOffer:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a promotional offer purchase completes successfully,
+/// providing the resulting customer info, transaction, and the promotional offer identifier.
+/// note:
+/// If the delegate also implements
+/// <code>customerCenterViewControllerDidSucceedWithPromotionalOffer(_:)</code>,
+/// both methods will be called.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSucceedWithPromotionalOffer:(NSString * _Nonnull)offerId customerInfo:(RCCustomerInfo * _Nonnull)customerInfo transaction:(RCStoreTransaction * _Nonnull)transaction;
 /// Called when the Customer Center is dismissed.
 /// Make sure to call dismiss(animated: ) on the CustomerCenterViewController to actually dismiss
 /// the Customer Center.
@@ -370,6 +385,7 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 
 @protocol RCPaywallViewControllerDelegate;
 @class RCOffering;
+@protocol RCPaywallPurchaseHandler;
 @class RCPresentedOfferingContext;
 @class UITouch;
 @class UIEvent;
@@ -398,6 +414,18 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// \param key The variable key (without the <code>custom.</code> prefix).
 ///
 - (void)setCustomVariable:(NSString * _Nonnull)value forKey:(NSString * _Nonnull)key;
+/// Sets a numeric custom variable value for the given key.
+/// \param value The numeric value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariableNumber:(double)value forKey:(NSString * _Nonnull)key;
+/// Sets a boolean custom variable value for the given key.
+/// \param value The boolean value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariableBool:(BOOL)value forKey:(NSString * _Nonnull)key;
 /// Initialize a <code>PaywallViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired paywall to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -410,6 +438,23 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// after a successful purchase. Otherwise use this handler to handle dismissals of the paywall
 ///
 - (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
+/// Objective-C compatible initializer that accepts a <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+/// \param offering The <code>Offering</code> containing the desired paywall to display.
+/// <code>Offerings.current</code> will be used by default.
+///
+/// \param displayCloseButton Set this to <code>true</code> to automatically include a close button.
+///
+/// \param shouldBlockTouchEvents Whether to intercept all touch events propagated through this VC.
+///
+/// \param purchaseHandler An object implementing <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic. Only used when <code>Purchases</code> has been configured with
+/// <code>.with(purchasesAreCompletedBy: .myApp)</code>.
+///
+/// \param dismissRequestedHandler If this is not set, the paywall will close itself automatically
+/// after a successful purchase. Otherwise use this handler to handle dismissals of the paywall.
+///
+- (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents purchaseHandler:(id <RCPaywallPurchaseHandler> _Nullable)purchaseHandler dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
@@ -443,6 +488,23 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// <code>PaywallView</code> for <code>SwiftUI</code>.
 SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallFooterViewController : RCPaywallViewController
+/// Objective-C compatible initializer that accepts a <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+/// important:
+/// <code>purchaseHandler</code> is only used when <code>Purchases</code> has been configured with
+/// <code>.with(purchasesAreCompletedBy: .myApp)</code>. Otherwise, the default purchase and restore
+/// implementations are used and the handler is ignored.
+/// \param offering The <code>Offering</code> containing the desired <code>PaywallData</code> to display.
+/// <code>Offerings.current</code> will be used by default.
+///
+/// \param purchaseHandler An object implementing <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+///
+/// \param dismissRequestedHandler If this is not set, the paywall footer will close itself
+/// automatically after a successful purchase. Otherwise use this handler to handle dismissals
+/// of the paywall.
+///
+- (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering purchaseHandler:(id <RCPaywallPurchaseHandler> _Nullable)purchaseHandler dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler OBJC_DESIGNATED_INITIALIZER;
 /// Initialize a <code>PaywallFooterViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired <code>PaywallData</code> to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -471,6 +533,42 @@ SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introdu
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class RCPackage;
+/// Objective-C compatible protocol for handling custom purchase and restore logic.
+/// Implement this protocol to provide custom purchase and restore behavior when <code>Purchases</code>
+/// has been configured with <code>.with(purchasesAreCompletedBy: .myApp)</code>.
+/// Pass an instance to the <code>PaywallViewController</code> or <code>PaywallFooterViewController</code>
+/// initializer via the <code>purchaseHandler</code> parameter.
+SWIFT_PROTOCOL_NAMED("PaywallPurchaseHandler") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@protocol RCPaywallPurchaseHandler
+/// Performs a purchase for the given package.
+/// \param package The <code>Package</code> to purchase.
+///
+/// \param completion Must be called when the purchase completes.
+/// <ul>
+///   <li>
+///     <code>userCancelled</code>: <code>true</code> if the user cancelled the purchase; otherwise, <code>false</code>.
+///   </li>
+///   <li>
+///     <code>error</code>: An optional error that occurred during the purchase, or <code>nil</code> if none.
+///   </li>
+/// </ul>
+///
+- (void)performPurchaseFor:(RCPackage * _Nonnull)package completion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
+/// Performs a restore operation.
+/// \param completion Must be called when the restore completes.
+/// <ul>
+///   <li>
+///     <code>success</code>: <code>true</code> if the restore succeeded; otherwise, <code>false</code>.
+///   </li>
+///   <li>
+///     <code>error</code>: An optional error that occurred during the restore, or <code>nil</code> if none.
+///   </li>
+/// </ul>
+///
+- (void)performRestoreWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
+@end
+
 @class UIPresentationController;
 SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallViewController (SWIFT_EXTENSION(RevenueCatUI)) <UIAdaptivePresentationControllerDelegate>
@@ -480,8 +578,6 @@ SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.
 - (void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
-@class RCPackage;
-@class RCStoreTransaction;
 /// Delegate for <code>PaywallViewController</code>.
 SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @protocol RCPaywallViewControllerDelegate
@@ -521,6 +617,14 @@ SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,in
 /// \param exitOfferController The new <code>PaywallViewController</code> that will present the exit offer.
 ///
 - (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller willPresentExitOfferController:(RCPaywallViewController * _Nonnull)exitOfferController;
+/// Notifies that a purchase is about to be initiated, before the payment sheet is displayed.
+/// This allows the delegate to gate the purchase flow (e.g., requiring authentication).
+/// The <code>resume</code> closure <em>must</em> be called to either proceed (<code>true</code>) or cancel (<code>false</code>) the purchase.
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didInitiatePurchaseWithPackage:(RCPackage * _Nonnull)package resume:(void (^ _Nonnull)(BOOL))resume;
+/// Notifies that a restore is about to be initiated.
+/// This allows the delegate to gate the restore flow (e.g., requiring authentication).
+/// The <code>resume</code> closure <em>must</em> be called to either proceed (<code>true</code>) or cancel (<code>false</code>) the restore.
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didInitiateRestoreWithResume:(void (^ _Nonnull)(BOOL))resume;
 @end
 
 #endif
@@ -869,6 +973,7 @@ SWIFT_CLASS_NAMED("CustomerCenterViewController") SWIFT_AVAILABILITY(watchos,una
 
 @class RCCustomerInfo;
 @class NSError;
+@class RCStoreTransaction;
 /// Delegate protocol for <code>CustomerCenterViewController</code>.
 /// Use this delegate for Objective-C compatibility. Swift users can alternatively use the
 /// closure-based initializer.
@@ -877,6 +982,9 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 @optional
 /// Called when a restore operation starts.
 - (void)customerCenterViewControllerDidStartRestore:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a restore operation is about to start.
+/// The <code>resume</code> closure must be called with <code>true</code> to proceed or <code>false</code> to cancel.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didInitiateRestoreWithResume:(void (^ _Nonnull)(BOOL))resume;
 /// Called when a restore operation completes successfully.
 - (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didFinishRestoringWithCustomerInfo:(RCCustomerInfo * _Nonnull)customerInfo;
 /// Called when a restore operation fails.
@@ -894,7 +1002,18 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 /// Called when a custom action is selected.
 - (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSelectCustomActionWithIdentifier:(NSString * _Nonnull)actionIdentifier purchaseIdentifier:(NSString * _Nullable)purchaseIdentifier;
 /// Called when a promotional offer succeeds.
+/// note:
+/// Prefer <code>customerCenterViewController(_:didSucceedWithPromotionalOffer:customerInfo:transaction:)</code>
+/// which also provides purchase details. If both methods are implemented, both will be called
+/// on a successful promotional offer purchase.
 - (void)customerCenterViewControllerDidSucceedWithPromotionalOffer:(RCCustomerCenterViewController * _Nonnull)controller;
+/// Called when a promotional offer purchase completes successfully,
+/// providing the resulting customer info, transaction, and the promotional offer identifier.
+/// note:
+/// If the delegate also implements
+/// <code>customerCenterViewControllerDidSucceedWithPromotionalOffer(_:)</code>,
+/// both methods will be called.
+- (void)customerCenterViewController:(RCCustomerCenterViewController * _Nonnull)controller didSucceedWithPromotionalOffer:(NSString * _Nonnull)offerId customerInfo:(RCCustomerInfo * _Nonnull)customerInfo transaction:(RCStoreTransaction * _Nonnull)transaction;
 /// Called when the Customer Center is dismissed.
 /// Make sure to call dismiss(animated: ) on the CustomerCenterViewController to actually dismiss
 /// the Customer Center.
@@ -903,6 +1022,7 @@ SWIFT_PROTOCOL_NAMED("CustomerCenterViewControllerDelegate") SWIFT_AVAILABILITY(
 
 @protocol RCPaywallViewControllerDelegate;
 @class RCOffering;
+@protocol RCPaywallPurchaseHandler;
 @class RCPresentedOfferingContext;
 @class UITouch;
 @class UIEvent;
@@ -931,6 +1051,18 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// \param key The variable key (without the <code>custom.</code> prefix).
 ///
 - (void)setCustomVariable:(NSString * _Nonnull)value forKey:(NSString * _Nonnull)key;
+/// Sets a numeric custom variable value for the given key.
+/// \param value The numeric value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariableNumber:(double)value forKey:(NSString * _Nonnull)key;
+/// Sets a boolean custom variable value for the given key.
+/// \param value The boolean value to set.
+///
+/// \param key The variable key (without the <code>custom.</code> prefix).
+///
+- (void)setCustomVariableBool:(BOOL)value forKey:(NSString * _Nonnull)key;
 /// Initialize a <code>PaywallViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired paywall to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -943,6 +1075,23 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// after a successful purchase. Otherwise use this handler to handle dismissals of the paywall
 ///
 - (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
+/// Objective-C compatible initializer that accepts a <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+/// \param offering The <code>Offering</code> containing the desired paywall to display.
+/// <code>Offerings.current</code> will be used by default.
+///
+/// \param displayCloseButton Set this to <code>true</code> to automatically include a close button.
+///
+/// \param shouldBlockTouchEvents Whether to intercept all touch events propagated through this VC.
+///
+/// \param purchaseHandler An object implementing <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic. Only used when <code>Purchases</code> has been configured with
+/// <code>.with(purchasesAreCompletedBy: .myApp)</code>.
+///
+/// \param dismissRequestedHandler If this is not set, the paywall will close itself automatically
+/// after a successful purchase. Otherwise use this handler to handle dismissals of the paywall.
+///
+- (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering displayCloseButton:(BOOL)displayCloseButton shouldBlockTouchEvents:(BOOL)shouldBlockTouchEvents purchaseHandler:(id <RCPaywallPurchaseHandler> _Nullable)purchaseHandler dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
@@ -976,6 +1125,23 @@ SWIFT_CLASS_NAMED("PaywallViewController") SWIFT_AVAILABILITY(tvos,introduced=15
 /// <code>PaywallView</code> for <code>SwiftUI</code>.
 SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallFooterViewController : RCPaywallViewController
+/// Objective-C compatible initializer that accepts a <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+/// important:
+/// <code>purchaseHandler</code> is only used when <code>Purchases</code> has been configured with
+/// <code>.with(purchasesAreCompletedBy: .myApp)</code>. Otherwise, the default purchase and restore
+/// implementations are used and the handler is ignored.
+/// \param offering The <code>Offering</code> containing the desired <code>PaywallData</code> to display.
+/// <code>Offerings.current</code> will be used by default.
+///
+/// \param purchaseHandler An object implementing <code>PaywallPurchaseHandler</code> for custom
+/// purchase and restore logic.
+///
+/// \param dismissRequestedHandler If this is not set, the paywall footer will close itself
+/// automatically after a successful purchase. Otherwise use this handler to handle dismissals
+/// of the paywall.
+///
+- (nonnull instancetype)initWithOffering:(RCOffering * _Nullable)offering purchaseHandler:(id <RCPaywallPurchaseHandler> _Nullable)purchaseHandler dismissRequestedHandler:(void (^ _Nullable)(RCPaywallViewController * _Nonnull))dismissRequestedHandler OBJC_DESIGNATED_INITIALIZER;
 /// Initialize a <code>PaywallFooterViewController</code> with an optional <code>Offering</code>.
 /// \param offering The <code>Offering</code> containing the desired <code>PaywallData</code> to display.
 /// <code>Offerings.current</code> will be used by default.
@@ -1004,6 +1170,42 @@ SWIFT_CLASS_NAMED("PaywallFooterViewController") SWIFT_AVAILABILITY(tvos,introdu
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class RCPackage;
+/// Objective-C compatible protocol for handling custom purchase and restore logic.
+/// Implement this protocol to provide custom purchase and restore behavior when <code>Purchases</code>
+/// has been configured with <code>.with(purchasesAreCompletedBy: .myApp)</code>.
+/// Pass an instance to the <code>PaywallViewController</code> or <code>PaywallFooterViewController</code>
+/// initializer via the <code>purchaseHandler</code> parameter.
+SWIFT_PROTOCOL_NAMED("PaywallPurchaseHandler") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
+@protocol RCPaywallPurchaseHandler
+/// Performs a purchase for the given package.
+/// \param package The <code>Package</code> to purchase.
+///
+/// \param completion Must be called when the purchase completes.
+/// <ul>
+///   <li>
+///     <code>userCancelled</code>: <code>true</code> if the user cancelled the purchase; otherwise, <code>false</code>.
+///   </li>
+///   <li>
+///     <code>error</code>: An optional error that occurred during the purchase, or <code>nil</code> if none.
+///   </li>
+/// </ul>
+///
+- (void)performPurchaseFor:(RCPackage * _Nonnull)package completion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
+/// Performs a restore operation.
+/// \param completion Must be called when the restore completes.
+/// <ul>
+///   <li>
+///     <code>success</code>: <code>true</code> if the restore succeeded; otherwise, <code>false</code>.
+///   </li>
+///   <li>
+///     <code>error</code>: An optional error that occurred during the restore, or <code>nil</code> if none.
+///   </li>
+/// </ul>
+///
+- (void)performRestoreWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
+@end
+
 @class UIPresentationController;
 SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @interface RCPaywallViewController (SWIFT_EXTENSION(RevenueCatUI)) <UIAdaptivePresentationControllerDelegate>
@@ -1013,8 +1215,6 @@ SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.
 - (void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
-@class RCPackage;
-@class RCStoreTransaction;
 /// Delegate for <code>PaywallViewController</code>.
 SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0)
 @protocol RCPaywallViewControllerDelegate
@@ -1054,6 +1254,14 @@ SWIFT_PROTOCOL_NAMED("PaywallViewControllerDelegate") SWIFT_AVAILABILITY(tvos,in
 /// \param exitOfferController The new <code>PaywallViewController</code> that will present the exit offer.
 ///
 - (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller willPresentExitOfferController:(RCPaywallViewController * _Nonnull)exitOfferController;
+/// Notifies that a purchase is about to be initiated, before the payment sheet is displayed.
+/// This allows the delegate to gate the purchase flow (e.g., requiring authentication).
+/// The <code>resume</code> closure <em>must</em> be called to either proceed (<code>true</code>) or cancel (<code>false</code>) the purchase.
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didInitiatePurchaseWithPackage:(RCPackage * _Nonnull)package resume:(void (^ _Nonnull)(BOOL))resume;
+/// Notifies that a restore is about to be initiated.
+/// This allows the delegate to gate the restore flow (e.g., requiring authentication).
+/// The <code>resume</code> closure <em>must</em> be called to either proceed (<code>true</code>) or cancel (<code>false</code>) the restore.
+- (void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didInitiateRestoreWithResume:(void (^ _Nonnull)(BOOL))resume;
 @end
 
 #endif

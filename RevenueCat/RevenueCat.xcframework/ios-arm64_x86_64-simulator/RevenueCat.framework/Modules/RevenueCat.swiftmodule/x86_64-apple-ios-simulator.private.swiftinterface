@@ -43,7 +43,6 @@ import os
   @_spi(Experimental) @objc public static let rewardedInterstitial: RevenueCat.AdFormat
   @_spi(Experimental) @objc public static let native: RevenueCat.AdFormat
   @_spi(Experimental) @objc public static let appOpen: RevenueCat.AdFormat
-  @_spi(Experimental) @objc public static let mrec: RevenueCat.AdFormat
   #if compiler(>=5.3) && $NonescapableTypes
   @_spi(Experimental) @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   #endif
@@ -420,6 +419,13 @@ extension RevenueCat.Attribution {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func setAppsFlyerConversionData(_ data: [Swift.AnyHashable : Any]?)
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setAppstackAttributionParams(_ data: [Swift.String : Any]?, completion: @escaping (RevenueCat.Offerings?, RevenueCat.PublicError?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.2, *)
+  final public func setAppstackAttributionParams(_ data: [Swift.String : Any]?) async throws -> RevenueCat.Offerings?
+  #endif
 }
 extension RevenueCat.Attribution : @unchecked Swift.Sendable {
 }
@@ -551,16 +557,20 @@ public protocol PaywallPartialComponent : RevenueCat.PaywallComponentBase {
 extension RevenueCat.PaywallComponent {
   public typealias ComponentOverrides<T> = [RevenueCat.PaywallComponent.ComponentOverride<T>] where T : RevenueCat.PaywallPartialComponent
   public struct ComponentOverride<T> : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable where T : RevenueCat.PaywallPartialComponent {
-    public let conditions: [RevenueCat.PaywallComponent.Condition]
+    public var conditions: [RevenueCat.PaywallComponent.Condition] {
+      get
+    }
     public let properties: T
+    @_spi(Internal) public let extendedConditions: [RevenueCat.PaywallComponent.ExtendedCondition]
     public init(conditions: [RevenueCat.PaywallComponent.Condition], properties: T)
-    public static func == (a: RevenueCat.PaywallComponent.ComponentOverride<T>, b: RevenueCat.PaywallComponent.ComponentOverride<T>) -> Swift.Bool
+    @_spi(Internal) public init(extendedConditions: [RevenueCat.PaywallComponent.ExtendedCondition], properties: T)
+    public init(from decoder: any Swift.Decoder) throws
     public func encode(to encoder: any Swift.Encoder) throws
+    public static func == (a: RevenueCat.PaywallComponent.ComponentOverride<T>, b: RevenueCat.PaywallComponent.ComponentOverride<T>) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public init(from decoder: any Swift.Decoder) throws
   }
   public enum Condition : Swift.String, Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
     case compact
@@ -570,14 +580,75 @@ extension RevenueCat.PaywallComponent {
     case promoOffer
     case selected
     case unsupported
-    public func encode(to encoder: any Swift.Encoder) throws
-    public init(from decoder: any Swift.Decoder) throws
     #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
     #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
+    }
+  }
+}
+@_spi(Internal) extension RevenueCat.PaywallComponent {
+  @_spi(Internal) public enum ConditionValue : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+    @_spi(Internal) case string(Swift.String)
+    @_spi(Internal) case int(Swift.Int)
+    @_spi(Internal) case double(Swift.Double)
+    @_spi(Internal) case bool(Swift.Bool)
+    @_spi(Internal) public init(from decoder: any Swift.Decoder) throws
+    @_spi(Internal) public func encode(to encoder: any Swift.Encoder) throws
+    @_spi(Internal) public static func == (a: RevenueCat.PaywallComponent.ConditionValue, b: RevenueCat.PaywallComponent.ConditionValue) -> Swift.Bool
+    @_spi(Internal) public func hash(into hasher: inout Swift.Hasher)
+    @_spi(Internal) public var hashValue: Swift.Int {
+      @_spi(Internal) get
+    }
+  }
+  @_spi(Internal) public enum EqualityOperator : Swift.String, Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+    @_spi(Internal) case equals
+    @_spi(Internal) case notEquals
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(Internal) public init?(rawValue: Swift.String)
+    #endif
+    @_spi(Internal) public typealias RawValue = Swift.String
+    @_spi(Internal) public var rawValue: Swift.String {
+      @_spi(Internal) get
+    }
+  }
+  @_spi(Internal) public enum ArrayOperator : Swift.String, Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+    @_spi(Internal) case `in`
+    @_spi(Internal) case notIn
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(Internal) public init?(rawValue: Swift.String)
+    #endif
+    @_spi(Internal) public typealias RawValue = Swift.String
+    @_spi(Internal) public var rawValue: Swift.String {
+      @_spi(Internal) get
+    }
+  }
+  @_spi(Internal) public enum ExtendedCondition : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
+    @_spi(Internal) case compact
+    @_spi(Internal) case medium
+    @_spi(Internal) case expanded
+    @_spi(Internal) case selected
+    @_spi(Internal) case introOffer
+    @_spi(Internal) case promoOffer
+    @_spi(Internal) case introOfferCondition(operator: RevenueCat.PaywallComponent.EqualityOperator, value: Swift.Bool)
+    @_spi(Internal) case promoOfferCondition(operator: RevenueCat.PaywallComponent.EqualityOperator, value: Swift.Bool)
+    @_spi(Internal) case multipleIntroOffers
+    @_spi(Internal) case variable(operator: RevenueCat.PaywallComponent.EqualityOperator, variable: Swift.String, value: RevenueCat.PaywallComponent.ConditionValue)
+    @_spi(Internal) case selectedPackage(operator: RevenueCat.PaywallComponent.ArrayOperator, packages: [Swift.String])
+    @_spi(Internal) case unsupported
+    @_spi(Internal) public var isRule: Swift.Bool {
+      @_spi(Internal) get
+    }
+    @_spi(Internal) public func toCondition() -> RevenueCat.PaywallComponent.Condition
+    @_spi(Internal) public init(from condition: RevenueCat.PaywallComponent.Condition)
+    @_spi(Internal) public func encode(to encoder: any Swift.Encoder) throws
+    @_spi(Internal) public init(from decoder: any Swift.Decoder) throws
+    @_spi(Internal) public static func == (a: RevenueCat.PaywallComponent.ExtendedCondition, b: RevenueCat.PaywallComponent.ExtendedCondition) -> Swift.Bool
+    @_spi(Internal) public func hash(into hasher: inout Swift.Hasher)
+    @_spi(Internal) public var hashValue: Swift.Int {
+      @_spi(Internal) get
     }
   }
 }
@@ -1180,6 +1251,17 @@ extension RevenueCat.CustomerInfo : Swift.Identifiable {
   }
   public typealias ID = Swift.String
 }
+@objc(RCCustomPaywallImpressionParams) final public class CustomPaywallImpressionParams : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let paywallId: Swift.String?
+  @objc final public let offeringId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(paywallId: Swift.String? = nil, offeringId: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc convenience public init(paywallId: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(RCDangerousSettings) final public class DangerousSettings : ObjectiveC.NSObject {
   @objc final public let autoSyncPurchases: Swift.Bool
   @_spi(Internal) final public let uiPreviewMode: Swift.Bool
@@ -1678,6 +1760,9 @@ extension RevenueCat.ErrorCode : Foundation.CustomNSError {
   public var errorUserInfo: [Swift.String : Any] {
     get
   }
+}
+@_spi(Internal) public protocol EventsListener : AnyObject {
+  @_spi(Internal) func onEventTracked(_ event: [Swift.String : Any])
 }
 public struct ExitOffer : Swift.Codable, Swift.Sendable, Swift.Hashable, Swift.Equatable {
   public let offeringId: Swift.String
@@ -3797,10 +3882,21 @@ extension RevenueCat.PaywallEvent {
     public var displayMode: RevenueCat.PaywallViewMode
     public var localeIdentifier: Swift.String
     public var darkMode: Swift.Bool
+    @_spi(Internal) public var source: RevenueCat.PaywallSource?
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    @available(*, deprecated, message: "This initializer will be removed in a future version.")
     public init(offering: RevenueCat.Offering, paywallComponentsData: RevenueCat.PaywallComponentsData, sessionID: RevenueCat.PaywallEvent.SessionID, displayMode: RevenueCat.PaywallViewMode, locale: Foundation.Locale, darkMode: Swift.Bool)
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(Internal) @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    public init(offering: RevenueCat.Offering, paywallComponentsData: RevenueCat.PaywallComponentsData, sessionID: RevenueCat.PaywallEvent.SessionID, displayMode: RevenueCat.PaywallViewMode, locale: Foundation.Locale, darkMode: Swift.Bool, source: RevenueCat.PaywallSource?)
+    #endif
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    @available(*, deprecated, message: "This initializer will be removed in a future version.")
     public init(offering: RevenueCat.Offering, paywall: RevenueCat.PaywallData, sessionID: RevenueCat.PaywallEvent.SessionID, displayMode: RevenueCat.PaywallViewMode, locale: Foundation.Locale, darkMode: Swift.Bool)
+    #if compiler(>=5.3) && $NonescapableTypes
+    @_spi(Internal) @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    public init(offering: RevenueCat.Offering, paywall: RevenueCat.PaywallData, sessionID: RevenueCat.PaywallEvent.SessionID, displayMode: RevenueCat.PaywallViewMode, locale: Foundation.Locale, darkMode: Swift.Bool, source: RevenueCat.PaywallSource?)
+    #endif
   }
 }
 extension RevenueCat.PaywallEvent {
@@ -3866,6 +3962,11 @@ extension _StoreKit_SwiftUI.SubscriptionStoreView {
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 extension _StoreKit_SwiftUI.SubscriptionStoreView where Content == _StoreKit_SwiftUI.AutomaticSubscriptionStoreMarketingContent {
   @_Concurrency.MainActor @preconcurrency public static func forOffering(_ offering: RevenueCat.Offering) -> some SwiftUICore.View
+  
+}
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, *)
+extension _StoreKit_SwiftUI.SubscriptionStoreView {
+  @_Concurrency.MainActor @preconcurrency public static func forOffering<C>(_ offering: RevenueCat.Offering, @_StoreKit_SwiftUI.StoreContentBuilder content: () -> C) -> some SwiftUICore.View where Content == _StoreKit_SwiftUI.SubscriptionStoreContentView<C>, C : _StoreKit_SwiftUI.StoreContent
   
 }
 extension RevenueCat.PaywallComponent {
@@ -4102,6 +4203,16 @@ extension RevenueCat.PaywallComponent {
       get
     }
     public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@_spi(Internal) public enum PaywallSource : Swift.String, Swift.Sendable, Swift.Codable {
+  @_spi(Internal) case customerCenter
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) public init?(rawValue: Swift.String)
+  #endif
+  @_spi(Internal) public typealias RawValue = Swift.String
+  @_spi(Internal) public var rawValue: Swift.String {
+    @_spi(Internal) get
   }
 }
 extension RevenueCat.PaywallComponent {
@@ -4741,6 +4852,12 @@ public typealias StartPurchaseBlock = (@escaping RevenueCat.PurchaseCompletedBlo
     @objc set
   }
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) final public var eventsListener: (any RevenueCat.EventsListener)? {
+    @_spi(Internal) get
+    @_spi(Internal) set
+  }
+  #endif
   @objc public static var logLevel: RevenueCat.LogLevel {
     @objc get
     @objc set
@@ -5022,7 +5139,13 @@ extension RevenueCat.Purchases {
 extension RevenueCat.Purchases : @unchecked Swift.Sendable {
 }
 extension RevenueCat.Purchases {
-  @_spi(Internal) final public func cachePresentedOfferingContext(_ context: RevenueCat.PresentedOfferingContext, productIdentifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) final public func cachePurchaseData(presentedOfferingContext: RevenueCat.PresentedOfferingContext, paywallEvent: RevenueCat.PaywallEvent?, productIdentifier: Swift.String)
+  #endif
+  @_spi(Internal) final public func clearCachedPurchaseData(productIdentifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_spi(Internal) final public func purchase(package: RevenueCat.Package, promotionalOffer: RevenueCat.PromotionalOffer?, paywallEvent: RevenueCat.PaywallEvent?) async throws -> RevenueCat.PurchaseResultData
+  #endif
   @_spi(Internal) final public var preferredLocales: [Swift.String] {
     @_spi(Internal) get
   }
@@ -5031,6 +5154,15 @@ extension RevenueCat.Purchases {
     @_spi(Internal) get
   }
   #endif
+  @_spi(Internal) public static var installationMethod: Swift.String {
+    @_spi(Internal) get
+  }
+}
+extension RevenueCat.Purchases {
+  @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+  @objc final public func trackCustomPaywallImpression(_ params: RevenueCat.CustomPaywallImpressionParams)
+  @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+  @objc final public func trackCustomPaywallImpression()
 }
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension RevenueCat.Purchases {
@@ -6244,6 +6376,8 @@ extension RevenueCat.Checksum.Algorithm : Swift.Equatable {}
 extension RevenueCat.Checksum.Algorithm : Swift.Hashable {}
 extension RevenueCat.Checksum.Algorithm : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.Condition : Swift.RawRepresentable {}
+@_spi(Internal) extension RevenueCat.PaywallComponent.EqualityOperator : Swift.RawRepresentable {}
+@_spi(Internal) extension RevenueCat.PaywallComponent.ArrayOperator : Swift.RawRepresentable {}
 extension RevenueCat.Configuration.EntitlementVerificationMode : Swift.Equatable {}
 extension RevenueCat.Configuration.EntitlementVerificationMode : Swift.Hashable {}
 extension RevenueCat.Configuration.EntitlementVerificationMode : Swift.RawRepresentable {}
@@ -6315,6 +6449,9 @@ extension RevenueCat.ExitOfferType : Swift.Equatable {}
 extension RevenueCat.ExitOfferType : Swift.Hashable {}
 extension RevenueCat.ExitOfferType : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.PurchaseButtonComponent.Action : Swift.RawRepresentable {}
+@_spi(Internal) extension RevenueCat.PaywallSource : Swift.Equatable {}
+@_spi(Internal) extension RevenueCat.PaywallSource : Swift.Hashable {}
+@_spi(Internal) extension RevenueCat.PaywallSource : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.StackComponent.Overflow : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.TabsComponent.TabControl.TabControlType : Swift.RawRepresentable {}
 extension RevenueCat.PaywallComponent.TimelineComponent.IconAlignment : Swift.RawRepresentable {}

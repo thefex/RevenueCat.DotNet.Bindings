@@ -7,7 +7,7 @@
         <SupportedOSPlatformVersion>14.2</SupportedOSPlatformVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>RevenueCatUI.DotNet.Bindings</PackageId>
-        <Version>5.58.0</Version>
+        <Version>5.67.0</Version>
         <Authors>Przemysław Raciborski [thefex]</Authors>
         <Description>.net-ios bindings for RevenueCatUI. This package is not affiliated with RevenueCat at all.</Description>
         <Configurations>Debug;Release</Configurations>
@@ -16,7 +16,7 @@
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <Version>5.58.0-rc1</Version>
+        <Version>5.67.0-rc1</Version>
     </PropertyGroup>
     
     <ItemGroup>

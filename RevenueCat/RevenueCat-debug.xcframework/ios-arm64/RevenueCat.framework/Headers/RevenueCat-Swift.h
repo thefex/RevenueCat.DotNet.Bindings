@@ -373,9 +373,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RCAdFormat *
 /// App open ad format displayed at app launch
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RCAdFormat * _Nonnull appOpen;)
 + (RCAdFormat * _Nonnull)appOpen SWIFT_WARN_UNUSED_RESULT;
-/// Medium rectangle ad format
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RCAdFormat * _Nonnull mrec;)
-+ (RCAdFormat * _Nonnull)mrec SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) NSUInteger hash;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -603,6 +600,8 @@ SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWI
 @end
 
 @class NSData;
+@class RCOfferings;
+@class NSError;
 @interface RCAttribution (SWIFT_EXTENSION(RevenueCat))
 /// Automatically collect subscriber attributes associated with the device identifiers
 /// <ul>
@@ -956,6 +955,20 @@ SWIFT_AVAILABILITY(watchos,unavailable) SWIFT_AVAILABILITY(tvos,unavailable) SWI
 /// \param data The conversion data dictionary from AppsFlyer’s <code>onConversionDataSuccess</code>.
 ///
 - (void)setAppsFlyerConversionData:(NSDictionary * _Nullable)data;
+/// Sets attribution data from Appstack’s attribution params, then syncs attributes and fetches
+/// offerings so that Appstack-based targeting is applied before the callback returns.
+/// Note: Offering fetching is rate limited, so the offerings being returned might be cached if the
+/// limit is hit.
+/// Pass the dictionary received from <code>AppstackAttributionSdk.shared.getAttributionParams()</code> directly.
+/// The SDK extracts relevant attribution info and sets the appropriate subscriber attributes. Note
+/// that this method will never unset any attributes, even if passed <code>nil</code>. To unset an attribute,
+/// call the individual setter with a <code>nil</code> value.
+/// \param data The attribution params from <code>AppstackAttributionSdk.shared.getAttributionParams()</code>.
+///
+/// \param completion Called with the <code>Offerings</code> (targeted with Appstack data, or the cached
+/// ones if rate limited) or an error.
+///
+- (void)setAppstackAttributionParams:(NSDictionary<NSString *, id> * _Nullable)data completion:(void (^ _Nonnull)(RCOfferings * _Nullable, NSError * _Nullable))completion;
 @end
 
 /// Enum of supported attribution networks
@@ -1195,6 +1208,29 @@ typedef SWIFT_ENUM_NAMED(NSInteger, RCEntitlementVerificationMode, "EntitlementV
 /// <code>ErrorCode/signatureVerificationFailed</code> will be thrown.
   RCEntitlementVerificationModeEnforced = 2,
 };
+
+/// Parameters for tracking a custom paywall impression event.
+SWIFT_CLASS_NAMED("CustomPaywallImpressionParams")
+@interface RCCustomPaywallImpressionParams : NSObject
+/// An optional identifier for the custom paywall being shown.
+@property (nonatomic, readonly, copy) NSString * _Nullable paywallId;
+/// An optional identifier for the offering associated with the custom paywall.
+/// If not provided, the SDK will use the current offering identifier from the cache.
+@property (nonatomic, readonly, copy) NSString * _Nullable offeringId;
+/// Creates parameters for a custom paywall impression.
+/// \param paywallId An optional identifier for the custom paywall being shown.
+///
+/// \param offeringId An optional identifier for the offering associated with the custom paywall.
+/// If <code>nil</code>, the SDK will use the current offering identifier from the cache.
+///
+- (nonnull instancetype)initWithPaywallId:(NSString * _Nullable)paywallId offeringId:(NSString * _Nullable)offeringId OBJC_DESIGNATED_INITIALIZER;
+/// Creates parameters with only a paywall identifier.
+/// \param paywallId An optional identifier for the custom paywall being shown.
+///
+- (nonnull instancetype)initWithPaywallId:(NSString * _Nullable)paywallId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class RCEntitlementInfos;
 @class NSDate;
@@ -2086,7 +2122,6 @@ SWIFT_CLASS_NAMED("PurchaserInfo") SWIFT_AVAILABILITY(macos,obsoleted=1,message=
 
 @protocol RCPurchasesDelegate;
 @class RCStorefront;
-@class NSError;
 enum RCRefundRequestStatus : NSInteger;
 @class RCWebPurchaseRedemption;
 @class RCVirtualCurrencies;
@@ -3091,6 +3126,25 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 @property (nonatomic, readonly, strong) RCAdTracker * _Nonnull adTracker SWIFT_AVAILABILITY(watchos,introduced=8.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(ios,introduced=15.0);
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface RCPurchases (SWIFT_EXTENSION(RevenueCat))
+/// Tracks an impression for a custom paywall.
+/// Call this method when your custom (non-RevenueCat) paywall is displayed to a user.
+/// This enables RevenueCat to track paywall impressions for analytics.
+/// important:
+/// Each call creates a separate impression event. Call this once per paywall presentation,
+/// not in SwiftUI’s <code>onAppear</code> or similar callbacks that may fire multiple times for the same display.
+/// \param params Parameters for the custom paywall impression.
+///
+- (void)trackCustomPaywallImpression:(RCCustomPaywallImpressionParams * _Nonnull)params SWIFT_AVAILABILITY(watchos,introduced=8.0) SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0);
+/// Tracks an impression for a custom paywall with no additional parameters.
+/// Call this method when your custom (non-RevenueCat) paywall is displayed to a user.
+/// This enables RevenueCat to track paywall impressions for analytics.
+/// important:
+/// Each call creates a separate impression event. Call this once per paywall presentation,
+/// not in SwiftUI’s <code>onAppear</code> or similar callbacks that may fire multiple times for the same display.
+- (void)trackCustomPaywallImpression SWIFT_AVAILABILITY(watchos,introduced=8.0) SWIFT_AVAILABILITY(tvos,introduced=15.0) SWIFT_AVAILABILITY(macos,introduced=12.0) SWIFT_AVAILABILITY(ios,introduced=15.0);
 @end
 
 @interface RCPurchases (SWIFT_EXTENSION(RevenueCat))

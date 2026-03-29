@@ -129,6 +129,7 @@ extension RevenueCatUI.CustomerCenterNavigationOptions {
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension RevenueCatUI.CustomerCenterView {
+  public typealias RestoreInitiatedHandler = @_Concurrency.MainActor @Sendable (_ resume: RevenueCatUI.ResumeAction) -> Swift.Void
   public typealias RestoreStartedHandler = @_Concurrency.MainActor @Sendable () -> Swift.Void
   public typealias RestoreFailedHandler = @_Concurrency.MainActor @Sendable (_ error: any Swift.Error) -> Swift.Void
   public typealias RestoreCompletedHandler = @_Concurrency.MainActor @Sendable (_ customerInfo: RevenueCat.CustomerInfo) -> Swift.Void
@@ -138,7 +139,9 @@ extension RevenueCatUI.CustomerCenterView {
   public typealias FeedbackSurveyCompletedHandler = @_Concurrency.MainActor @Sendable (_ optionId: Swift.String) -> Swift.Void
   public typealias ManagementOptionSelectedHandler = @_Concurrency.MainActor @Sendable (_ managementOption: any RevenueCatUI.CustomerCenterActionable) -> Swift.Void
   public typealias CustomActionHandler = @_Concurrency.MainActor @Sendable (_ actionIdentifier: Swift.String, _ purchaseIdentifier: Swift.String?) -> Swift.Void
+  @available(*, deprecated, message: "Use PromotionalOfferSucceededHandler instead")
   public typealias PromotionalOfferSuccessHandler = @_Concurrency.MainActor @Sendable () -> Swift.Void
+  public typealias PromotionalOfferSucceededHandler = @_Concurrency.MainActor @Sendable (_ customerInfo: RevenueCat.CustomerInfo, _ transaction: RevenueCat.StoreTransaction, _ offerId: Swift.String) -> Swift.Void
   public typealias ChangePlansHandler = @_Concurrency.MainActor @Sendable (_ optionId: Swift.String) -> Swift.Void
 }
 @available(iOS 15.0, *)
@@ -146,6 +149,8 @@ extension RevenueCatUI.CustomerCenterView {
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func onCustomerCenterRestoreInitiated(_ handler: @escaping RevenueCatUI.CustomerCenterView.RestoreInitiatedHandler) -> some SwiftUICore.View
+  
   @_Concurrency.MainActor @preconcurrency public func onCustomerCenterRestoreStarted(_ handler: @escaping RevenueCatUI.CustomerCenterView.RestoreStartedHandler) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func onCustomerCenterRestoreFailed(_ handler: @escaping RevenueCatUI.CustomerCenterView.RestoreFailedHandler) -> some SwiftUICore.View
@@ -162,7 +167,10 @@ extension SwiftUICore.View {
   
   @_Concurrency.MainActor @preconcurrency public func onCustomerCenterManagementOptionSelected(_ handler: @escaping RevenueCatUI.CustomerCenterView.ManagementOptionSelectedHandler) -> some SwiftUICore.View
   
+  @available(*, deprecated, message: "Use onCustomerCenterPromotionalOfferSucceeded instead")
   @_Concurrency.MainActor @preconcurrency public func onCustomerCenterPromotionalOfferSuccess(_ handler: @escaping RevenueCatUI.CustomerCenterView.PromotionalOfferSuccessHandler) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func onCustomerCenterPromotionalOfferSucceeded(_ handler: @escaping RevenueCatUI.CustomerCenterView.PromotionalOfferSucceededHandler) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func onCustomerCenterChangePlansSelected(_ handler: @escaping RevenueCatUI.CustomerCenterView.ChangePlansHandler) -> some SwiftUICore.View
   
@@ -182,7 +190,7 @@ extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public init(customerCenterActionHandler: RevenueCatUI.CustomerCenterActionHandler?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(restoreStarted: RevenueCatUI.CustomerCenterView.RestoreStartedHandler? = nil, restoreCompleted: RevenueCatUI.CustomerCenterView.RestoreCompletedHandler? = nil, restoreFailed: RevenueCatUI.CustomerCenterView.RestoreFailedHandler? = nil, showingManageSubscriptions: RevenueCatUI.CustomerCenterView.ShowingManageSubscriptionsHandler? = nil, refundRequestStarted: RevenueCatUI.CustomerCenterView.RefundRequestStartedHandler? = nil, refundRequestCompleted: RevenueCatUI.CustomerCenterView.RefundRequestCompletedHandler? = nil, feedbackSurveyCompleted: RevenueCatUI.CustomerCenterView.FeedbackSurveyCompletedHandler? = nil, managementOptionSelected: RevenueCatUI.CustomerCenterView.ManagementOptionSelectedHandler? = nil, changePlansSelected: RevenueCatUI.CustomerCenterView.ChangePlansHandler? = nil, onCustomAction: RevenueCatUI.CustomerCenterView.CustomActionHandler? = nil, promotionalOfferSuccess: RevenueCatUI.CustomerCenterView.PromotionalOfferSuccessHandler? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(restoreInitiated: RevenueCatUI.CustomerCenterView.RestoreInitiatedHandler? = nil, restoreStarted: RevenueCatUI.CustomerCenterView.RestoreStartedHandler? = nil, restoreCompleted: RevenueCatUI.CustomerCenterView.RestoreCompletedHandler? = nil, restoreFailed: RevenueCatUI.CustomerCenterView.RestoreFailedHandler? = nil, showingManageSubscriptions: RevenueCatUI.CustomerCenterView.ShowingManageSubscriptionsHandler? = nil, refundRequestStarted: RevenueCatUI.CustomerCenterView.RefundRequestStartedHandler? = nil, refundRequestCompleted: RevenueCatUI.CustomerCenterView.RefundRequestCompletedHandler? = nil, feedbackSurveyCompleted: RevenueCatUI.CustomerCenterView.FeedbackSurveyCompletedHandler? = nil, managementOptionSelected: RevenueCatUI.CustomerCenterView.ManagementOptionSelectedHandler? = nil, changePlansSelected: RevenueCatUI.CustomerCenterView.ChangePlansHandler? = nil, onCustomAction: RevenueCatUI.CustomerCenterView.CustomActionHandler? = nil, promotionalOfferSuccess: (@_Concurrency.MainActor @Sendable () -> Swift.Void)? = nil, promotionalOfferSucceeded: RevenueCatUI.CustomerCenterView.PromotionalOfferSucceededHandler? = nil)
   #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
@@ -194,6 +202,7 @@ extension SwiftUICore.View {
 @available(watchOS, unavailable)
 @objc(RCCustomerCenterViewControllerDelegate) public protocol CustomerCenterViewControllerDelegate : ObjectiveC.NSObjectProtocol {
   @objc(customerCenterViewControllerDidStartRestore:) optional func customerCenterViewControllerDidStartRestore(_ controller: RevenueCatUI.CustomerCenterViewController)
+  @objc(customerCenterViewController:didInitiateRestoreWithResume:) optional func customerCenterViewController(_ controller: RevenueCatUI.CustomerCenterViewController, didInitiateRestoreWith resume: @escaping (Swift.Bool) -> Swift.Void)
   @objc(customerCenterViewController:didFinishRestoringWithCustomerInfo:) optional func customerCenterViewController(_ controller: RevenueCatUI.CustomerCenterViewController, didFinishRestoringWith customerInfo: RevenueCat.CustomerInfo)
   @objc(customerCenterViewController:didFailRestoringWithError:) optional func customerCenterViewController(_ controller: RevenueCatUI.CustomerCenterViewController, didFailRestoringWith error: Foundation.NSError)
   @objc(customerCenterViewControllerDidShowManageSubscriptions:) optional func customerCenterViewControllerDidShowManageSubscriptions(_ controller: RevenueCatUI.CustomerCenterViewController)
@@ -205,11 +214,14 @@ extension SwiftUICore.View {
   @objc(customerCenterViewController:didSelectCustomActionWithIdentifier:purchaseIdentifier:) optional func customerCenterViewController(_ controller: RevenueCatUI.CustomerCenterViewController, didSelectCustomActionWith actionIdentifier: Swift.String, purchaseIdentifier: Swift.String?)
   #endif
   @objc(customerCenterViewControllerDidSucceedWithPromotionalOffer:) optional func customerCenterViewControllerDidSucceedWithPromotionalOffer(_ controller: RevenueCatUI.CustomerCenterViewController)
+  @objc(customerCenterViewController:didSucceedWithPromotionalOffer:customerInfo:transaction:) optional func customerCenterViewController(_ controller: RevenueCatUI.CustomerCenterViewController, didSucceedWithPromotionalOffer offerId: Swift.String, customerInfo: RevenueCat.CustomerInfo, transaction: RevenueCat.StoreTransaction)
   @objc(customerCenterViewControllerWasDismissed:) optional func customerCenterViewControllerWasDismissed(_ controller: RevenueCatUI.CustomerCenterViewController)
 }
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public struct CustomVariableValue : Swift.Sendable, Swift.Equatable, Swift.Hashable {
   public static func string(_ value: Swift.String) -> RevenueCatUI.CustomVariableValue
+  public static func number(_ value: Swift.Double) -> RevenueCatUI.CustomVariableValue
+  public static func bool(_ value: Swift.Bool) -> RevenueCatUI.CustomVariableValue
   public var stringValue: Swift.String {
     get
   }
@@ -263,6 +275,9 @@ open class CustomPaywallFontProvider : RevenueCatUI.PaywallFontProvider {
   @_Concurrency.MainActor @preconcurrency public init(offering: RevenueCat.Offering? = nil, performPurchase: @escaping RevenueCatUI.PerformPurchase, performRestore: @escaping RevenueCatUI.PerformRestore, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor @preconcurrency public init(offering: RevenueCat.Offering? = nil, purchaseHandler: (any RevenueCatUI.PaywallPurchaseHandler)?, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public init(offering: RevenueCat.Offering? = nil, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -302,11 +317,16 @@ open class CustomPaywallFontProvider : RevenueCatUI.PaywallFontProvider {
     set
   }
   @objc @_Concurrency.MainActor @preconcurrency public func setCustomVariable(_ value: Swift.String, forKey key: Swift.String)
+  @objc @_Concurrency.MainActor @preconcurrency public func setCustomVariableNumber(_ value: Swift.Double, forKey key: Swift.String)
+  @objc @_Concurrency.MainActor @preconcurrency public func setCustomVariableBool(_ value: Swift.Bool, forKey key: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency convenience public init(offering: RevenueCat.Offering? = nil, displayCloseButton: Swift.Bool = false, shouldBlockTouchEvents: Swift.Bool = false, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(offering: RevenueCat.Offering? = nil, fonts: any RevenueCatUI.PaywallFontProvider, displayCloseButton: Swift.Bool = false, shouldBlockTouchEvents: Swift.Bool = false, performPurchase: RevenueCatUI.PerformPurchase? = nil, performRestore: RevenueCatUI.PerformRestore? = nil, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(offering: RevenueCat.Offering? = nil, displayCloseButton: Swift.Bool = false, shouldBlockTouchEvents: Swift.Bool = false, purchaseHandler: (any RevenueCatUI.PaywallPurchaseHandler)?, dismissRequestedHandler: ((_ controller: RevenueCatUI.PaywallViewController) -> Swift.Void)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "use init with Offering instead")
@@ -360,6 +380,17 @@ extension RevenueCatUI.PaywallViewController : UIKit.UIAdaptivePresentationContr
   @objc(paywallViewControllerWasDismissed:) optional func paywallViewControllerWasDismissed(_ controller: RevenueCatUI.PaywallViewController)
   @objc(paywallViewController:didChangeSizeTo:) optional func paywallViewController(_ controller: RevenueCatUI.PaywallViewController, didChangeSizeTo size: CoreFoundation.CGSize)
   @objc(paywallViewController:willPresentExitOfferController:) optional func paywallViewController(_ controller: RevenueCatUI.PaywallViewController, willPresentExitOfferController exitOfferController: RevenueCatUI.PaywallViewController)
+  @objc(paywallViewController:didInitiatePurchaseWithPackage:resume:) optional func paywallViewController(_ controller: RevenueCatUI.PaywallViewController, didInitiatePurchaseWith package: RevenueCat.Package, resume: @escaping (Swift.Bool) -> Swift.Void)
+  @objc(paywallViewController:didInitiateRestoreWithResume:) optional func paywallViewController(_ controller: RevenueCatUI.PaywallViewController, didInitiateRestoreWith resume: @escaping (Swift.Bool) -> Swift.Void)
+}
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, *)
+@objc(RCPaywallPurchaseHandler) public protocol PaywallPurchaseHandler {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func performPurchase(for package: RevenueCat.Package, completion: @escaping (_ userCancelled: Swift.Bool, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc func performRestore(completion: @escaping (_ success: Swift.Bool, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
 }
 public struct ResumeAction : Swift.Sendable {
   public init(action: @escaping @Sendable (Swift.Bool) -> Swift.Void)
@@ -380,11 +411,11 @@ extension SwiftUICore.View {
 extension SwiftUICore.View {
   #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use the version with individual action handlers instead")
-  @_Concurrency.MainActor @preconcurrency public func presentCustomerCenter(isPresented: SwiftUICore.Binding<Swift.Bool>, customerCenterActionHandler: RevenueCatUI.CustomerCenterActionHandler?, presentationMode: RevenueCat.CustomerCenterPresentationMode = .default, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
+  @_Concurrency.MainActor @preconcurrency public func presentCustomerCenter(isPresented: SwiftUICore.Binding<Swift.Bool>, customerCenterActionHandler: RevenueCatUI.CustomerCenterActionHandler?, presentationMode: RevenueCat.CustomerCenterPresentationMode = .default, restoreInitiated: RevenueCatUI.CustomerCenterView.RestoreInitiatedHandler? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
   
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func presentCustomerCenter(isPresented: SwiftUICore.Binding<Swift.Bool>, presentationMode: RevenueCat.CustomerCenterPresentationMode = .default, restoreStarted: RevenueCatUI.CustomerCenterView.RestoreStartedHandler? = nil, restoreCompleted: RevenueCatUI.CustomerCenterView.RestoreCompletedHandler? = nil, restoreFailed: RevenueCatUI.CustomerCenterView.RestoreFailedHandler? = nil, showingManageSubscriptions: RevenueCatUI.CustomerCenterView.ShowingManageSubscriptionsHandler? = nil, refundRequestStarted: RevenueCatUI.CustomerCenterView.RefundRequestStartedHandler? = nil, refundRequestCompleted: RevenueCatUI.CustomerCenterView.RefundRequestCompletedHandler? = nil, feedbackSurveyCompleted: RevenueCatUI.CustomerCenterView.FeedbackSurveyCompletedHandler? = nil, managementOptionSelected: RevenueCatUI.CustomerCenterView.ManagementOptionSelectedHandler? = nil, onCustomAction: RevenueCatUI.CustomerCenterView.CustomActionHandler? = nil, changePlansSelected: RevenueCatUI.CustomerCenterView.ChangePlansHandler? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
+  @_Concurrency.MainActor @preconcurrency public func presentCustomerCenter(isPresented: SwiftUICore.Binding<Swift.Bool>, presentationMode: RevenueCat.CustomerCenterPresentationMode = .default, restoreInitiated: RevenueCatUI.CustomerCenterView.RestoreInitiatedHandler? = nil, restoreStarted: RevenueCatUI.CustomerCenterView.RestoreStartedHandler? = nil, restoreCompleted: RevenueCatUI.CustomerCenterView.RestoreCompletedHandler? = nil, restoreFailed: RevenueCatUI.CustomerCenterView.RestoreFailedHandler? = nil, showingManageSubscriptions: RevenueCatUI.CustomerCenterView.ShowingManageSubscriptionsHandler? = nil, refundRequestStarted: RevenueCatUI.CustomerCenterView.RefundRequestStartedHandler? = nil, refundRequestCompleted: RevenueCatUI.CustomerCenterView.RefundRequestCompletedHandler? = nil, feedbackSurveyCompleted: RevenueCatUI.CustomerCenterView.FeedbackSurveyCompletedHandler? = nil, managementOptionSelected: RevenueCatUI.CustomerCenterView.ManagementOptionSelectedHandler? = nil, onCustomAction: RevenueCatUI.CustomerCenterView.CustomActionHandler? = nil, changePlansSelected: RevenueCatUI.CustomerCenterView.ChangePlansHandler? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
   
   #endif
 }
@@ -517,6 +548,10 @@ public struct PurchaseInitiatedAction : Swift.Sendable {
   public init(_ action: @escaping @Sendable (RevenueCat.Package, RevenueCatUI.ResumeAction) -> Swift.Void)
 }
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+public struct RestoreInitiatedAction : Swift.Sendable {
+  public init(_ action: @escaping @Sendable (RevenueCatUI.ResumeAction) -> Swift.Void)
+}
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public struct OfferCodeRedemptionInitiatedAction : Swift.Sendable {
   public init(_ action: @escaping @Sendable (RevenueCatUI.ResumeAction) -> Swift.Void)
 }
@@ -546,6 +581,8 @@ extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func onRestoreFailure(_ handler: @escaping RevenueCatUI.PurchaseFailureHandler) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func onPurchaseInitiated(_ action: @escaping @Sendable (RevenueCat.Package, RevenueCatUI.ResumeAction) -> Swift.Void) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func onRestoreInitiated(_ action: @escaping @Sendable (RevenueCatUI.ResumeAction) -> Swift.Void) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func onOfferCodeRedemptionInitiated(_ action: @escaping @Sendable (RevenueCatUI.ResumeAction) -> Swift.Void) -> some SwiftUICore.View
   
