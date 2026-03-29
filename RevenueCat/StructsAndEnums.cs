@@ -1,10 +1,8 @@
 using ObjCRuntime;
 
-namespace RevenueCat
-{
+namespace RevenueCat {
 	[Native]
-	public enum RCAttributionNetwork : long
-	{
+	public enum RCAttributionNetwork : long {
 		AppleSearchAds = 0,
 		Adjust = 1,
 		AppsFlyer = 2,
@@ -14,10 +12,9 @@ namespace RevenueCat
 		MParticle = 6,
 		AdServices = 7
 	}
-	
+
 	[Native]
-	public enum RCCacheFetchPolicy : long
-	{
+	public enum RCCacheFetchPolicy : long {
 		FromCacheOnly = 0,
 		FetchCurrent = 1,
 		NotStaleCachedOrFetched = 2,
@@ -25,16 +22,14 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCEntitlementVerificationMode : long
-	{
+	public enum RCEntitlementVerificationMode : long {
 		Disabled = 0,
 		Informational = 1,
 		Enforced = 2
 	}
-	
+
 	[Native]
-	public enum RCPurchasesErrorCode : long
-	{
+	public enum RCPurchasesErrorCode : long {
 		UnknownError = 0,
 		PurchaseCancelledError = 1,
 		StoreProblemError = 2,
@@ -78,19 +73,9 @@ namespace RevenueCat
 		ExpiredWebPurchaseToken = 41,
 		TestStoreSimulatedPurchaseError = 42
 	}
-	
+
 	[Native]
-	public enum FakeTrackingManagerAuthorizationStatus : long
-	{
-		NotDetermined = 0,
-		Restricted = 1,
-		Denied = 2,
-		Authorized = 3
-	}
-	
-	[Native]
-	public enum RCIntroEligibilityStatus : long
-	{
+	public enum RCIntroEligibilityStatus : long {
 		Unknown = 0,
 		Ineligible = 1,
 		Eligible = 2,
@@ -98,8 +83,7 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCLogLevel  : long
-	{
+	public enum RCLogLevel : long {
 		Verbose = 4,
 		Debug = 0,
 		Info = 1,
@@ -108,8 +92,7 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCPackageType  : long
-	{
+	public enum RCPackageType : long {
 		Unknown = -2,
 		Custom = -1,
 		Lifetime = 0,
@@ -122,8 +105,7 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCPeriodType  : long
-	{
+	public enum RCPeriodType : long {
 		Normal = 0,
 		Intro = 1,
 		Trial = 2,
@@ -131,31 +113,27 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCPurchaseOwnershipType : long
-	{
+	public enum RCPurchaseOwnershipType : long {
 		Purchased = 0,
 		FamilyShared = 1,
 		Unknown = 2
 	}
 
 	[Native]
-	public enum RCPurchasesAreCompletedBy : long
-	{
+	public enum RCPurchasesAreCompletedBy : long {
 		RevenueCat = 0,
 		MyApp = 1
 	}
 
 	[Native]
-	public enum RCRefundRequestStatus : long
-	{
+	public enum RCRefundRequestStatus : long {
 		UserCancelled = 0,
 		Success = 1,
 		Error = 2
 	}
 
 	[Native]
-	public enum RCStore : long
-	{
+	public enum RCStore : long {
 		AppStore = 0,
 		MacAppStore = 1,
 		PlayStore = 2,
@@ -171,15 +149,13 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCStoreKitVersion  : long
-	{
+	public enum RCStoreKitVersion : long {
 		RCStoreKitVersion1 = 1,
 		RCStoreKitVersion2 = 2
 	}
 
 	[Native]
-	public enum RCStoreMessageType : long
-	{
+	public enum RCStoreMessageType : long {
 		BillingIssue = 0,
 		PriceIncreaseConsent = 1,
 		Generic = 2,
@@ -187,15 +163,13 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCStoreProductCategory  : long
-	{
+	public enum RCStoreProductCategory : long {
 		Subscription = 0,
 		NonSubscription = 1
 	}
 
 	[Native]
-	public enum RCStoreProductType : long
-	{
+	public enum RCStoreProductType : long {
 		Consumable = 0,
 		NonConsumable = 1,
 		NonRenewableSubscription = 2,
@@ -203,24 +177,21 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCPaymentMode : long
-	{
+	public enum RCPaymentMode : long {
 		PayAsYouGo = 0,
 		PayUpFront = 1,
 		FreeTrial = 2
 	}
 
 	[Native]
-	public enum RCDiscountType : long
-	{
+	public enum RCDiscountType : long {
 		Introductory = 0,
 		Promotional = 1,
 		WinBack = 2
 	}
 
 	[Native]
-	public enum RCSubscriptionPeriodUnit : long
-	{
+	public enum RCSubscriptionPeriodUnit : long {
 		Day = 0,
 		Week = 1,
 		Month = 2,
@@ -228,8 +199,7 @@ namespace RevenueCat
 	}
 
 	[Native]
-	public enum RCVerificationResult : long
-	{
+	public enum RCVerificationResult : long {
 		NotRequested = 0,
 		Verified = 1,
 		VerifiedOnDevice = 3,
