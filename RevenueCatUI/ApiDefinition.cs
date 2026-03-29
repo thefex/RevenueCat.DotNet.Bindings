@@ -172,6 +172,19 @@ namespace RevenueCatUI {
 		// -(void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 		[Export ("touchesCancelled:withEvent:")]
 		void TouchesCancelled (NSSet<UITouch> touches, [NullAllowed] UIEvent @event);
+
+		// (merged from RevenueCatUI_Swift_574 — UIAdaptivePresentationControllerDelegate extension)
+		[Export ("presentationControllerShouldDismiss:")]
+		bool PresentationControllerShouldDismiss (UIPresentationController presentationController);
+
+		[Export ("presentationControllerDidAttemptToDismiss:")]
+		void PresentationControllerDidAttemptToDismiss (UIPresentationController presentationController);
+
+		[Export ("presentationControllerWillDismiss:")]
+		void PresentationControllerWillDismiss (UIPresentationController presentationController);
+
+		[Export ("presentationControllerDidDismiss:")]
+		void PresentationControllerDidDismiss (UIPresentationController presentationController);
 	}
 
 	// @interface RCPaywallFooterViewController : RCPaywallViewController
@@ -233,27 +246,6 @@ namespace RevenueCatUI {
 		[Abstract]
 		[Export ("performRestoreWithCompletion:")]
 		void PerformRestoreWithCompletion (Action<bool, NSError> completion);
-	}
-
-	// @interface RevenueCatUI_Swift_574 (RCPaywallViewController) <UIAdaptivePresentationControllerDelegate>
-	[TV (15, 0), Mac (12, 0), iOS (15, 0)]
-	[BaseType (typeof (RCPaywallViewController))]
-	interface RCPaywallViewController_RevenueCatUI_Swift_574 {
-		// -(BOOL)presentationControllerShouldDismiss:(UIPresentationController * _Nonnull)presentationController __attribute__((warn_unused_result("")));
-		[Export ("presentationControllerShouldDismiss:")]
-		bool PresentationControllerShouldDismiss (UIPresentationController presentationController);
-
-		// -(void)presentationControllerDidAttemptToDismiss:(UIPresentationController * _Nonnull)presentationController;
-		[Export ("presentationControllerDidAttemptToDismiss:")]
-		void PresentationControllerDidAttemptToDismiss (UIPresentationController presentationController);
-
-		// -(void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
-		[Export ("presentationControllerWillDismiss:")]
-		void PresentationControllerWillDismiss (UIPresentationController presentationController);
-
-		// -(void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
-		[Export ("presentationControllerDidDismiss:")]
-		void PresentationControllerDidDismiss (UIPresentationController presentationController);
 	}
 
 	// @protocol RCPaywallViewControllerDelegate

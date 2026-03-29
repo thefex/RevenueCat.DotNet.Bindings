@@ -224,7 +224,130 @@ cp RevenueCatUI-bindings-new/ApiDefinitions.cs $REPO/generated/RevenueCatUI/ApiD
 
 ---
 
-## Step 7 — Update version numbers in csproj files
+## Step 7 — Merge split Swift extension interfaces
+
+Objective Sharpie generates a separate `interface` block for every Swift `extension` on a type, giving them auto-generated names like `RevenueCat_Swift_3187`, `RevenueCat_Swift_4021`, etc. Merge all of these into the **primary interface for that type** so the SDK surface is clean and unified.
+
+### 7a — Identify extension interfaces to merge
+
+Look for any `[BaseType (typeof (SomeType))]` interface whose name contains `_Swift_NNNN`. Group them by the base type they extend:
+
+```csharp
+// These three all extend RCPurchases
+[BaseType (typeof (RCPurchases))]
+interface RCPurchases_RevenueCat_Swift_3187 { ... }
+
+[BaseType (typeof (RCPurchases))]
+interface RCPurchases_RevenueCat_Swift_4021 { ... }
+
+[BaseType (typeof (RCPurchases))]
+interface RCPurchases_RevenueCat_Swift_5902 { ... }
+```
+
+If any of them carry `[Category]`, **remove it** — it causes bgen to generate an incompatible static class when instance members or properties are present.
+
+### 7b — Move members into the primary interface
+
+Find the existing primary `interface RCPurchases { ... }` declaration and append all members from the `_Swift_NNNN` blocks directly into it:
+
+```csharp
+// Primary interface — extension members folded in
+[TV (15, 0), Mac (12, 0), iOS (15, 0)]
+[BaseType (typeof (NSObject))]
+interface RCPurchases {
+    // ... original members ...
+
+    // --- from RCPurchases_RevenueCat_Swift_3187 ---
+    [Export ("someMethod")]
+    void SomeMethod ();
+
+    // --- from RCPurchases_RevenueCat_Swift_4021 ---
+    [Export ("anotherMethod")]
+    void AnotherMethod ();
+
+    // --- from RCPurchases_RevenueCat_Swift_5902 ---
+    [Export ("thirdMethod")]
+    void ThirdMethod ();
+}
+```
+
+> If no primary interface exists for the base type (rare — only happens for types that are entirely defined via Swift extensions), create one with the correct `[BaseType]` and move everything there.
+
+### 7c — Delete the individual split interfaces
+
+Remove all the original `_Swift_NNNN` interface blocks from the file once their members have been moved.
+
+### 7d — Ensure a single `[BaseType]` attribute per interface
+
+After merging, each interface must have **exactly one** `[BaseType(...)]` attribute. bgen will produce duplicate member errors if two `[BaseType]` lines appear on the same interface. Remove any orphaned `[BaseType]` lines that get left behind when extension blocks are deleted.
+
+### 7e — Remove `partial interface Constants` blocks that import native symbols
+
+Sharpie generates `partial interface Constants` blocks for C-level symbols (version number fields, `__Internal` library imports). These are **not needed** in the .NET binding surface and will cause build errors (`[Field]` on a `byte[]`). Remove any `partial interface Constants` block whose body references `__Internal`:
+
+```csharp
+// REMOVE THIS BLOCK
+[Static]
+partial interface Constants {
+    // extern double RevenueCatVersionNumber;
+    [Field ("RevenueCatVersionNumber", "__Internal")]
+    double RevenueCatVersionNumber { get; }
+
+    // extern NSString * _Nonnull RevenueCatVersionString;
+    [Field ("RevenueCatVersionString", "__Internal")]
+    NSString RevenueCatVersionString { get; }
+}
+```
+
+Use a brace-stack parser (not regex) to find the block boundaries reliably, since inner `{ get; }` bodies contain `}` characters.
+
+### 7f — Fix nested `Action<Action<...>>` delegates
+
+Sharpie generates `Action<Action<T1, T2, T3, T4>>` for ObjC blocks-within-blocks (e.g. the "start purchase" callback). bgen cannot generate trampolines for nested generic delegates. Fix by defining custom delegates and replacing the nested Action:
+
+```csharp
+// At the top of the namespace, define:
+delegate void RCPurchaseCompletionBlock (RCStoreTransaction transaction, RCCustomerInfo info, NSError error, bool userCancelled);
+delegate void RCStartPurchaseBlock (RCPurchaseCompletionBlock purchaseBlock);
+
+// Then replace every occurrence of:
+//   Action<Action<RCStoreTransaction, RCCustomerInfo, NSError, bool>>
+// with:
+//   RCStartPurchaseBlock
+```
+
+Place delegate declarations **inside** the namespace block (not at file scope), otherwise bgen generates `global::` references without a namespace that result in `CS1001: Identifier expected`.
+
+### 7g — Fix duplicate C# method signatures from merged extensions
+
+Extensions from different `_Swift_NNNN` blocks may bring in methods with the same C# name and parameter types (e.g. `logIn:completion:` and `logIn:completionHandler:` both map to `void LogIn(string, Action<...>)`). Rename the second occurrence to avoid `CS0111`:
+
+```csharp
+// First occurrence (keep as-is)
+[Export ("logIn:completion:")]
+void LogIn (string appUserID, Action<RCCustomerInfo, bool, NSError> completion);
+
+// Second occurrence — rename to make unique
+[Export ("logIn:completionHandler:")]
+void LogInWithCompletionHandler (string appUserID, Action<RCCustomerInfo, bool, NSError> completionHandler);
+```
+
+### Rules of thumb
+
+| Situation | Action |
+|---|---|
+| `_Swift_NNNN` interfaces for a type that has a primary interface | Move members into that primary interface |
+| `_Swift_NNNN` interfaces for a type with **no** primary interface | Create `interface X { }` and move all members there |
+| A `_Swift_NNNN` interface has `[Category]` | Remove `[Category]` before merging |
+| A `_Swift_NNNN` interface has `: ISomeProtocol` conformance and `[Category]` | Drop the protocol conformance too (a static Category class can't implement interfaces) |
+| Multiple `_Swift_NNNN` blocks extend the same type | Only one `[BaseType]` on the final merged interface |
+| `partial interface Constants` with `__Internal` fields | Remove the entire block (not needed in SDK surface) |
+| Nested `Action<Action<T1,T2,...>>` | Define custom delegate + replace (see 7f above) |
+| Two merged methods have the same C# signature | Rename the second one (see 7g above) |
+
+---
+
+## Step 8 — Update version numbers in csproj files
 
 Update the `<Version>` (Release) and the Debug `<Version>` (with `-rc1` suffix) in both:
 
@@ -241,7 +364,7 @@ Example for version `5.59.0`:
 
 ---
 
-## Step 8 — Build the .NET binding projects
+## Step 9 — Build the .NET binding projects
 
 ```bash
 cd $REPO
