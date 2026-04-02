@@ -1,0 +1,84 @@
+<metadata>
+
+  <!-- ===== Fix IParcelableCreator return types =====
+       Creator<T>.createFromParcel returns T, but IParcelableCreator requires Object.
+       Creator<T>.newArray returns T[], but IParcelableCreator requires Object[].
+       Fix by changing managedReturn to Java.Lang.Object / Java.Lang.Object[]. -->
+
+  <!-- com.revenuecat.purchases -->
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='CustomerInfo.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='CustomerInfo.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='DangerousSettings.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='DangerousSettings.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfo.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfo.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfos.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='EntitlementInfos.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PresentedOfferingContext.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PresentedOfferingContext.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PresentedOfferingContext.TargetingContext.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PresentedOfferingContext.TargetingContext.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PurchasesError.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases']/class[@name='PurchasesError.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- com.revenuecat.purchases.amazon -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.amazon']/class[@name='DefaultPurchasingServiceProvider.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.amazon']/class[@name='DefaultPurchasingServiceProvider.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- com.revenuecat.purchases.models -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GalaxyReplacementMode.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GalaxyReplacementMode.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GoogleReplacementMode.CREATOR']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GoogleReplacementMode.CREATOR']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Period.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Period.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Price.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Price.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='PricingPhase.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='PricingPhase.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreTransaction.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreTransaction.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Transaction.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='Transaction.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- com.revenuecat.purchases.virtualcurrencies -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.virtualcurrencies']/class[@name='VirtualCurrencies.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.virtualcurrencies']/class[@name='VirtualCurrencies.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.virtualcurrencies']/class[@name='VirtualCurrency.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.virtualcurrencies']/class[@name='VirtualCurrency.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- ===== Remove java.util.List from SubscriptionOptions =====
+       Kotlin collection delegates are not fully mappable; remove IList to avoid missing member errors. -->
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='SubscriptionOptions']/implements[@name='java.util.List']" />
+
+  <!-- ===== Remove ReplacementMode interface from enum classes =====
+       Java Enum.name() conflicts with ReplacementMode.name() in the binding generator. -->
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GalaxyReplacementMode']/implements[@name='com.revenuecat.purchases.ReplacementMode']" />
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GoogleReplacementMode']/implements[@name='com.revenuecat.purchases.ReplacementMode']" />
+
+  <!-- ===== Fix interface return type mismatches =====
+       IStoreProduct.PurchasingData requires IPurchasingData; AmazonStoreProduct returns concrete AmazonPurchasingData.
+       ISubscriptionOption.InstallmentsInfo requires IInstallmentsInfo; GoogleSubscriptionOption returns concrete GoogleInstallmentsInfo. -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.amazon']/class[@name='AmazonStoreProduct']/method[@name='getPurchasingData']" name="managedReturn">Com.Revenuecat.Purchases.Models.IPurchasingData</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GoogleSubscriptionOption']/method[@name='getInstallmentsInfo']" name="managedReturn">Com.Revenuecat.Purchases.Models.IInstallmentsInfo</attr>
+
+  <!-- ===== Fix KotlinX Serialization interface mismatches =====
+       IKSerializer<T> covariance: deserialize returns T, but IDeserializationStrategy requires Object.
+       serialize takes T, but ISerializationStrategy requires Object. -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.paywalls']/class[@name='PaywallColor.Serializer']/method[@name='deserialize']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.paywalls']/class[@name='PaywallColor.Serializer']/method[@name='serialize' and count(parameter)=2]/parameter[2]" name="type">java.lang.Object</attr>
+
+</metadata>

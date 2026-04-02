@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thefex.revenuecat.sample">
+  <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36"
+      tools:overrideLibrary="androidx.lifecycle.runtime,com.google.firebase.encoders.json,com.google.android.gms.common,com.google.android.gms.auth.blockstore,com.google.android.gms.tasks,com.android.billingclient,com.google.android.gms.base,com.google.android.gms.location" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application
+      android:label="RevenueCat Sample"
+      android:theme="@style/AppTheme"
+      android:allowBackup="true">
+  </application>
+</manifest>

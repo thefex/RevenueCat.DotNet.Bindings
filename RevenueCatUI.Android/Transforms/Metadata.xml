@@ -1,0 +1,85 @@
+<metadata>
+
+  <!-- ===== Fix IParcelableCreator return types =====
+       Creator<T>.createFromParcel returns T, but IParcelableCreator requires Object.
+       Creator<T>.newArray returns T[], but IParcelableCreator requires Object[]. -->
+
+  <!-- com.revenuecat.purchases.ui.revenuecatui.activity -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Cancelled.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Cancelled.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Error.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Error.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Purchased.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Purchased.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Restored.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/class[@name='PaywallResult.Restored.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.Boolean.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.Boolean.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.Number.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.Number.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.String.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/class[@name='CustomVariableValue.String.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- ===== Fix PaywallResultHandler =====
+       The binding has two problems when C# implements IPaywallResultHandler:
+       
+       Problem 1: IPaywallResultHandler inherits IActivityResultCallback in C# (from the
+       <implements> node). This means the Java proxy lists BOTH "PaywallResultHandler" AND
+       "ActivityResultCallback" as implemented interfaces, causing Java to try to emit
+       both onActivityResult(Object) and onActivityResult(PaywallResult) — a name-clash due
+       to type erasure.
+       
+       Problem 2: When we remove <implements>, the generator also loses the typed
+       onActivityResult(PaywallResult) method (it was derived from the generic inference).
+       
+       Fix: (1) Remove the <implements ActivityResultCallback> so no raw IActivityResultCallback
+       is inherited in C#. (2) Explicitly add onActivityResult(PaywallResult) with the concrete
+       JNI type signature so the Java proxy generates onActivityResult(PaywallResult) — which
+       properly satisfies ActivityResultCallback<PaywallResult> at the Java level. Java's
+       compiler generates the bridge onActivityResult(Object) automatically via type erasure. -->
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/interface[@name='PaywallResultHandler']/implements[@name='androidx.activity.result.ActivityResultCallback']" />
+  <add-node path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.activity']/interface[@name='PaywallResultHandler']">
+    
+  </add-node>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='GoogleFontProvider.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='GoogleFontProvider.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.AssetFont.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.AssetFont.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.GoogleFont.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.GoogleFont.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.ResourceFont.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFont.ResourceFont.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFontFamily.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.fonts']/class[@name='PaywallFontFamily.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
+  <!-- ===== Fix ConstraintLayoutBaseScope duplicate method names =====
+       Kotlin inline-class methods are mangled with a suffix (e.g. -0680j_4).
+       Both the plain and mangled variants take a single float, so the generator
+       produces two C# methods with the same name. Rename the offset-based
+       (mangled) variants so they don't clash with the fraction-based ones. -->
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromAbsoluteLeft-0680j_4']" name="managedName">CreateGuidelineFromAbsoluteLeftWithOffset</attr>
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromAbsoluteRight-0680j_4']" name="managedName">CreateGuidelineFromAbsoluteRightWithOffset</attr>
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromBottom-0680j_4']" name="managedName">CreateGuidelineFromBottomWithOffset</attr>
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromEnd-0680j_4']" name="managedName">CreateGuidelineFromEndWithOffset</attr>
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromStart-0680j_4']" name="managedName">CreateGuidelineFromStartWithOffset</attr>
+  <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromTop-0680j_4']" name="managedName">CreateGuidelineFromTopWithOffset</attr>
+
+  <!-- ===== Fix ActivityResultContract abstract method mismatches =====
+       ShowCustomerCenter extends ActivityResultContract but the newer AndroidX Activity
+       NuGet changed abstract signatures (Object instead of typed params/returns).
+       Easiest fix: remove the class from bindings — it's an internal Android contract
+       not intended to be subclassed from C#. -->
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui.customercenter']/class[@name='ShowCustomerCenter']" />
+
+</metadata>

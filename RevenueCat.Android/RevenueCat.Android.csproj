@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>RevenueCat.DotNet.Android.Bindings</PackageId>
+    <Version>9.28.1</Version>
+    <Authors>Przemysław Raciborski [thefex]</Authors>
+    <Description>.net-android bindings for RevenueCat. This package is not affiliated with RevenueCat at all.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/RevenueCat/purchases-android</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Version>9.28.1-rc1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Main RevenueCat Android library from Maven Central -->
+    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases" Version="9.28.1" />
+
+    <!-- No MS NuGet available for poko-annotations -->
+    <AndroidMavenLibrary Include="dev.drewhamilton.poko:poko-annotations" Version="0.17.2" Bind="false" />
+  </ItemGroup>
+
+  <!--
+    MS-maintained NuGet packages — preferred over AndroidMavenLibrary Bind="false".
+    The dep verifier requires EXPLICIT PackageReference entries (transitive don't count).
+    Versions are dictated by the NuGet transitive graph — BillingClient 8.0.0 pulls
+    Activity 1.12.4.1 which requires newer lifecycle/coroutines/core-ktx.
+    Reference: https://github.com/dotnet/android-libraries/blob/main/config.json
+  -->
+  <ItemGroup>
+    <!-- 
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'androidx.lifecycle:lifecycle-runtime:2.5.0' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.AndroidX.Lifecycle.Runtime' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'androidx.lifecycle:lifecycle-common:2.5.0' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.AndroidX.Lifecycle.Common' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'androidx.lifecycle:lifecycle-process:2.5.0' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.AndroidX.Lifecycle.Process' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4241 : Java dependency 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1' is not satisfied.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'com.google.android.gms:play-services-auth-blockstore:16.4.0' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.GooglePlayServices.Auth.Blockstore' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'com.google.crypto.tink:tink-android:1.8.0' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.Google.Crypto.Tink.Android' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'com.google.android.gms:play-services-ads-identifier:17.0.1' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.GooglePlayServices.Ads.Identifier' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.KotlinX.Coroutines.Core' that could fulfill this dependency.
+0>Xamarin.Android.Bindings.JavaDependencyVerification.targets(27,5): Error XA4242 : Java dependency 'org.jetbrains.kotlin:kotlin-stdlib:2.0.21' is not satisfied. Microsoft maintains the NuGet package 'Xamarin.Kotlin.StdLib' that could fulfill this dependency.
+-->
+    
+    <!-- Kotlin / KotlinX -->
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.3.10.1" />
+    <PackageReference Include="Xamarin.Kotlin.Parcelize.Runtime" Version="2.0.21.4" />
+    <PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.10.2.3" />
+    <PackageReference Include="Xamarin.KotlinX.Serialization.Json" Version="1.7.3.5" />
+    <PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.7.3.5" />
+    <!-- Google Crypto / DataTransport / Gson -->
+    <PackageReference Include="Xamarin.Google.Crypto.Tink.Android" Version="1.18.0.1" />
+    <!-- Google Play Billing and Services -->
+    <PackageReference Include="Xamarin.Android.Google.BillingClient" Version="8.0.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="117.0.1.5" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth.Blockstore" Version="116.4.0.8" />
+    <!-- AndroidX — versions resolved by BillingClient->Activity transitive graph -->
+    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.17.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.7" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.10.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.10.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml" />
+  </ItemGroup>
+
+</Project>
