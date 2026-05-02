@@ -58,6 +58,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -117,6 +118,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -134,6 +136,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -196,7 +199,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -223,7 +229,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -294,7 +303,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -318,7 +330,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -342,7 +357,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -458,11 +476,32 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -519,13 +558,20 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -569,7 +615,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6182,7 +6231,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6267,7 +6319,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6332,8 +6387,8 @@
       },
       {
         "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
@@ -6347,6 +6402,18 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -6390,7 +6457,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6498,6 +6568,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -6613,6 +6684,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -6635,8 +6707,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
@@ -6648,82 +6720,11 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -6747,7 +6748,172 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
         "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6836,7 +7002,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6853,7 +7022,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -6965,7 +7137,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -7111,7 +7286,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -7127,6 +7305,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -7274,7 +7453,73 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
         ]
       },
       {
@@ -7303,64 +7548,6 @@
       },
       {
         "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -7392,6 +7579,33 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -9136,7 +9350,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -9153,7 +9370,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -11817,6 +12037,23 @@
       },
       {
         "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -12042,6 +12279,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -12094,7 +12332,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -12118,7 +12359,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -12489,6 +12733,16 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -12701,7 +12955,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -12717,6 +12974,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -12740,6 +12998,16 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -12848,7 +13116,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -12864,6 +13135,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -12881,6 +13153,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -12898,6 +13171,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -12923,7 +13197,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -12939,6 +13216,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13070,23 +13348,9 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
-          "RawDocComment"
+          "SPIAccessControl"
         ]
       },
       {
@@ -13098,35 +13362,12 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "RevenueCat",
-        "printedName": "RevenueCat",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RevenueCatUI"
-      },
-      {
-        "kind": "Import",
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13152,7 +13393,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -13168,6 +13412,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13193,7 +13438,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -13209,6 +13457,52 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13226,6 +13520,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13244,7 +13539,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -13545,6 +13843,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13594,7 +13893,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -13618,7 +13920,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -13678,6 +13983,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -13934,7 +14240,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -14027,7 +14336,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -14092,7 +14404,10 @@
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
-        "moduleName": "RevenueCatUI"
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -14149,6 +14464,7 @@
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
       },
@@ -15270,6 +15586,66 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "SPIAccessControl",
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -20432,6 +20808,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -20913,6 +21292,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -21779,6 +22161,95 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "PartialPackageComponent",
+        "printedName": "PartialPackageComponent",
+        "declKind": "Class",
+        "usr": "s:10RevenueCat16PaywallComponentO014PartialPackageD0C",
+        "mangledName": "$s10RevenueCat16PaywallComponentO014PartialPackageD0C",
+        "moduleName": "RevenueCat",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "PaywallPartialComponent",
+            "printedName": "PaywallPartialComponent",
+            "usr": "s:10RevenueCat23PaywallPartialComponentP",
+            "mangledName": "$s10RevenueCat23PaywallPartialComponentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Purchases",
         "printedName": "Purchases",
         "declKind": "Class",
@@ -21902,6 +22373,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -21988,6 +22462,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -22074,6 +22551,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -22160,6 +22640,9 @@
           "Final"
         ],
         "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -22542,14 +23025,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/BadgeModifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 8808,
+      "offset": 8824,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/BadgeModifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11825,
+      "offset": 11841,
       "length": 1,
       "value": "0"
     },
@@ -22598,245 +23081,252 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Button\/ButtonComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 969,
+      "offset": 985,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Button\/ButtonComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1025,
+      "offset": 1041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Button\/ButtonComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1083,
+      "offset": 1099,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1299,
+      "offset": 1405,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3933,
+      "offset": 5662,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "Array",
-      "offset": 5053,
+      "offset": 6853,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5153,
+      "offset": 6953,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5310,
+      "offset": 7110,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5514,
+      "offset": 7314,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5602,
+      "offset": 7402,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5715,
+      "offset": 7515,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "FloatLiteral",
-      "offset": 5816,
+      "offset": 7616,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7315,
+      "offset": 9261,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 7681,
+      "offset": 9627,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9106,
+      "offset": 9948,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11506,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9162,
+      "offset": 11562,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9389,
+      "offset": 11789,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9494,
+      "offset": 11894,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9572,
+      "offset": 11972,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10300,
+      "offset": 12700,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 10740,
+      "offset": 13140,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11088,
+      "offset": 13488,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13423,
+      "offset": 15823,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13650,
+      "offset": 16050,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 13952,
+      "offset": 16352,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14091,
+      "offset": 16491,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14409,
+      "offset": 16809,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14554,
+      "offset": 16954,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14592,
+      "offset": 16992,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14798,
+      "offset": 17198,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17348,
+      "offset": 20522,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17531,
+      "offset": 20705,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 17824,
+      "offset": 20998,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 18698,
+      "offset": 21872,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/CarouselComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1162,
+      "offset": 1222,
       "length": 5,
       "value": "false"
     },
@@ -22969,86 +23459,156 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/ComponentsView.swift",
       "kind": "BooleanLiteral",
-      "offset": 852,
+      "offset": 1150,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 494,
+      "offset": 512,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 562,
+      "offset": 580,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 637,
+      "offset": 655,
       "length": 4,
       "value": "0.35"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 660,
+      "offset": 678,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 787,
+      "offset": 805,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 934,
+      "offset": 952,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 990,
+      "offset": 1008,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1045,
+      "offset": 1063,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1104,
+      "offset": 1122,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "FloatLiteral",
-      "offset": 1166,
+      "offset": 1184,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1560,
+      "offset": 1578,
       "length": 2,
       "value": "44"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3253,
+      "length": 18,
+      "value": "\"all_plans_button\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3307,
+      "length": 16,
+      "value": "\"restore_button\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3355,
+      "length": 12,
+      "value": "\"terms_link\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3401,
+      "length": 14,
+      "value": "\"privacy_link\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3450,
+      "length": 15,
+      "value": "\"tier_selector\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3502,
+      "length": 17,
+      "value": "\"purchase_button\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3585,
+      "length": 18,
+      "value": "\"toggle_all_plans\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3636,
+      "length": 19,
+      "value": "\"restore_purchases\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3687,
+      "length": 19,
+      "value": "\"navigate_to_terms\""
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 3746,
+      "length": 28,
+      "value": "\"navigate_to_privacy_policy\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Countdown\/CountdownComponentViewModel.swift",
@@ -23676,35 +24236,35 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/DefaultPaywall\/DefaultPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 851,
+      "offset": 867,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/DefaultPaywall\/DefaultPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8379,
+      "offset": 9179,
       "length": 5,
       "value": "0.949"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/DefaultPaywall\/DefaultPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8393,
+      "offset": 9193,
       "length": 5,
       "value": "0.329"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/DefaultPaywall\/DefaultPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8406,
+      "offset": 9206,
       "length": 5,
       "value": "0.357"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/DisplayableColor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1769,
+      "offset": 1785,
       "length": 4,
       "value": "true"
     },
@@ -23725,9 +24285,16 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/FileImageLoader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1109,
+      "offset": 1108,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/FileImageLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 2820,
+      "length": 34,
+      "value": "\"com.revenuecat.DecodedImageCache\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/FooterHidingModifier.swift",
@@ -23746,56 +24313,56 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1010,
+      "offset": 1089,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1669,
+      "offset": 1748,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5313,
+      "offset": 5717,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5402,
+      "offset": 5806,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5825,
+      "offset": 6308,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/FooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8846,
+      "offset": 9461,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Icon\/IconComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1027,
+      "offset": 1043,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Icon\/IconComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 5907,
+      "offset": 5923,
       "length": 4,
       "value": "true"
     },
@@ -23907,14 +24474,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Image\/ImageComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1010,
+      "offset": 1062,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Image\/ImageComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6660,
+      "offset": 6712,
       "length": 4,
       "value": "true"
     },
@@ -23928,7 +24495,7 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/IntroOfferEligibilityContext.swift",
       "kind": "Dictionary",
-      "offset": 639,
+      "offset": 655,
       "length": 3,
       "value": "[]"
     },
@@ -23942,238 +24509,238 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 3200,
+      "offset": 3280,
       "length": 10,
       "value": "\"offering\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 3271,
+      "offset": 3351,
       "length": 8,
       "value": "\"weekly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 3518,
+      "offset": 3598,
       "length": 9,
       "value": "\"monthly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 3767,
+      "offset": 3847,
       "length": 8,
       "value": "\"annual\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4026,
+      "offset": 4106,
       "length": 8,
       "value": "\"Weekly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 4051,
+      "offset": 4131,
       "length": 4,
       "value": "1.99"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4079,
+      "offset": 4159,
       "length": 5,
       "value": "\"USD\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4116,
+      "offset": 4196,
       "length": 7,
       "value": "\"$1.99\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4152,
+      "offset": 4232,
       "length": 26,
       "value": "\"com.revenuecat.product_1\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4259,
+      "offset": 4339,
       "length": 12,
       "value": "\"PRO weekly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4310,
+      "offset": 4390,
       "length": 7,
       "value": "\"group\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4360,
+      "offset": 4440,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4412,
+      "offset": 4492,
       "length": 7,
       "value": "\"en_US\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4501,
+      "offset": 4581,
       "length": 9,
       "value": "\"Monthly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 4527,
+      "offset": 4607,
       "length": 5,
       "value": "12.99"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4556,
+      "offset": 4636,
       "length": 5,
       "value": "\"USD\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4593,
+      "offset": 4673,
       "length": 8,
       "value": "\"$12.99\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4630,
+      "offset": 4710,
       "length": 26,
       "value": "\"com.revenuecat.product_2\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4737,
+      "offset": 4817,
       "length": 13,
       "value": "\"PRO monthly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4789,
+      "offset": 4869,
       "length": 7,
       "value": "\"group\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4839,
+      "offset": 4919,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4892,
+      "offset": 4972,
       "length": 7,
       "value": "\"en_US\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 4980,
+      "offset": 5060,
       "length": 8,
       "value": "\"Annual\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 5005,
+      "offset": 5085,
       "length": 5,
       "value": "69.49"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5034,
+      "offset": 5114,
       "length": 5,
       "value": "\"USD\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5071,
+      "offset": 5151,
       "length": 8,
       "value": "\"$69.49\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5108,
+      "offset": 5188,
       "length": 26,
       "value": "\"com.revenuecat.product_3\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5215,
+      "offset": 5295,
       "length": 12,
       "value": "\"PRO annual\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5266,
+      "offset": 5346,
       "length": 7,
       "value": "\"group\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5316,
+      "offset": 5396,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "StringLiteral",
-      "offset": 5368,
+      "offset": 5448,
       "length": 7,
       "value": "\"en_US\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7247,
+      "offset": 7627,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8484,
+      "offset": 8864,
       "length": 3,
       "value": "1.5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8517,
+      "offset": 8897,
       "length": 5,
       "value": "false"
     },
@@ -24500,23 +25067,30 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Packages\/Package\/PackageComponentViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1247,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PackageContext.swift",
       "kind": "BooleanLiteral",
-      "offset": 703,
+      "offset": 719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PackageContext.swift",
       "kind": "BooleanLiteral",
-      "offset": 1084,
+      "offset": 1100,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/PackageValidator.swift",
       "kind": "Array",
-      "offset": 663,
+      "offset": 744,
       "length": 2,
       "value": "[]"
     },
@@ -24537,16 +25111,37 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/PaywallData+Default.swift",
       "kind": "StringLiteral",
-      "offset": 3935,
+      "offset": 3971,
       "length": 16,
       "value": "\"background.jpg\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/PaywallData+Default.swift",
       "kind": "IntegerLiteral",
-      "offset": 4090,
+      "offset": 4126,
       "length": 2,
       "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PaywallEventTracker.swift",
+      "kind": "Dictionary",
+      "offset": 1080,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PaywallEventTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8307,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PaywallEventTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8695,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallFooterViewController.swift",
@@ -24579,7 +25174,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 3442,
+      "offset": 1976,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2427,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12035,
       "length": 5,
       "value": "false"
     },
@@ -24628,154 +25237,154 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/PaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2532,
+      "offset": 2594,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/PaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3833,
+      "offset": 3895,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/PaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4424,
+      "offset": 4486,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/PaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5197,
+      "offset": 5259,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/PaywallViewConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 834,
+      "offset": 1083,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/PaywallViewConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 873,
+      "offset": 1122,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/PaywallViewConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2096,
+      "offset": 2345,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/PaywallViewConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2135,
+      "offset": 2384,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2511,
+      "offset": 2527,
       "length": 64,
       "value": "\"Custom variables can only be set before presenting the paywall\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "Dictionary",
-      "offset": 2443,
+      "offset": 2459,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4590,
+      "offset": 4606,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4732,
+      "offset": 4748,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6008,
+      "offset": 6024,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6054,
+      "offset": 6070,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7652,
+      "offset": 7668,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7698,
+      "offset": 7714,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9310,
+      "offset": 9326,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9356,
+      "offset": 9372,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10873,
+      "offset": 10889,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10919,
+      "offset": 10935,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12754,
+      "offset": 12770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12800,
+      "offset": 12816,
       "length": 5,
       "value": "false"
     },
@@ -24929,28 +25538,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 3415,
+      "offset": 3612,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 4071,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4760,
+      "offset": 4800,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 24422,
+      "offset": 30713,
       "length": 5,
       "value": "false"
     },
@@ -25452,11 +26054,39 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/RequestSizeCalculation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 246,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/ResumeAction.swift",
       "kind": "BooleanLiteral",
       "offset": 954,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1052,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5236,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5558,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Carousel\/ScrollViewGestureCoordinator.swift",
@@ -25489,56 +26119,49 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/Shape.swift",
       "kind": "FloatLiteral",
-      "offset": 6035,
+      "offset": 6051,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/Shape.swift",
       "kind": "FloatLiteral",
-      "offset": 8260,
+      "offset": 8276,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/Shape.swift",
       "kind": "IntegerLiteral",
-      "offset": 10413,
+      "offset": 10429,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1650,
+      "offset": 1666,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1793,
+      "offset": 1809,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6324,
+      "offset": 6469,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1143,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1223,
+      "offset": 1823,
       "length": 5,
       "value": "false"
     },
@@ -25559,98 +26182,98 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/ViewModels\/SubscriptionDetailViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1709,
+      "offset": 1735,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/ViewModels\/SubscriptionDetailViewModel.swift",
       "kind": "Array",
-      "offset": 1822,
+      "offset": 1848,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabControlToggleComponentView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1065,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "StringLiteral",
-      "offset": 612,
+      "offset": 628,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
+      "kind": "Dictionary",
+      "offset": 999,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2662,
+      "offset": 3280,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3590,
+      "offset": 4208,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1144,
+      "offset": 1228,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template2View.swift",
       "kind": "FloatLiteral",
-      "offset": 5140,
+      "offset": 5231,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template2View.swift",
       "kind": "IntegerLiteral",
-      "offset": 11037,
+      "offset": 11703,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template2View.swift",
       "kind": "IntegerLiteral",
-      "offset": 11120,
+      "offset": 11786,
       "length": 3,
       "value": "140"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template2View.swift",
       "kind": "FloatLiteral",
-      "offset": 11177,
+      "offset": 11843,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 5213,
+      "offset": 5212,
       "length": 2,
       "value": "65"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 7617,
+      "offset": 7616,
       "length": 2,
       "value": "35"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 7692,
+      "offset": 7691,
       "length": 1,
       "value": "5"
     },
@@ -25664,49 +26287,49 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template4View.swift",
       "kind": "IntegerLiteral",
-      "offset": 7768,
+      "offset": 8434,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template4View.swift",
       "kind": "IntegerLiteral",
-      "offset": 7863,
+      "offset": 8529,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template4View.swift",
       "kind": "IntegerLiteral",
-      "offset": 8799,
+      "offset": 9465,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template4View.swift",
       "kind": "IntegerLiteral",
-      "offset": 14244,
+      "offset": 14910,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template4View.swift",
       "kind": "IntegerLiteral",
-      "offset": 14292,
+      "offset": 14958,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template5View.swift",
       "kind": "IntegerLiteral",
-      "offset": 11546,
+      "offset": 12211,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/Template7View.swift",
       "kind": "IntegerLiteral",
-      "offset": 16003,
+      "offset": 17659,
       "length": 2,
       "value": "25"
     },
@@ -26378,91 +27001,91 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 999,
+      "offset": 1015,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "Dictionary",
-      "offset": 2063,
+      "offset": 2079,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 11123,
+      "offset": 11328,
       "length": 12,
       "value": "\"sans-serif\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 11197,
+      "offset": 11402,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/TierSelectorView.swift",
       "kind": "StringLiteral",
-      "offset": 6048,
+      "offset": 6352,
       "length": 12,
       "value": "\"background\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/TierSelectorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 6130,
+      "offset": 6434,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/TierSelectorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 6171,
+      "offset": 6475,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Timeline\/TimelineComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1348,
+      "offset": 1364,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Timeline\/TimelineComponentView.swift",
       "kind": "Dictionary",
-      "offset": 9570,
+      "offset": 9586,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Timeline\/TimelineComponentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9842,
+      "offset": 9858,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Timeline\/TimelineComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1123,
+      "offset": 1139,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Timeline\/TimelineComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3708,
+      "offset": 3724,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/TransitionModifier.swift",
       "kind": "BooleanLiteral",
-      "offset": 574,
+      "offset": 590,
       "length": 5,
       "value": "false"
     },
@@ -26497,651 +27120,651 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 668,
+      "offset": 684,
       "length": 9,
       "value": "\"custom.\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "Dictionary",
-      "offset": 1475,
+      "offset": 1491,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "Dictionary",
-      "offset": 1544,
+      "offset": 1560,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7011,
+      "offset": 7027,
       "length": 5,
       "value": "\"day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7034,
+      "offset": 7050,
       "length": 7,
       "value": "\"daily\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7062,
+      "offset": 7078,
       "length": 11,
       "value": "\"day_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7090,
+      "offset": 7106,
       "length": 6,
       "value": "\"week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7115,
+      "offset": 7131,
       "length": 8,
       "value": "\"weekly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7145,
+      "offset": 7161,
       "length": 12,
       "value": "\"week_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7175,
+      "offset": 7191,
       "length": 7,
       "value": "\"month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7202,
+      "offset": 7218,
       "length": 9,
       "value": "\"monthly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7234,
+      "offset": 7250,
       "length": 13,
       "value": "\"month_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7264,
+      "offset": 7280,
       "length": 6,
       "value": "\"year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7289,
+      "offset": 7305,
       "length": 8,
       "value": "\"yearly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7319,
+      "offset": 7335,
       "length": 12,
       "value": "\"year_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7350,
+      "offset": 7366,
       "length": 8,
       "value": "\"annual\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7379,
+      "offset": 7395,
       "length": 10,
       "value": "\"annually\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7413,
+      "offset": 7429,
       "length": 14,
       "value": "\"annual_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7449,
+      "offset": 7465,
       "length": 12,
       "value": "\"free_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7481,
+      "offset": 7497,
       "length": 9,
       "value": "\"percent\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7513,
+      "offset": 7529,
       "length": 14,
       "value": "\"num_day_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7549,
+      "offset": 7565,
       "length": 13,
       "value": "\"num_day_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7584,
+      "offset": 7600,
       "length": 13,
       "value": "\"num_day_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7619,
+      "offset": 7635,
       "length": 13,
       "value": "\"num_day_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7655,
+      "offset": 7671,
       "length": 14,
       "value": "\"num_day_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7693,
+      "offset": 7709,
       "length": 15,
       "value": "\"num_day_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7732,
+      "offset": 7748,
       "length": 15,
       "value": "\"num_week_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7770,
+      "offset": 7786,
       "length": 14,
       "value": "\"num_week_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7807,
+      "offset": 7823,
       "length": 14,
       "value": "\"num_week_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7844,
+      "offset": 7860,
       "length": 14,
       "value": "\"num_week_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7882,
+      "offset": 7898,
       "length": 15,
       "value": "\"num_week_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7922,
+      "offset": 7938,
       "length": 16,
       "value": "\"num_week_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 7963,
+      "offset": 7979,
       "length": 16,
       "value": "\"num_month_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8003,
+      "offset": 8019,
       "length": 15,
       "value": "\"num_month_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8042,
+      "offset": 8058,
       "length": 15,
       "value": "\"num_month_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8081,
+      "offset": 8097,
       "length": 15,
       "value": "\"num_month_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8121,
+      "offset": 8137,
       "length": 16,
       "value": "\"num_month_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8163,
+      "offset": 8179,
       "length": 17,
       "value": "\"num_month_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8204,
+      "offset": 8220,
       "length": 15,
       "value": "\"num_year_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8242,
+      "offset": 8258,
       "length": 14,
       "value": "\"num_year_one\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8279,
+      "offset": 8295,
       "length": 14,
       "value": "\"num_year_two\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8316,
+      "offset": 8332,
       "length": 14,
       "value": "\"num_year_few\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8354,
+      "offset": 8370,
       "length": 15,
       "value": "\"num_year_many\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8394,
+      "offset": 8410,
       "length": 16,
       "value": "\"num_year_other\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8435,
+      "offset": 8451,
       "length": 16,
       "value": "\"num_days_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8477,
+      "offset": 8493,
       "length": 17,
       "value": "\"num_weeks_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8521,
+      "offset": 8537,
       "length": 18,
       "value": "\"num_months_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8565,
+      "offset": 8581,
       "length": 17,
       "value": "\"num_years_short\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8705,
+      "offset": 8721,
       "length": 23,
       "value": "\"product.currency_code\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8762,
+      "offset": 8778,
       "length": 25,
       "value": "\"product.currency_symbol\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8815,
+      "offset": 8831,
       "length": 18,
       "value": "\"product.periodly\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8858,
+      "offset": 8874,
       "length": 15,
       "value": "\"product.price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8907,
+      "offset": 8923,
       "length": 26,
       "value": "\"product.price_per_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 8978,
+      "offset": 8994,
       "length": 38,
       "value": "\"product.price_per_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9047,
+      "offset": 9063,
       "length": 23,
       "value": "\"product.price_per_day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9102,
+      "offset": 9118,
       "length": 24,
       "value": "\"product.price_per_week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9159,
+      "offset": 9175,
       "length": 25,
       "value": "\"product.price_per_month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9216,
+      "offset": 9232,
       "length": 24,
       "value": "\"product.price_per_year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9266,
+      "offset": 9282,
       "length": 16,
       "value": "\"product.period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9319,
+      "offset": 9335,
       "length": 28,
       "value": "\"product.period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9379,
+      "offset": 9395,
       "length": 24,
       "value": "\"product.period_in_days\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9436,
+      "offset": 9452,
       "length": 25,
       "value": "\"product.period_in_weeks\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9495,
+      "offset": 9511,
       "length": 26,
       "value": "\"product.period_in_months\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9554,
+      "offset": 9570,
       "length": 25,
       "value": "\"product.period_in_years\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9613,
+      "offset": 9629,
       "length": 26,
       "value": "\"product.period_with_unit\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9669,
+      "offset": 9685,
       "length": 21,
       "value": "\"product.offer_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9726,
+      "offset": 9742,
       "length": 29,
       "value": "\"product.offer_price_per_day\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9792,
+      "offset": 9808,
       "length": 30,
       "value": "\"product.offer_price_per_week\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9860,
+      "offset": 9876,
       "length": 31,
       "value": "\"product.offer_price_per_month\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9928,
+      "offset": 9944,
       "length": 30,
       "value": "\"product.offer_price_per_year\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 9989,
+      "offset": 10005,
       "length": 22,
       "value": "\"product.offer_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10053,
+      "offset": 10069,
       "length": 34,
       "value": "\"product.offer_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10124,
+      "offset": 10140,
       "length": 30,
       "value": "\"product.offer_period_in_days\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10192,
+      "offset": 10208,
       "length": 31,
       "value": "\"product.offer_period_in_weeks\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10262,
+      "offset": 10278,
       "length": 32,
       "value": "\"product.offer_period_in_months\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10332,
+      "offset": 10348,
       "length": 31,
       "value": "\"product.offer_period_in_years\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10402,
+      "offset": 10418,
       "length": 32,
       "value": "\"product.offer_period_with_unit\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10466,
+      "offset": 10482,
       "length": 24,
       "value": "\"product.offer_end_date\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10529,
+      "offset": 10545,
       "length": 31,
       "value": "\"product.secondary_offer_price\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10600,
+      "offset": 10616,
       "length": 32,
       "value": "\"product.secondary_offer_period\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10683,
+      "offset": 10699,
       "length": 44,
       "value": "\"product.secondary_offer_period_abbreviated\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10763,
+      "offset": 10779,
       "length": 27,
       "value": "\"product.relative_discount\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10826,
+      "offset": 10842,
       "length": 28,
       "value": "\"product.store_product_name\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10912,
+      "offset": 10928,
       "length": 22,
       "value": "\"count_days_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 10967,
+      "offset": 10983,
       "length": 25,
       "value": "\"count_days_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11023,
+      "offset": 11039,
       "length": 23,
       "value": "\"count_hours_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11080,
+      "offset": 11096,
       "length": 26,
       "value": "\"count_hours_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11139,
+      "offset": 11155,
       "length": 25,
       "value": "\"count_minutes_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11200,
+      "offset": 11216,
       "length": 28,
       "value": "\"count_minutes_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11261,
+      "offset": 11277,
       "length": 25,
       "value": "\"count_seconds_with_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 11322,
+      "offset": 11338,
       "length": 28,
       "value": "\"count_seconds_without_zero\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 39800,
+      "offset": 39820,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Variables\/VariableHandlerV2.swift",
       "kind": "StringLiteral",
-      "offset": 44349,
+      "offset": 44821,
       "length": 27,
       "value": "\"\\{\\{\\s*(.*?)\\s*\\}\\}\""
     },
@@ -27225,14 +27848,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1043,
+      "offset": 1059,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8175,
+      "offset": 8191,
       "length": 4,
       "value": "true"
     },
@@ -27361,6 +27984,34 @@
       "offset": 2579,
       "length": 1,
       "value": "4"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/WorkflowNavigator.swift",
+      "kind": "Array",
+      "offset": 613,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 724,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
+      "kind": "FloatLiteral",
+      "offset": 3174,
+      "length": 4,
+      "value": "0.25"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3639,
+      "length": 5,
+      "value": "false"
     }
   ]
 }
