@@ -32,6 +32,9 @@
   <attr path="/api/package[@name='com.revenuecat.purchases.amazon']/class[@name='DefaultPurchasingServiceProvider.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
 
   <!-- com.revenuecat.purchases.models -->
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreReplacementMode.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='StoreReplacementMode.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
+
   <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GalaxyReplacementMode.Creator']/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
   <attr path="/api/package[@name='com.revenuecat.purchases.models']/class[@name='GalaxyReplacementMode.Creator']/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
 

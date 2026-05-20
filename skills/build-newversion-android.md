@@ -18,7 +18,7 @@ Look up the latest version of both artifacts on Maven Central:
 - **purchases** → https://central.sonatype.com/artifact/com.revenuecat.purchases/purchases
 - **purchases-ui** → https://central.sonatype.com/artifact/com.revenuecat.purchases/purchases-ui
 
-Note the version string (e.g. `9.28.1`). Both artifacts are always released together at the same version.
+Note the version string (e.g. `10.5.0`). Both artifacts are always released together at the same version.
 
 ---
 
@@ -82,7 +82,7 @@ curl -s "https://api.nuget.org/v3-flatcontainer/xamarin.androidx.lifecycle.runti
 
 #### Important: NuGet transitive version graph
 
-When you add a NuGet package, its own dependencies may require **newer versions** of other packages than RevenueCat's POM specifies. For example, `Xamarin.Android.Google.BillingClient 8.0.0` transitively pulls `Xamarin.AndroidX.Activity 1.12.4.1` which requires lifecycle `2.10.0.2`, coroutines `1.10.2.3`, etc.
+When you add a NuGet package, its own dependencies may require **newer versions** of other packages than RevenueCat's POM specifies. For example, `Xamarin.Android.Google.BillingClient 8.3.0` transitively pulls `Xamarin.AndroidX.Activity 1.12.4.1` which requires lifecycle `2.10.0.2`, coroutines `1.10.2.3`, etc.
 
 **You must use the version the NuGet graph dictates — not the Maven version.**
 The Maven dep verifier only checks `>=`, so a newer NuGet version always satisfies an older Maven requirement.
@@ -113,9 +113,9 @@ Use `<AndroidIgnoredJavaDependency />` only for deep transitive deps that have n
 
 
 ```xml
-<AndroidMavenLibrary Include="com.revenuecat.purchases:purchases-ui" Version="9.28.1" />
+<AndroidMavenLibrary Include="com.revenuecat.purchases:purchases-ui" Version="10.5.0" />
 <!-- purchases satisfied by ProjectReference -->
-<AndroidIgnoredJavaDependency Include="com.revenuecat.purchases:purchases:9.28.1" />
+<AndroidIgnoredJavaDependency Include="com.revenuecat.purchases:purchases:10.5.0" />
 <!-- Kotlin — transitively satisfied via ProjectReference -->
 <AndroidIgnoredJavaDependency Include="org.jetbrains.kotlin:kotlin-parcelize-runtime:2.0.21" />
 <AndroidIgnoredJavaDependency Include="org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1" />
@@ -195,7 +195,7 @@ NuGet packages are output to `bin/Release/`.
 | No MS NuGet for the dep | `<AndroidMavenLibrary Bind="false" />` for direct deps |
 | No MS NuGet, deep transitive | `<AndroidIgnoredJavaDependency Include="g:a:v" />` |
 | purchases-ui dep verifier errors | `AndroidIgnoredJavaDependency` — runtime Compose/UI deps don't need PackageReference in binding project |
-| `purchases` dep in purchases-ui POM | `AndroidIgnoredJavaDependency Include="com.revenuecat.purchases:purchases:X.Y.Z"` — satisfied by ProjectReference |
+| `purchases` dep in purchases-ui POM | `AndroidIgnoredJavaDependency Include="com.revenuecat.purchases:purchases:10.5.0"` — satisfied by ProjectReference |
 | CS0738 Creator/Serializer return type | Fix `managedReturn` in Metadata.xml |
 | CS0534 ActivityResultContract mismatch | `<remove-node>` the class — it's not useful from C# |
 | XAJDV7004 duplicate key | Only one `AndroidIgnoredJavaDependency` per `groupId:artifactId` |
