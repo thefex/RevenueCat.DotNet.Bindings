@@ -1,10 +1,13 @@
 nuget package: 
 https://www.nuget.org/packages/RevenueCat.DotNet.Bindings
+https://www.nuget.org/packages/RevenueCatUI.DotNet.Bindings/
 
-.NET-iOS only as for now. 
-Maybe in future for Android, if i ever need it.
+https://www.nuget.org/packages/RevenueCat.DotNet.Android.Bindings
+https://www.nuget.org/packages/RevenueCatUI.DotNet.Android.Bindings
 
-# Test Store API-Key does not work for me, what should I do?
+.NET-iOS + .NET-Android
+
+# iOS Test Store API-Key does not work for me, what should I do?
 If you are using the TestStore key use latest version -rc1 nuget.
 
 Reason:
