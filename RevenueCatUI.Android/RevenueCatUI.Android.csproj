@@ -6,7 +6,7 @@
     <ImplicitUsings>true</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>RevenueCatUI.DotNet.Android.Bindings</PackageId>
-    <Version>10.5.0</Version>
+    <Version>10.10.0</Version>
     <Authors>Przemysław Raciborski [thefex]</Authors>
     <Description>.net-android bindings for RevenueCat UI. This package is not affiliated with RevenueCat at all.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <Version>10.5.0-rc1</Version>
+    <Version>10.10.0-rc1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
          via dependencyManagement, which lives on Google Maven (not Central). The verifier
          would try to fetch it from Central and get 404. All deps are declared explicitly
          as PackageReferences so verification adds no value here. -->
-    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases-ui" Version="10.5.0" VerifyDependencies="false" />
+    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases-ui" Version="10.10.0" VerifyDependencies="false" />
     <!-- No MS-maintained NuGet for these deps -->    
     <AndroidMavenLibrary Include="dev.drewhamilton.poko:poko-annotations" Version="0.17.2" Bind="false" />
     <AndroidLibrary Include="libs/constraintlayout-compose-1.1.1.aar" Bind="false" JavaArtifact="androidx.constraintlayout:constraintlayout-compose:1.1.1" />
@@ -91,7 +91,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RevenueCat.Android\RevenueCat.Android.csproj" JavaArtifact="com.revenuecat.purchases:purchases:10.5.0" />
+    <ProjectReference Include="..\RevenueCat.Android\RevenueCat.Android.csproj" JavaArtifact="com.revenuecat.purchases:purchases:10.10.0" />
   </ItemGroup>
 
 </Project>

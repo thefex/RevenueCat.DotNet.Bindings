@@ -7,5 +7,4 @@ framework module RevenueCatUI {
 
 module RevenueCatUI.Swift {
   header "RevenueCatUI-Swift.h"
-  requires objc
 }

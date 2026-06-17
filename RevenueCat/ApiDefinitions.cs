@@ -637,14 +637,17 @@ namespace RevenueCat {
 		[NullAllowed, Export ("offeringId")]
 		string OfferingId { get; }
 
-		// -(instancetype _Nonnull)initWithPaywallId:(NSString * _Nullable)paywallId offeringId:(NSString * _Nullable)offeringId __attribute__((objc_designated_initializer));
-		[Export ("initWithPaywallId:offeringId:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor ([NullAllowed] string paywallId, [NullAllowed] string offeringId);
-
 		// -(instancetype _Nonnull)initWithPaywallId:(NSString * _Nullable)paywallId;
 		[Export ("initWithPaywallId:")]
 		NativeHandle Constructor ([NullAllowed] string paywallId);
+
+		// -(instancetype _Nonnull)initWithPaywallId:(NSString * _Nullable)paywallId offeringId:(NSString * _Nullable)offeringId __attribute__((deprecated("Pass an Offering object instead. Using an offering identifier string prevents the SDK from deriving placement and targeting context automatically.", "initWithPaywallId:offering:")));
+		[Export ("initWithPaywallId:offeringId:")]
+		NativeHandle Constructor ([NullAllowed] string paywallId, [NullAllowed] string offeringId);
+
+		// -(instancetype _Nonnull)initWithPaywallId:(NSString * _Nullable)paywallId offering:(RCOffering * _Nonnull)offering;
+		[Export ("initWithPaywallId:offering:")]
+		NativeHandle Constructor ([NullAllowed] string paywallId, RCOffering offering);
 	}
 
 	// @interface RCCustomerInfo : NSObject
@@ -1336,6 +1339,11 @@ namespace RevenueCat {
 		[Watch (11, 0), TV (18, 0), Mac (15, 0), iOS (18, 0)]
 		[Export ("withWinBackOffer:")]
 		RCPurchaseParamsBuilder WithWinBackOffer (RCWinBackOffer winBackOffer);
+
+		// -(instancetype _Nonnull)withIntroductoryOfferEligibilityJWS:(NSString * _Nonnull)introductoryOfferEligibilityJWS __attribute__((warn_unused_result(""))) __attribute__((availability(xros, introduced=2.4))) __attribute__((availability(watchos, introduced=11.4))) __attribute__((availability(tvos, introduced=18.4))) __attribute__((availability(macos, introduced=15.4))) __attribute__((availability(ios, introduced=15.0)));
+		[Watch (11, 4), TV (18, 4), Mac (15, 4), iOS (15, 0)]
+		[Export ("withIntroductoryOfferEligibilityJWS:")]
+		RCPurchaseParamsBuilder WithIntroductoryOfferEligibilityJWS (string introductoryOfferEligibilityJWS);
 
 		// -(RCPurchaseParams * _Nonnull)build __attribute__((warn_unused_result("")));
 		[Export ("build")]
@@ -2686,6 +2694,83 @@ namespace RevenueCat {
 	interface RCPurchasesErrorUtils {
 	}
 
+	// @interface RCBillingPlanType : NSObject
+	[BaseType (typeof (NSObject))]
+	[DisableDefaultCtor]
+	interface RCBillingPlanType {
+		// @property (readonly, nonatomic, strong, class) RCBillingPlanType * _Nonnull RCUpFront;
+		[Static]
+		[Export ("RCUpFront", ArgumentSemantic.Strong)]
+		RCBillingPlanType RCUpFront { get; }
+
+		// @property (readonly, nonatomic, strong, class) RCBillingPlanType * _Nonnull RCMonthly;
+		[Static]
+		[Export ("RCMonthly", ArgumentSemantic.Strong)]
+		RCBillingPlanType RCMonthly { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull rawValue;
+		[Export ("rawValue")]
+		string RawValue { get; }
+
+		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+		[Export ("isEqual:")]
+		bool IsEqual ([NullAllowed] NSObject @object);
+
+		// @property (readonly, nonatomic) NSUInteger hash;
+		[Export ("hash")]
+		nuint Hash { get; }
+	}
+
+	// @interface RCInstallmentsInfo : NSObject
+	[BaseType (typeof (NSObject))]
+	[DisableDefaultCtor]
+	interface RCInstallmentsInfo {
+		// @property (readonly, nonatomic) NSInteger commitmentInstallmentsCount;
+		[Export ("commitmentInstallmentsCount")]
+		nint CommitmentInstallmentsCount { get; }
+
+		// @property (readonly, nonatomic, strong) RCSubscriptionPeriod * _Nonnull commitmentInstallmentPeriod;
+		[Export ("commitmentInstallmentPeriod", ArgumentSemantic.Strong)]
+		RCSubscriptionPeriod CommitmentInstallmentPeriod { get; }
+
+		// @property (readonly, nonatomic) NSDecimal installmentBillingPrice;
+		[Export ("installmentBillingPrice")]
+		NSDecimal InstallmentBillingPrice { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull installmentBillingDisplayPrice;
+		[Export ("installmentBillingDisplayPrice")]
+		string InstallmentBillingDisplayPrice { get; }
+
+		// @property (readonly, nonatomic, strong) RCSubscriptionPeriod * _Nonnull commitmentTotalPeriod;
+		[Export ("commitmentTotalPeriod", ArgumentSemantic.Strong)]
+		RCSubscriptionPeriod CommitmentTotalPeriod { get; }
+
+		// @property (readonly, nonatomic) NSDecimal commitmentTotalPrice;
+		[Export ("commitmentTotalPrice")]
+		NSDecimal CommitmentTotalPrice { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull commitmentTotalDisplayPrice;
+		[Export ("commitmentTotalDisplayPrice")]
+		string CommitmentTotalDisplayPrice { get; }
+
+		// @property (readonly, nonatomic, strong) RCBillingPlanType * _Nonnull billingPlanType;
+		[Export ("billingPlanType", ArgumentSemantic.Strong)]
+		RCBillingPlanType BillingPlanType { get; }
+
+		// -(instancetype _Nonnull)initWithCommitmentInstallmentsCount:(NSInteger)commitmentInstallmentsCount commitmentInstallmentPeriod:(RCSubscriptionPeriod * _Nonnull)commitmentInstallmentPeriod installmentBillingPrice:(NSDecimal)installmentBillingPrice installmentBillingDisplayPrice:(NSString * _Nonnull)installmentBillingDisplayPrice commitmentTotalPeriod:(RCSubscriptionPeriod * _Nonnull)commitmentTotalPeriod commitmentTotalPrice:(NSDecimal)commitmentTotalPrice commitmentTotalDisplayPrice:(NSString * _Nonnull)commitmentTotalDisplayPrice billingPlanType:(RCBillingPlanType * _Nonnull)billingPlanType __attribute__((objc_designated_initializer));
+		[Export ("initWithCommitmentInstallmentsCount:commitmentInstallmentPeriod:installmentBillingPrice:installmentBillingDisplayPrice:commitmentTotalPeriod:commitmentTotalPrice:commitmentTotalDisplayPrice:billingPlanType:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (nint commitmentInstallmentsCount, RCSubscriptionPeriod commitmentInstallmentPeriod, NSDecimal installmentBillingPrice, string installmentBillingDisplayPrice, RCSubscriptionPeriod commitmentTotalPeriod, NSDecimal commitmentTotalPrice, string commitmentTotalDisplayPrice, RCBillingPlanType billingPlanType);
+
+		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+		[Export ("isEqual:")]
+		bool IsEqual ([NullAllowed] NSObject @object);
+
+		// @property (readonly, nonatomic) NSUInteger hash;
+		[Export ("hash")]
+		nuint Hash { get; }
+	}
+
 	// @interface RCStoreProduct : NSObject
 	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
@@ -2750,7 +2835,12 @@ namespace RevenueCat {
 		// @property (readonly, copy, nonatomic) NSArray<RCStoreProductDiscount *> * _Nonnull discounts;
 		[Export ("discounts", ArgumentSemantic.Copy)]
 		RCStoreProductDiscount [] Discounts { get; }
-	
+
+		// @property (readonly, nonatomic, strong) SWIFT_AVAILABILITY(visionos,introduced=26.4) RCInstallmentsInfo * installmentsInfo __attribute__((availability(xros, introduced=26.4))) __attribute__((availability(macos, introduced=26.4))) __attribute__((availability(watchos, introduced=26.4))) __attribute__((availability(tvos, introduced=26.4))) __attribute__((availability(ios, introduced=26.4)));
+		[Watch (26, 4), TV (26, 4), Mac (26, 4), iOS (26, 4)]
+		[Export ("installmentsInfo", ArgumentSemantic.Strong)]
+		RCInstallmentsInfo InstallmentsInfo { get; }
+
 		// ── Swift extensions (RCStoreProduct) ────────────────────────
 		// RCStoreProduct_RevenueCat_Swift_3810
 

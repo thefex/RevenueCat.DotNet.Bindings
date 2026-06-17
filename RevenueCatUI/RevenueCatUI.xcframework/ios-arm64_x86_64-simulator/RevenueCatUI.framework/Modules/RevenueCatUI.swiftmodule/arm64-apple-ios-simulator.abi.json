@@ -1003,10 +1003,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -1017,17 +1017,17 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
           }
         ]
       },
@@ -1650,6 +1650,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -1661,13 +1668,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           },
@@ -1733,6 +1733,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -1744,13 +1751,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           },
@@ -1769,6 +1769,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -1780,13 +1787,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           },
@@ -1805,6 +1805,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -1816,13 +1823,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           },
@@ -1841,6 +1841,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -1852,13 +1859,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           },
@@ -2027,6 +2027,13 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "CustomerCenterActionable",
+                "printedName": "CustomerCenterActionable",
+                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
+                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Copyable",
                 "printedName": "Copyable",
                 "usr": "s:s8CopyableP",
@@ -2038,13 +2045,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "CustomerCenterActionable",
-                "printedName": "CustomerCenterActionable",
-                "usr": "s:12RevenueCatUI24CustomerCenterActionableP",
-                "mangledName": "$s12RevenueCatUI24CustomerCenterActionableP"
               }
             ]
           }
@@ -5078,38 +5078,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -5120,10 +5092,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -5134,10 +5120,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -6115,31 +6115,25 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
           },
           {
             "kind": "Conformance",
@@ -6187,25 +6181,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "ExpressibleByUnicodeScalarLiteral",
-            "printedName": "ExpressibleByUnicodeScalarLiteral",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "UnicodeScalarLiteralType",
-                "printedName": "UnicodeScalarLiteralType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
-            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -6367,13 +6367,21 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "RevenueCat",
+        "printedName": "RevenueCat",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
+          "SPIAccessControl",
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -7104,6 +7112,13 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7763,6 +7778,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallFontProvider",
+            "printedName": "PaywallFontProvider",
+            "usr": "s:12RevenueCatUI19PaywallFontProviderP",
+            "mangledName": "$s12RevenueCatUI19PaywallFontProviderP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7774,13 +7796,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PaywallFontProvider",
-            "printedName": "PaywallFontProvider",
-            "usr": "s:12RevenueCatUI19PaywallFontProviderP",
-            "mangledName": "$s12RevenueCatUI19PaywallFontProviderP"
           }
         ]
       },
@@ -7866,6 +7881,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallFontProvider",
+            "printedName": "PaywallFontProvider",
+            "usr": "s:12RevenueCatUI19PaywallFontProviderP",
+            "mangledName": "$s12RevenueCatUI19PaywallFontProviderP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7877,13 +7899,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PaywallFontProvider",
-            "printedName": "PaywallFontProvider",
-            "usr": "s:12RevenueCatUI19PaywallFontProviderP",
-            "mangledName": "$s12RevenueCatUI19PaywallFontProviderP"
           }
         ]
       },
@@ -8566,38 +8581,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -8608,17 +8595,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -8629,10 +8616,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -8647,7 +8655,24 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -8692,6 +8717,16 @@
         "moduleName": "RevenueCatUI",
         "declAttributes": [
           "SPIAccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -11140,38 +11175,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -11182,17 +11189,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -11203,10 +11210,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -11221,6 +11249,13 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
         ]
       },
@@ -12453,6 +12488,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI"
       },
       {
         "kind": "Import",
@@ -14114,20 +14156,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "ObservableObject",
             "printedName": "ObservableObject",
             "children": [
@@ -14147,6 +14175,20 @@
             ],
             "usr": "s:7Combine16ObservableObjectP",
             "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -14726,17 +14768,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -15589,13 +15631,22 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RevenueCatUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "RevenueCat",
         "printedName": "RevenueCat",
         "declKind": "Import",
         "moduleName": "RevenueCatUI",
         "declAttributes": [
-          "SPIAccessControl",
-          "RawDocComment"
+          "SPIAccessControl"
         ]
       },
       {
@@ -20798,11 +20849,11 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "PartialCarouselComponent",
-        "printedName": "PartialCarouselComponent",
+        "name": "PartialButtonComponent",
+        "printedName": "PartialButtonComponent",
         "declKind": "Class",
-        "usr": "s:10RevenueCat16PaywallComponentO015PartialCarouselD0C",
-        "mangledName": "$s10RevenueCat16PaywallComponentO015PartialCarouselD0C",
+        "usr": "s:10RevenueCat16PaywallComponentO013PartialButtonD0C",
+        "mangledName": "$s10RevenueCat16PaywallComponentO013PartialButtonD0C",
         "moduleName": "RevenueCat",
         "declAttributes": [
           "Final"
@@ -20815,6 +20866,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -20822,10 +20880,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -20843,10 +20901,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -20857,10 +20922,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -20868,6 +20933,39 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PartialCarouselComponent",
+        "printedName": "PartialCarouselComponent",
+        "declKind": "Class",
+        "usr": "s:10RevenueCat16PaywallComponentO015PartialCarouselD0C",
+        "mangledName": "$s10RevenueCat16PaywallComponentO015PartialCarouselD0C",
+        "moduleName": "RevenueCat",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "spi_group_names": [
+          "Internal"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PaywallPartialComponent",
+            "printedName": "PaywallPartialComponent",
+            "usr": "s:10RevenueCat23PaywallPartialComponentP",
+            "mangledName": "$s10RevenueCat23PaywallPartialComponentP"
           },
           {
             "kind": "Conformance",
@@ -20878,10 +20976,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -21051,17 +21191,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -21162,17 +21302,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -21259,17 +21399,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -21299,6 +21439,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -21306,10 +21453,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -21327,10 +21474,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -21341,10 +21495,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -21352,20 +21506,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -21396,45 +21536,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -21445,17 +21550,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -21466,10 +21571,45 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
             "name": "SendableMetatype",
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -21491,108 +21631,24 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BitwiseCopyable",
-            "printedName": "BitwiseCopyable",
-            "usr": "s:s15BitwiseCopyableP",
-            "mangledName": "$ss15BitwiseCopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByNilLiteral",
-            "printedName": "ExpressibleByNilLiteral",
-            "usr": "s:s23ExpressibleByNilLiteralP",
-            "mangledName": "$ss23ExpressibleByNilLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DecodableWithConfiguration",
+            "printedName": "DecodableWithConfiguration",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "DecodingConfiguration",
+                "printedName": "DecodingConfiguration",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.DecodingConfiguration"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation26DecodableWithConfigurationP",
+            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
           },
           {
             "kind": "Conformance",
@@ -21617,29 +21673,113 @@
           },
           {
             "kind": "Conformance",
-            "name": "DecodableWithConfiguration",
-            "printedName": "DecodableWithConfiguration",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByNilLiteral",
+            "printedName": "ExpressibleByNilLiteral",
+            "usr": "s:s23ExpressibleByNilLiteralP",
+            "mangledName": "$ss23ExpressibleByNilLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "DecodingConfiguration",
-                "printedName": "DecodingConfiguration",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.DecodingConfiguration"
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation26DecodableWithConfigurationP",
-            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "AttributedTextFormattingDefinition",
-            "printedName": "AttributedTextFormattingDefinition",
+            "name": "Commands",
+            "printedName": "Commands",
             "children": [
               {
                 "kind": "TypeWitness",
@@ -21648,34 +21788,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some SwiftUICore.AttributedTextFormattingDefinition<Wrapped.Scope>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AttributedTextFormattingDefinition",
-                        "printedName": "SwiftUICore.AttributedTextFormattingDefinition",
-                        "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Scope",
-                "printedName": "Scope",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.Scope"
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
                   }
                 ]
               }
             ],
-            "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP",
-            "mangledName": "$s7SwiftUI34AttributedTextFormattingDefinitionP"
+            "usr": "s:7SwiftUI8CommandsP",
+            "mangledName": "$s7SwiftUI8CommandsP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomizableToolbarContent",
+            "printedName": "CustomizableToolbarContent",
+            "usr": "s:7SwiftUI26CustomizableToolbarContentP",
+            "mangledName": "$s7SwiftUI26CustomizableToolbarContentP"
           },
           {
             "kind": "Conformance",
@@ -21713,9 +21841,21 @@
           },
           {
             "kind": "Conformance",
-            "name": "View",
-            "printedName": "View",
+            "name": "SliderTickContent",
+            "printedName": "SliderTickContent",
             "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ]
+              },
               {
                 "kind": "TypeWitness",
                 "name": "Body",
@@ -21723,61 +21863,30 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
+                    "name": "Array",
+                    "printedName": "[SwiftUI.SliderTick<τ_0_0.Value>]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SliderTick",
+                        "printedName": "SwiftUI.SliderTick<τ_0_0.Value>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DependentMember",
+                            "printedName": "τ_0_0.Value"
+                          }
+                        ],
+                        "usr": "s:7SwiftUI10SliderTickV"
+                      }
+                    ],
+                    "usr": "s:Sa"
                   }
                 ]
               }
             ],
-            "usr": "s:7SwiftUI4ViewP",
-            "mangledName": "$s7SwiftUI4ViewP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TableColumnContent",
-            "printedName": "TableColumnContent",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "TableRowValue",
-                "printedName": "TableRowValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.TableRowValue"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "TableColumnSortComparator",
-                "printedName": "TableColumnSortComparator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.TableColumnSortComparator"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "TableColumnBody",
-                "printedName": "TableColumnBody",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI18TableColumnContentP",
-            "mangledName": "$s7SwiftUI18TableColumnContentP"
+            "usr": "s:7SwiftUI17SliderTickContentP",
+            "mangledName": "$s7SwiftUI17SliderTickContentP"
           },
           {
             "kind": "Conformance",
@@ -21842,6 +21951,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "TableColumnContent",
+            "printedName": "TableColumnContent",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "TableRowValue",
+                "printedName": "TableRowValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableRowValue"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableColumnSortComparator",
+                "printedName": "TableColumnSortComparator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableColumnSortComparator"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableColumnBody",
+                "printedName": "TableColumnBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18TableColumnContentP",
+            "mangledName": "$s7SwiftUI18TableColumnContentP"
+          },
+          {
+            "kind": "Conformance",
             "name": "TableRowContent",
             "printedName": "TableRowContent",
             "children": [
@@ -21876,77 +22031,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "SliderTickContent",
-            "printedName": "SliderTickContent",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Value",
-                "printedName": "Value",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.Value"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[SwiftUI.SliderTick<τ_0_0.Value>]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SliderTick",
-                        "printedName": "SwiftUI.SliderTick<τ_0_0.Value>",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "DependentMember",
-                            "printedName": "τ_0_0.Value"
-                          }
-                        ],
-                        "usr": "s:7SwiftUI10SliderTickV"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI17SliderTickContentP",
-            "mangledName": "$s7SwiftUI17SliderTickContentP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Commands",
-            "printedName": "Commands",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI8CommandsP",
-            "mangledName": "$s7SwiftUI8CommandsP"
-          },
-          {
-            "kind": "Conformance",
             "name": "ToolbarContent",
             "printedName": "ToolbarContent",
             "children": [
@@ -21969,10 +22053,87 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomizableToolbarContent",
-            "printedName": "CustomizableToolbarContent",
-            "usr": "s:7SwiftUI26CustomizableToolbarContentP",
-            "mangledName": "$s7SwiftUI26CustomizableToolbarContentP"
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AttributedTextFormattingDefinition",
+            "printedName": "AttributedTextFormattingDefinition",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUICore.AttributedTextFormattingDefinition<τ_0_0.Scope>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributedTextFormattingDefinition",
+                        "printedName": "SwiftUICore.AttributedTextFormattingDefinition",
+                        "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Scope",
+                "printedName": "Scope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Scope"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP",
+            "mangledName": "$s7SwiftUI34AttributedTextFormattingDefinitionP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.AtomicOptionalRepresentation"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           },
           {
             "kind": "Conformance",
@@ -22015,27 +22176,6 @@
             ],
             "usr": "s:17_StoreKit_SwiftUI0A7ContentP",
             "mangledName": "$s17_StoreKit_SwiftUI0A7ContentP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AtomicRepresentable",
-            "printedName": "AtomicRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AtomicRepresentation",
-                "printedName": "AtomicRepresentation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.AtomicOptionalRepresentation"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:15Synchronization19AtomicRepresentableP",
-            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -22060,38 +22200,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -22102,10 +22214,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -22116,10 +22242,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -22178,6 +22318,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -22185,10 +22332,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -22206,10 +22353,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22220,10 +22374,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -22231,20 +22385,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22270,52 +22410,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "PurchasesType",
-            "printedName": "PurchasesType",
-            "usr": "c:@M@RevenueCat@objc(pl)RCPurchasesType",
-            "mangledName": "$s10RevenueCat13PurchasesTypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PurchasesSwiftType",
-            "printedName": "PurchasesSwiftType",
-            "usr": "s:10RevenueCat18PurchasesSwiftTypeP",
-            "mangledName": "$s10RevenueCat18PurchasesSwiftTypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -22326,10 +22424,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "PurchasesSwiftType",
+            "printedName": "PurchasesSwiftType",
+            "usr": "s:10RevenueCat18PurchasesSwiftTypeP",
+            "mangledName": "$s10RevenueCat18PurchasesSwiftTypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PurchasesType",
+            "printedName": "PurchasesType",
+            "usr": "c:@M@RevenueCat@objc(pl)RCPurchasesType",
+            "mangledName": "$s10RevenueCat13PurchasesTypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -22340,10 +22466,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -22380,6 +22520,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -22387,10 +22534,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -22408,10 +22555,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22422,10 +22576,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -22433,20 +22587,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22469,6 +22609,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -22476,10 +22623,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -22497,10 +22644,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22511,10 +22665,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -22522,20 +22676,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22558,6 +22698,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -22565,10 +22712,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -22586,10 +22733,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22600,10 +22754,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -22611,20 +22765,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22647,6 +22787,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "PaywallComponentBase",
+            "printedName": "PaywallComponentBase",
+            "usr": "s:10RevenueCat20PaywallComponentBaseP",
+            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+          },
+          {
+            "kind": "Conformance",
             "name": "PaywallPartialComponent",
             "printedName": "PaywallPartialComponent",
             "usr": "s:10RevenueCat23PaywallPartialComponentP",
@@ -22654,10 +22801,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "PaywallComponentBase",
-            "printedName": "PaywallComponentBase",
-            "usr": "s:10RevenueCat20PaywallComponentBaseP",
-            "mangledName": "$s10RevenueCat20PaywallComponentBaseP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -22675,10 +22822,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22689,10 +22843,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -22700,20 +22854,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22739,38 +22879,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -22781,10 +22893,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -22795,10 +22921,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -22838,38 +22978,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -22880,10 +22992,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -22894,10 +23020,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -22941,38 +23081,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -22983,17 +23095,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "Observable",
+            "printedName": "Observable",
+            "usr": "s:11Observation10ObservableP",
+            "mangledName": "$s11Observation10ObservableP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -23004,10 +23123,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "Observable",
-            "printedName": "Observable",
-            "usr": "s:11Observation10ObservableP",
-            "mangledName": "$s11Observation10ObservableP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       }
@@ -23025,14 +23165,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/BadgeModifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 8824,
+      "offset": 9532,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/BadgeModifier.swift",
       "kind": "IntegerLiteral",
-      "offset": 11841,
+      "offset": 12549,
       "length": 1,
       "value": "0"
     },
@@ -23067,14 +23207,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Bundle+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 3487,
+      "offset": 3473,
       "length": 25,
       "value": "\"RevenueCat_RevenueCatUI\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/Bundle+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 3634,
+      "offset": 3620,
       "length": 9,
       "value": "\".bundle\""
     },
@@ -23096,6 +23236,13 @@
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Button\/ButtonComponentView.swift",
       "kind": "BooleanLiteral",
       "offset": 1099,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Button\/ButtonComponentViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2626,
       "length": 5,
       "value": "false"
     },
@@ -24269,6 +24416,41 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/EnvironmentValues+Workflow.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1172,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/EnvironmentValues+Workflow.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1196,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/EnvironmentValues+Workflow.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1216,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/EnvironmentValues+Workflow.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1957,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/EnvironmentValues+Workflow.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1989,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/CustomerCenter\/Views\/FallbackNoSubscriptionsView.swift",
       "kind": "BooleanLiteral",
       "offset": 1225,
@@ -24288,13 +24470,6 @@
       "offset": 1108,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/FileImageLoader.swift",
-      "kind": "StringLiteral",
-      "offset": 2820,
-      "length": 34,
-      "value": "\"com.revenuecat.DecodedImageCache\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/FooterHidingModifier.swift",
@@ -24726,35 +24901,35 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7627,
+      "offset": 7744,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 8864,
+      "offset": 8981,
       "length": 3,
       "value": "1.5"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Views\/LoadingPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8897,
+      "offset": 9014,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Localization.swift",
       "kind": "Array",
-      "offset": 6829,
+      "offset": 6844,
       "length": 8,
       "value": "[2, 3]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Data\/Localization.swift",
       "kind": "StringLiteral",
-      "offset": 7081,
+      "offset": 7096,
       "length": 7,
       "value": "\"en_US\""
     },
@@ -25095,6 +25270,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/PaywallComponentTypeTransformers.swift",
+      "kind": "BooleanLiteral",
+      "offset": 634,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/PaywallComponentTypeTransformers.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1449,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Helpers\/PaywallData+Default.swift",
       "kind": "StringLiteral",
       "offset": 1767,
@@ -25158,6 +25347,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PaywallLoadingKey.swift",
+      "kind": "BooleanLiteral",
+      "offset": 539,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/EnvironmentObjects\/PaywallPromoOfferCache.swift",
       "kind": "Dictionary",
       "offset": 874,
@@ -25172,23 +25368,37 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Layout\/PaywallScrollEnvironment.swift",
       "kind": "BooleanLiteral",
-      "offset": 1976,
+      "offset": 484,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Layout\/PaywallScrollEnvironment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 658,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2427,
+      "offset": 3105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 12035,
+      "offset": 3671,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/PaywallsV2View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17285,
       "length": 5,
       "value": "false"
     },
@@ -25307,84 +25517,84 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4606,
+      "offset": 5018,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4748,
+      "offset": 5160,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6024,
+      "offset": 6436,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6070,
+      "offset": 6482,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7668,
+      "offset": 8080,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7714,
+      "offset": 8126,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9326,
+      "offset": 9738,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9372,
+      "offset": 9784,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10889,
+      "offset": 11301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10935,
+      "offset": 11347,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12770,
+      "offset": 13182,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/UIKit\/PaywallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12816,
+      "offset": 13228,
       "length": 5,
       "value": "false"
     },
@@ -25538,21 +25748,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 3612,
+      "offset": 4379,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 4800,
+      "offset": 5567,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Purchasing\/PurchaseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 30713,
+      "offset": 38396,
       "length": 5,
       "value": "false"
     },
@@ -26070,21 +26280,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1052,
+      "offset": 1281,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5236,
+      "offset": 7347,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Root\/RootView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5558,
+      "offset": 7669,
       "length": 1,
       "value": "0"
     },
@@ -26140,23 +26350,37 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1666,
+      "offset": 1857,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1809,
+      "offset": 2000,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6469,
+      "offset": 6806,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6853,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6902,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Stack\/StackComponentViewModel.swift",
@@ -26210,14 +26434,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3280,
+      "offset": 3494,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Tabs\/TabsComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4208,
+      "offset": 4422,
       "length": 5,
       "value": "false"
     },
@@ -27015,14 +27239,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 11328,
+      "offset": 11437,
       "length": 12,
       "value": "\"sans-serif\""
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Text\/TextComponentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 11402,
+      "offset": 11511,
       "length": 4,
       "value": "true"
     },
@@ -27085,7 +27309,7 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewHelpers\/TransitionModifier.swift",
       "kind": "BooleanLiteral",
-      "offset": 590,
+      "offset": 706,
       "length": 5,
       "value": "false"
     },
@@ -27099,14 +27323,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/UIConfigProvider.swift",
       "kind": "Array",
-      "offset": 749,
+      "offset": 908,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/UIConfigProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 3456,
+      "offset": 1019,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/UIConfigProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3928,
       "length": 4,
       "value": "true"
     },
@@ -27834,14 +28065,14 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1564,
+      "offset": 1744,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/Components\/Video\/VideoComponentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1851,
+      "offset": 2031,
       "length": 5,
       "value": "false"
     },
@@ -27918,49 +28149,49 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 5841,
+      "offset": 6055,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 8245,
+      "offset": 8459,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "Array",
-      "offset": 11108,
+      "offset": 11322,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14296,
+      "offset": 14510,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14466,
+      "offset": 14680,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14660,
+      "offset": 14874,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Modifiers\/ViewExtensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 14672,
+      "offset": 14886,
       "length": 2,
       "value": "10"
     },
@@ -27988,7 +28219,7 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/ViewModelHelpers\/WorkflowNavigator.swift",
       "kind": "Array",
-      "offset": 613,
+      "offset": 791,
       "length": 2,
       "value": "[]"
     },
@@ -28002,14 +28233,21 @@
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
       "kind": "FloatLiteral",
-      "offset": 3174,
+      "offset": 5093,
       "length": 4,
       "value": "0.25"
     },
     {
       "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5159,
+      "length": 10,
+      "value": "16000000"
+    },
+    {
+      "filePath": "\/Users\/przemyslawraciborski\/tmp\/rcbuild\/Pods\/RevenueCatUI\/RevenueCatUI\/Templates\/V2\/WorkflowPaywallView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3639,
+      "offset": 5940,
       "length": 5,
       "value": "false"
     }

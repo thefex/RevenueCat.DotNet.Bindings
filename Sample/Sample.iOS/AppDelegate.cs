@@ -12,6 +12,11 @@ public class AppDelegate : MvxSceneApplicationDelegate
 {  
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
+        // Verbose RevenueCat SDK logging in debug builds (must be set before configuring).
+#if DEBUG
+        RevenueCat.RCPurchases.LogLevel = RevenueCat.RCLogLevel.Debug;
+#endif
+
         // Configure RevenueCat — API key is set in KeyConstants
         RevenueCat.RCPurchases.ConfigureWithAPIKey(KeyConstants.RevenueCatApiKey);
         var result = base.FinishedLaunching(application, launchOptions);
