@@ -2,7 +2,6 @@ using System;
 using CoreFoundation;
 using Foundation;
 using ObjCRuntime;
-using RevenueCat;
 using RevenueCatUI;
 using UIKit;
 
@@ -245,11 +244,11 @@ namespace RevenueCatUI {
 		void PerformRestoreWithCompletion (Action<bool, NSError> completion);
 	}
 
-	// @interface RevenueCatUI_Swift_574 (RCPaywallViewController) <UIAdaptivePresentationControllerDelegate>
+	// @interface RevenueCatUI_Swift_639 (RCPaywallViewController) <UIAdaptivePresentationControllerDelegate>
 	[TV (15, 0), Mac (12, 0), iOS (15, 0)]
 	[Category]
 	[BaseType (typeof (RCPaywallViewController))]
-	interface RCPaywallViewController_RevenueCatUI_Swift_574 : IUIAdaptivePresentationControllerDelegate {
+	interface RCPaywallViewController_RevenueCatUI_Swift_639 : IUIAdaptivePresentationControllerDelegate {
 		// -(BOOL)presentationControllerShouldDismiss:(UIPresentationController * _Nonnull)presentationController __attribute__((warn_unused_result("")));
 		[Export ("presentationControllerShouldDismiss:")]
 		bool PresentationControllerShouldDismiss (UIPresentationController presentationController);

@@ -6,7 +6,7 @@
     <ImplicitUsings>true</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>RevenueCat.DotNet.Android.Bindings</PackageId>
-    <Version>10.5.0</Version>
+    <Version>10.10.0</Version>
     <Authors>Przemysław Raciborski [thefex]</Authors>
     <Description>.net-android bindings for RevenueCat. This package is not affiliated with RevenueCat at all.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -14,12 +14,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <Version>10.5.0-rc1</Version>
+    <Version>10.10.0-rc1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Main RevenueCat Android library from Maven Central -->
-    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases" Version="10.5.0" />
+    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases" Version="10.10.0" />
 
     <!-- No MS NuGet available for poko-annotations -->
     <AndroidMavenLibrary Include="dev.drewhamilton.poko:poko-annotations" Version="0.17.2" Bind="false" />

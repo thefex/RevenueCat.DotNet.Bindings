@@ -53,6 +53,7 @@ public class Setup : MvxAndroidSetup<App>
     protected override void InitializeLastChance(IMvxIoCProvider iocProvider)
     {
         base.InitializeLastChance(iocProvider);
-        iocProvider.RegisterSingleton<IRevenueCatService>(new RevenueCatService());
+        iocProvider.RegisterSingleton<IRevenueCatService>(
+            new RevenueCatService(iocProvider.Resolve<ILogger<RevenueCatService>>()));
     }
 }

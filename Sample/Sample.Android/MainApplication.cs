@@ -16,6 +16,11 @@ public class MainApplication : MvxAndroidApplication<Setup, App>
     {
         base.OnCreate();
 
+        // Verbose RevenueCat SDK logging in debug builds (must be set before configuring).
+#if DEBUG
+        Com.Revenuecat.Purchases.Purchases.LogLevel = Com.Revenuecat.Purchases.LogLevel.Debug!;
+#endif
+
         Com.Revenuecat.Purchases.Purchases.Configure(
             new Com.Revenuecat.Purchases.PurchasesConfiguration.Builder(this, KeyConstants.RevenueCatApiKey)
                 .Build());
