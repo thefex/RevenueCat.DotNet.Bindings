@@ -308,5 +308,38 @@ namespace RevenueCatUI {
 		// @optional -(void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didInitiateRestoreWithResume:(void (^ _Nonnull)(BOOL))resume;
 		[Export ("paywallViewController:didInitiateRestoreWithResume:")]
 		void PaywallViewController (RCPaywallViewController controller, Action<bool> resume);
+
+		// @optional -(void)paywallViewControllerDidOpenWebCheckout:(RCPaywallViewController * _Nonnull)controller;
+		[Export ("paywallViewControllerDidOpenWebCheckout:")]
+		void PaywallViewControllerDidOpenWebCheckout (RCPaywallViewController controller);
+
+		// @optional -(void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didOpenURL:(NSURL * _Nonnull)url;
+		[Export ("paywallViewController:didOpenURL:")]
+		void PaywallViewController (RCPaywallViewController controller, NSUrl url);
+	}
+
+	// @interface RevenueCatUI_Swift_705 (RCPurchases) — web checkout paywall presentation (5.84.0)
+	[Category]
+	[BaseType (typeof (RCPurchases))]
+	interface RCPurchases_RevenueCatUI_WebCheckout {
+		// -(BOOL)presentPaywallFrom:(NSURL * _Nonnull)url viewController:(UIViewController * _Nullable)viewController __attribute__((warn_unused_result(""))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
+		[Mac (12, 0), iOS (15, 0)]
+		[Export ("presentPaywallFrom:viewController:")]
+		bool PresentPaywallFrom (NSUrl url, [NullAllowed] UIViewController viewController);
+
+		// -(BOOL)presentPaywallFrom:(NSURL * _Nonnull)url window:(UIWindow * _Nullable)window __attribute__((warn_unused_result(""))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
+		[Mac (12, 0), iOS (15, 0)]
+		[Export ("presentPaywallFrom:window:")]
+		bool PresentPaywallFromWindow (NSUrl url, [NullAllowed] UIWindow window);
+
+		// -(BOOL)presentPaywallFrom:(NSURL * _Nonnull)url scene:(UIWindowScene * _Nullable)scene __attribute__((warn_unused_result(""))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
+		[Mac (12, 0), iOS (15, 0)]
+		[Export ("presentPaywallFrom:scene:")]
+		bool PresentPaywallFromScene (NSUrl url, [NullAllowed] UIWindowScene scene);
+
+		// -(BOOL)presentPaywallFrom:(NSURL * _Nonnull)url __attribute__((warn_unused_result(""))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
+		[Mac (12, 0), iOS (15, 0)]
+		[Export ("presentPaywallFrom:")]
+		bool PresentPaywallFrom (NSUrl url);
 	}
 }

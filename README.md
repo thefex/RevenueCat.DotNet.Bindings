@@ -8,10 +8,10 @@ Unofficial .NET bindings for the [RevenueCat](https://www.revenuecat.com/) SDKs,
 
 | Package | Platform | Wraps | Current version |
 |---|---|---|---|
-| [RevenueCat.DotNet.Bindings](https://www.nuget.org/packages/RevenueCat.DotNet.Bindings) | .NET iOS | [purchases-ios](https://github.com/RevenueCat/purchases-ios) | 5.78.0 |
-| [RevenueCatUI.DotNet.Bindings](https://www.nuget.org/packages/RevenueCatUI.DotNet.Bindings) | .NET iOS | purchases-ios (UI) | 5.78.0 |
-| [RevenueCat.DotNet.Android.Bindings](https://www.nuget.org/packages/RevenueCat.DotNet.Android.Bindings) | .NET Android | [purchases-android](https://github.com/RevenueCat/purchases-android) | 10.10.0 |
-| [RevenueCatUI.DotNet.Android.Bindings](https://www.nuget.org/packages/RevenueCatUI.DotNet.Android.Bindings) | .NET Android | purchases-android (UI) | 10.10.0 |
+| [RevenueCat.DotNet.Bindings](https://www.nuget.org/packages/RevenueCat.DotNet.Bindings) | .NET iOS | [purchases-ios](https://github.com/RevenueCat/purchases-ios) | 5.84.0 |
+| [RevenueCatUI.DotNet.Bindings](https://www.nuget.org/packages/RevenueCatUI.DotNet.Bindings) | .NET iOS | purchases-ios (UI) | 5.84.0 |
+| [RevenueCat.DotNet.Android.Bindings](https://www.nuget.org/packages/RevenueCat.DotNet.Android.Bindings) | .NET Android | [purchases-android](https://github.com/RevenueCat/purchases-android) | 10.17.0 |
+| [RevenueCatUI.DotNet.Android.Bindings](https://www.nuget.org/packages/RevenueCatUI.DotNet.Android.Bindings) | .NET Android | purchases-android (UI) | 10.17.0 |
 
 The binding package version tracks the underlying native RevenueCat SDK version.
 

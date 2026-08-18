@@ -1,14 +1,16 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RevenueCat
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import AdServices
 import Combine
 import CommonCrypto
+import Compression
 import CoreText
 import CryptoKit
 import Foundation
 @_exported import RevenueCat
+import Security
 import StoreKit
 import Swift
 import SwiftUI
@@ -18,6 +20,7 @@ import _StoreKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+import zlib
 public struct AppleReceipt : Swift.Equatable {
   public let environment: RevenueCat.AppleReceipt.Environment
   public let bundleId: Swift.String
@@ -212,7 +215,7 @@ extension RevenueCat.Checksum {
     @objc public func with(storeKitVersion version: RevenueCat.StoreKitVersion) -> RevenueCat.Configuration.Builder
     @objc public func with(automaticDeviceIdentifierCollectionEnabled: Swift.Bool) -> RevenueCat.Configuration.Builder
     @objc public func build() -> RevenueCat.Configuration
-    public func with(preferredUILocaleOverride: Swift.String?) -> RevenueCat.Configuration.Builder
+    @objc public func with(preferredUILocaleOverride: Swift.String?) -> RevenueCat.Configuration.Builder
     @objc deinit
   }
   @objc deinit
@@ -744,7 +747,7 @@ extension RevenueCat.ErrorCode : Swift.CaseIterable {
     get
   }
 }
-extension RevenueCat.ErrorCode {
+extension RevenueCat.ErrorCode : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
@@ -1358,7 +1361,10 @@ extension RevenueCat.Configuration.Builder {
     @objc get
   }
   final public let paywall: RevenueCat.PaywallData?
-  final public let paywallComponents: RevenueCat.Offering.PaywallComponents?
+  @available(*, deprecated, message: "Use hasPaywall to check whether the Offering has a paywall.")
+  final public var paywallComponents: RevenueCat.Offering.PaywallComponents? {
+    get
+  }
   final public var hasPaywall: Swift.Bool {
     get
   }
@@ -2242,7 +2248,7 @@ extension RevenueCat.Purchases {
   public static let paywallImageDownloadSession: Foundation.URLSession
 }
 extension RevenueCat.Purchases {
-  final public func overridePreferredUILocale(_ locale: Swift.String?)
+  @objc final public func overridePreferredUILocale(_ locale: Swift.String?)
 }
 extension RevenueCat.Purchases {
   @discardableResult
@@ -2664,6 +2670,19 @@ extension RevenueCat.PurchasesReceiptParser.Error : Foundation.LocalizedError {
     get
   }
 }
+@objc(RCRevocationReason) final public class RevocationReason : ObjectiveC.NSObject, Swift.RawRepresentable, Swift.Sendable {
+  @objc final public let rawValue: Swift.String
+  @objc public init(rawValue: Swift.String)
+  @objc(RCDeveloperIssue) public static let developerIssue: RevenueCat.RevocationReason
+  @objc(RCOther) public static let other: RevenueCat.RevocationReason
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override final public var hash: Swift.Int {
+    @objc get
+  }
+  public static func ~= (lhs: RevenueCat.RevocationReason, rhs: RevenueCat.RevocationReason) -> Swift.Bool
+  public typealias RawValue = Swift.String
+  @objc deinit
+}
 extension RevenueCat.PurchasesDiagnostics.SDKHealthError : Foundation.CustomNSError {
   public var errorUserInfo: [Swift.String : Any] {
     get
@@ -3011,6 +3030,12 @@ public typealias SK2Transaction = StoreKit.Transaction
   @objc final public var storefront: RevenueCat.Storefront? {
     @objc get
   }
+  @objc final public var revocationDate: Foundation.Date? {
+    @objc get
+  }
+  @objc final public var revocationReason: RevenueCat.RevocationReason? {
+    @objc get
+  }
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc override final public var hash: Swift.Int {
     @objc get
@@ -3046,6 +3071,7 @@ extension RevenueCat.StoreTransaction : Swift.Identifiable {
   @objc final public let unsubscribeDetectedAt: Foundation.Date?
   @objc final public let billingIssuesDetectedAt: Foundation.Date?
   @objc final public let gracePeriodExpiresDate: Foundation.Date?
+  @objc final public let autoResumeDate: Foundation.Date?
   @objc final public let ownershipType: RevenueCat.PurchaseOwnershipType
   @objc final public let periodType: RevenueCat.PeriodType
   @objc final public let refundedAt: Foundation.Date?
@@ -3055,6 +3081,7 @@ extension RevenueCat.StoreTransaction : Swift.Identifiable {
   @objc final public let displayName: Swift.String?
   @objc final public let price: RevenueCat.ProductPaidPrice?
   @objc final public let managementURL: Foundation.URL?
+  @objc final public let productPlanIdentifier: Swift.String?
   @objc override final public var description: Swift.String {
     @objc get
   }
@@ -3257,7 +3284,6 @@ extension RevenueCat.PeriodType : Swift.RawRepresentable {}
 extension RevenueCat.ErrorCode : Swift.Equatable {}
 extension RevenueCat.ErrorCode : Swift.Hashable {}
 extension RevenueCat.ErrorCode : Swift.RawRepresentable {}
-extension RevenueCat.ErrorCode : Swift.CustomStringConvertible {}
 extension RevenueCat.AppleReceipt.InAppPurchase.ProductType : Swift.Equatable {}
 extension RevenueCat.AppleReceipt.InAppPurchase.ProductType : Swift.Hashable {}
 extension RevenueCat.AppleReceipt.InAppPurchase.ProductType : Swift.RawRepresentable {}
