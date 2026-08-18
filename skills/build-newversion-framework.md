@@ -43,6 +43,10 @@ pod install
 
 ## Step 2 — Build Debug configuration (device + simulator)
 
+> **Note:** pass `CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=` on every
+> xcodebuild invocation — the dummy app target has no development team and device builds fail on
+> signing otherwise. The frameworks don't need to be signed (app packaging re-signs them).
+
 ```bash
 # Device — Debug
 xcodebuild \
@@ -53,6 +57,7 @@ xcodebuild \
   -derivedDataPath temporary-debug \
   ONLY_ACTIVE_ARCH=NO \
   BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= \
   build
 
 # Simulator — Debug
@@ -101,12 +106,15 @@ xcodebuild \
 
 Do this for both `RevenueCat` and `RevenueCatUI`. Repeat the pattern below, replacing `RevenueCat` with `RevenueCatUI` where needed.
 
+> **Note:** CocoaPods puts each pod's products in a per-pod subdirectory:
+> `Build/Products/<Config>-<sdk>/RevenueCat/RevenueCat.framework` (not directly in the products dir).
+
 ### RevenueCat — Debug xcframework
 
 ```bash
 xcodebuild -create-xcframework \
-  -framework temporary-debug/Build/Products/Debug-iphoneos/RevenueCat.framework \
-  -framework temporary-debug-sim/Build/Products/Debug-iphonesimulator/RevenueCat.framework \
+  -framework temporary-debug/Build/Products/Debug-iphoneos/RevenueCat/RevenueCat.framework \
+  -framework temporary-debug-sim/Build/Products/Debug-iphonesimulator/RevenueCat/RevenueCat.framework \
   -output RevenueCat-debug.xcframework
 ```
 
@@ -167,18 +175,29 @@ Run sharpie against the **Release device** headers. Check the available iOS SDK 
 
 ### 6a — Generate into a temp folder
 
+> **Important (sharpie 26.x):** pass the header via `--header=` — a positional header argument is
+> parsed as plain C (`__OBJC__` undefined), which silently skips every `@interface` and produces
+> only `StructsAndEnums.cs`. Also pass an **absolute** `--scope=` (relative paths match nothing and
+> yield empty output) to keep system/module declarations out of the output. RevenueCatUI-Swift.h
+> does `@import RevenueCat;`, so its invocation needs `-c -fmodules -F<dir-containing-RevenueCat.framework>`.
+
 ```bash
+P=$PWD/temporary-release/Build/Products/Release-iphoneos
+
 sharpie bind \
   -output RevenueCat-bindings-new \
   -namespace RevenueCat \
   -sdk iphoneos \
-  temporary-release/Build/Products/Release-iphoneos/RevenueCat.framework/Headers/RevenueCat-Swift.h
+  --scope=$P/RevenueCat/RevenueCat.framework/Headers \
+  --header=$P/RevenueCat/RevenueCat.framework/Headers/RevenueCat-Swift.h
 
 sharpie bind \
   -output RevenueCatUI-bindings-new \
   -namespace RevenueCatUI \
   -sdk iphoneos \
-  temporary-release/Build/Products/Release-iphoneos/RevenueCatUI.framework/Headers/RevenueCatUI-Swift.h
+  --scope=$P/RevenueCatUI/RevenueCatUI.framework/Headers \
+  --header=$P/RevenueCatUI/RevenueCatUI.framework/Headers/RevenueCatUI-Swift.h \
+  -c -fmodules -F$P/RevenueCat
 ```
 
 ### 6b — Diff against the previous generated files
