@@ -589,6 +589,14 @@ namespace RevenueCat {
 		[Export ("withAutomaticDeviceIdentifierCollectionEnabled:")]
 		RCConfigurationBuilder WithAutomaticDeviceIdentifierCollectionEnabled (bool automaticDeviceIdentifierCollectionEnabled);
 
+		// -(RCConfigurationBuilder * _Nonnull)withIAMEnabled:(BOOL)iamEnabled __attribute__((warn_unused_result("")));
+		[Export ("withIAMEnabled:")]
+		RCConfigurationBuilder WithIAMEnabled (bool iamEnabled);
+
+		// -(RCConfigurationBuilder * _Nonnull)withPreferredUILocaleOverride:(NSString * _Nullable)preferredUILocaleOverride __attribute__((warn_unused_result("")));
+		[Export ("withPreferredUILocaleOverride:")]
+		RCConfigurationBuilder WithPreferredUILocaleOverride ([NullAllowed] string preferredUILocaleOverride);
+
 		// -(RCConfiguration * _Nonnull)build __attribute__((warn_unused_result("")));
 		[Export ("build")]
 		RCConfiguration Build { get; }
@@ -1893,6 +1901,10 @@ namespace RevenueCat {
 		RCAdTracker AdTracker { get; }
 	
 		// ── Swift extensions (RCPurchases) ────────────────────────
+		// RCPurchases_RevenueCat_Swift_3277 (5.84.0)
+		// -(void)overridePreferredUILocale:(NSString * _Nullable)locale;
+		[Export ("overridePreferredUILocale:")]
+		void OverridePreferredUILocale ([NullAllowed] string locale);
 		// RCPurchases_RevenueCat_Swift_3114
 // -(void)trackCustomPaywallImpression:(RCCustomPaywallImpressionParams * _Nonnull)params __attribute__((availability(watchos, introduced=8.0))) __attribute__((availability(tvos, introduced=15.0))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
 		[Watch (8, 0), TV (15, 0), Mac (12, 0), iOS (15, 0)]
@@ -2998,6 +3010,38 @@ namespace RevenueCat {
 	}
 
 		// @interface RevenueCat_Swift_4012 (RCStoreProductDiscount)
+	// @interface RCRevocationReason : NSObject
+	[BaseType (typeof (NSObject))]
+	[DisableDefaultCtor]
+	interface RCRevocationReason {
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull rawValue;
+		[Export ("rawValue")]
+		string RawValue { get; }
+
+		// -(instancetype _Nonnull)initWithRawValue:(NSString * _Nonnull)rawValue __attribute__((objc_designated_initializer));
+		[Export ("initWithRawValue:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (string rawValue);
+
+		// @property (readonly, nonatomic, strong, class) RCRevocationReason * _Nonnull RCDeveloperIssue;
+		[Static]
+		[Export ("RCDeveloperIssue", ArgumentSemantic.Strong)]
+		RCRevocationReason RCDeveloperIssue { get; }
+
+		// @property (readonly, nonatomic, strong, class) RCRevocationReason * _Nonnull RCOther;
+		[Static]
+		[Export ("RCOther", ArgumentSemantic.Strong)]
+		RCRevocationReason RCOther { get; }
+
+		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+		[Export ("isEqual:")]
+		bool IsEqual ([NullAllowed] NSObject @object);
+
+		// @property (readonly, nonatomic) NSUInteger hash;
+		[Export ("hash")]
+		nuint Hash { get; }
+	}
+
 			// @interface RCStoreTransaction : NSObject
 	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
@@ -3021,6 +3065,14 @@ namespace RevenueCat {
 		// @property (readonly, nonatomic, strong) RCStorefront * _Nullable storefront;
 		[NullAllowed, Export ("storefront", ArgumentSemantic.Strong)]
 		RCStorefront Storefront { get; }
+
+		// @property (readonly, copy, nonatomic) NSDate * _Nullable revocationDate;
+		[NullAllowed, Export ("revocationDate", ArgumentSemantic.Copy)]
+		NSDate RevocationDate { get; }
+
+		// @property (readonly, nonatomic, strong) RCRevocationReason * _Nullable revocationReason;
+		[NullAllowed, Export ("revocationReason", ArgumentSemantic.Strong)]
+		RCRevocationReason RevocationReason { get; }
 
 		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 		[Export ("isEqual:")]
@@ -3144,6 +3196,10 @@ namespace RevenueCat {
 		[NullAllowed, Export ("gracePeriodExpiresDate", ArgumentSemantic.Copy)]
 		NSDate GracePeriodExpiresDate { get; }
 
+		// @property (readonly, copy, nonatomic) NSDate * _Nullable autoResumeDate;
+		[NullAllowed, Export ("autoResumeDate", ArgumentSemantic.Copy)]
+		NSDate AutoResumeDate { get; }
+
 		// @property (readonly, nonatomic) enum RCPurchaseOwnershipType ownershipType;
 		[Export ("ownershipType")]
 		RCPurchaseOwnershipType OwnershipType { get; }
@@ -3179,6 +3235,10 @@ namespace RevenueCat {
 		// @property (readonly, copy, nonatomic) NSURL * _Nullable managementURL;
 		[NullAllowed, Export ("managementURL", ArgumentSemantic.Copy)]
 		NSUrl ManagementURL { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable productPlanIdentifier;
+		[NullAllowed, Export ("productPlanIdentifier")]
+		string ProductPlanIdentifier { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull description;
 		[Export ("description")]

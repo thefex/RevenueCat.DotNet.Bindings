@@ -75,6 +75,18 @@
   <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromStart-0680j_4']" name="managedName">CreateGuidelineFromStartWithOffset</attr>
   <attr path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromTop-0680j_4']" name="managedName">CreateGuidelineFromTopWithOffset</attr>
 
+  <!-- ===== Fix PurchaseLogicWithCallback missing Invoker member (10.17.0) =====
+       PurchaseLogic gained a DEFAULT interface method
+       performPurchase(Activity, PaywallPurchaseLogicParams, Continuation).
+       PurchaseLogicWithCallback doesn't override it in Java (inherits the default),
+       so the generator emits it as abstract in the C# class but never implements it
+       in PurchaseLogicWithCallbackInvoker → CS0534.
+       Fix: remove the default method from the binding. At runtime the Java default
+       implementation still runs and delegates to the abstract
+       performPurchase(Activity, Package, Continuation), which C# implementors
+       provide — so no behavior is lost. -->
+  <remove-node path="/api/package[@name='com.revenuecat.purchases.ui.revenuecatui']/interface[@name='PurchaseLogic']/method[@name='performPurchase' and parameter[2][contains(@type,'PaywallPurchaseLogicParams')]]" />
+
   <!-- ===== Fix ActivityResultContract abstract method mismatches =====
        ShowCustomerCenter extends ActivityResultContract but the newer AndroidX Activity
        NuGet changed abstract signatures (Object instead of typed params/returns).

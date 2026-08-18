@@ -5,18 +5,6 @@ using RevenueCat;
 using StoreKit;
 
 namespace RevenueCat {
-	[Static]
-	[Verify (ConstantsInterfaceAssociation)]
-	partial interface Constants {
-		// extern double RevenueCatVersionNumber;
-		[Field ("RevenueCatVersionNumber", "__Internal")]
-		double RevenueCatVersionNumber { get; }
-
-		// extern const unsigned char[] RevenueCatVersionString;
-		[Field ("RevenueCatVersionString", "__Internal")]
-		byte [] RevenueCatVersionString { get; }
-	}
-
 	// @interface RCAdDisplayed : NSObject
 	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
@@ -632,16 +620,24 @@ namespace RevenueCat {
 		[Export ("withAutomaticDeviceIdentifierCollectionEnabled:")]
 		RCConfigurationBuilder WithAutomaticDeviceIdentifierCollectionEnabled (bool automaticDeviceIdentifierCollectionEnabled);
 
+		// -(RCConfigurationBuilder * _Nonnull)withIAMEnabled:(BOOL)iamEnabled __attribute__((warn_unused_result("")));
+		[Export ("withIAMEnabled:")]
+		RCConfigurationBuilder WithIAMEnabled (bool iamEnabled);
+
 		// -(RCConfiguration * _Nonnull)build __attribute__((warn_unused_result("")));
 		[Export ("build")]
 		[Verify (MethodToProperty)]
 		RCConfiguration Build { get; }
+
+		// -(RCConfigurationBuilder * _Nonnull)withPreferredUILocaleOverride:(NSString * _Nullable)preferredUILocaleOverride __attribute__((warn_unused_result("")));
+		[Export ("withPreferredUILocaleOverride:")]
+		RCConfigurationBuilder WithPreferredUILocaleOverride ([NullAllowed] string preferredUILocaleOverride);
 	}
 
-	// @interface RevenueCat_Swift_1198 (RCConfigurationBuilder)
+	// @interface RevenueCat_Swift_1206 (RCConfigurationBuilder)
 	[Category]
 	[BaseType (typeof (RCConfigurationBuilder))]
-	interface RCConfigurationBuilder_RevenueCat_Swift_1198 {
+	interface RCConfigurationBuilder_RevenueCat_Swift_1206 {
 		// -(RCConfigurationBuilder * _Nonnull)withObserverMode:(BOOL)observerMode __attribute__((warn_unused_result(""))) __attribute__((availability(macos, obsoleted=1))) __attribute__((availability(watchos, obsoleted=1))) __attribute__((availability(tvos, obsoleted=1))) __attribute__((availability(ios, obsoleted=1)));
 		[Obsoleted (PlatformName.MacOSX, 1, 0, message: "'with' has been renamed to 'withPurchasesAreCompletedBy:storeKitVersion:': Observer Mode is now named PurchasesAreCompletedBy.")]
 		[Obsoleted (PlatformName.WatchOS, 1, 0, message: "'with' has been renamed to 'withPurchasesAreCompletedBy:storeKitVersion:': Observer Mode is now named PurchasesAreCompletedBy.")]
@@ -651,10 +647,10 @@ namespace RevenueCat {
 		RCConfigurationBuilder WithObserverMode (bool observerMode);
 	}
 
-	// @interface RevenueCat_Swift_1202 (RCConfigurationBuilder)
+	// @interface RevenueCat_Swift_1210 (RCConfigurationBuilder)
 	[Category]
 	[BaseType (typeof (RCConfigurationBuilder))]
-	interface RCConfigurationBuilder_RevenueCat_Swift_1202 {
+	interface RCConfigurationBuilder_RevenueCat_Swift_1210 {
 		// -(RCConfigurationBuilder * _Nonnull)withUsesStoreKit2IfAvailable:(BOOL)usesStoreKit2IfAvailable __attribute__((warn_unused_result(""))) __attribute__((deprecated("Use .with(storeKitVersion:) to enable StoreKit 2")));
 		[Export ("withUsesStoreKit2IfAvailable:")]
 		RCConfigurationBuilder WithUsesStoreKit2IfAvailable (bool usesStoreKit2IfAvailable);
@@ -678,10 +674,10 @@ namespace RevenueCat {
 		RCConfigurationBuilder BuilderWithAPIKey (string apiKey);
 	}
 
-	// @interface RevenueCat_Swift_1259 (RCConfiguration)
+	// @interface RevenueCat_Swift_1267 (RCConfiguration)
 	[Category]
 	[BaseType (typeof (RCConfiguration))]
-	interface RCConfiguration_RevenueCat_Swift_1259 {
+	interface RCConfiguration_RevenueCat_Swift_1267 {
 	}
 
 	// @interface RCCustomPaywallImpressionParams : NSObject
@@ -794,19 +790,19 @@ namespace RevenueCat {
 		string Description { get; }
 	}
 
-	// @interface RevenueCat_Swift_1439 (RCCustomerInfo)
+	// @interface RevenueCat_Swift_1447 (RCCustomerInfo)
 	[Category]
 	[BaseType (typeof (RCCustomerInfo))]
-	interface RCCustomerInfo_RevenueCat_Swift_1439 {
+	interface RCCustomerInfo_RevenueCat_Swift_1447 {
 		// @property (readonly, copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull rawData;
 		[Export ("rawData", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSObject> RawData { get; }
 	}
 
-	// @interface RevenueCat_Swift_1444 (RCCustomerInfo)
+	// @interface RevenueCat_Swift_1452 (RCCustomerInfo)
 	[Category]
 	[BaseType (typeof (RCCustomerInfo))]
-	interface RCCustomerInfo_RevenueCat_Swift_1444 {
+	interface RCCustomerInfo_RevenueCat_Swift_1452 {
 		// @property (readonly, copy, nonatomic) SWIFT_DEPRECATED_MSG("use nonSubscriptionTransactions") NSSet<NSString *> * nonConsumablePurchases __attribute__((deprecated("use nonSubscriptionTransactions")));
 		[Export ("nonConsumablePurchases", ArgumentSemantic.Copy)]
 		NSSet<NSString> NonConsumablePurchases { get; }
@@ -921,10 +917,10 @@ namespace RevenueCat {
 		nuint Hash { get; }
 	}
 
-	// @interface RevenueCat_Swift_1572 (RCEntitlementInfo)
+	// @interface RevenueCat_Swift_1580 (RCEntitlementInfo)
 	[Category]
 	[BaseType (typeof (RCEntitlementInfo))]
-	interface RCEntitlementInfo_RevenueCat_Swift_1572 {
+	interface RCEntitlementInfo_RevenueCat_Swift_1580 {
 		// @property (readonly, nonatomic) BOOL isActiveInCurrentEnvironment;
 		[Export ("isActiveInCurrentEnvironment")]
 		bool IsActiveInCurrentEnvironment { get; }
@@ -960,10 +956,10 @@ namespace RevenueCat {
 		bool IsEqual ([NullAllowed] NSObject @object);
 	}
 
-	// @interface RevenueCat_Swift_1622 (RCEntitlementInfos)
+	// @interface RevenueCat_Swift_1630 (RCEntitlementInfos)
 	[Category]
 	[BaseType (typeof (RCEntitlementInfos))]
-	interface RCEntitlementInfos_RevenueCat_Swift_1622 {
+	interface RCEntitlementInfos_RevenueCat_Swift_1630 {
 		// @property (readonly, copy, nonatomic) NSDictionary<NSString *,RCEntitlementInfo *> * _Nonnull active;
 		[Export ("active", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, RCEntitlementInfo> Active { get; }
@@ -1052,10 +1048,10 @@ namespace RevenueCat {
 		nuint Hash { get; }
 	}
 
-	// @interface RevenueCat_Swift_1759 (RCIntroEligibility)
+	// @interface RevenueCat_Swift_1766 (RCIntroEligibility)
 	[Category]
 	[BaseType (typeof (RCIntroEligibility))]
-	interface RCIntroEligibility_RevenueCat_Swift_1759 {
+	interface RCIntroEligibility_RevenueCat_Swift_1766 {
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull description;
 		[Export ("description")]
 		string Description { get; }
@@ -1218,10 +1214,10 @@ namespace RevenueCat {
 		RCOffering Current { get; }
 	}
 
-	// @interface RevenueCat_Swift_1942 (RCOfferings)
+	// @interface RevenueCat_Swift_1949 (RCOfferings)
 	[Category]
 	[BaseType (typeof (RCOfferings))]
-	interface RCOfferings_RevenueCat_Swift_1942 {
+	interface RCOfferings_RevenueCat_Swift_1949 {
 		// -(RCOffering * _Nullable)offeringWithIdentifier:(NSString * _Nullable)identifier __attribute__((warn_unused_result("")));
 		[Export ("offeringWithIdentifier:")]
 		[return: NullAllowed]
@@ -1292,10 +1288,10 @@ namespace RevenueCat {
 		nuint Hash { get; }
 	}
 
-	// @interface RevenueCat_Swift_2002 (RCPackage)
+	// @interface RevenueCat_Swift_2009 (RCPackage)
 	[Category]
 	[BaseType (typeof (RCPackage))]
-	interface RCPackage_RevenueCat_Swift_2002 {
+	interface RCPackage_RevenueCat_Swift_2009 {
 		// @property (readonly, nonatomic, strong) SWIFT_AVAILABILITY(maccatalyst,obsoleted=1,message="'product' has been renamed to 'storeProduct': Use StoreProduct instead") SKProduct * product __attribute__((availability(maccatalyst, obsoleted=1))) __attribute__((availability(macos, obsoleted=1))) __attribute__((availability(watchos, obsoleted=1))) __attribute__((availability(tvos, obsoleted=1))) __attribute__((availability(ios, obsoleted=1)));
 		[Obsoleted (PlatformName.MacCatalyst, 1, 0, message: "'product' has been renamed to 'storeProduct': Use StoreProduct instead")]
 		[Obsoleted (PlatformName.MacOSX, 1, 0, message: "'product' has been renamed to 'storeProduct': Use StoreProduct instead")]
@@ -1306,10 +1302,10 @@ namespace RevenueCat {
 		SKProduct Product { get; }
 	}
 
-	// @interface RevenueCat_Swift_2007 (RCPackage)
+	// @interface RevenueCat_Swift_2014 (RCPackage)
 	[Category]
 	[BaseType (typeof (RCPackage))]
-	interface RCPackage_RevenueCat_Swift_2007 {
+	interface RCPackage_RevenueCat_Swift_2014 {
 		// +(NSString * _Nullable)stringFrom:(enum RCPackageType)packageType __attribute__((warn_unused_result("")));
 		[Static]
 		[Export ("stringFrom:")]
@@ -1408,10 +1404,10 @@ namespace RevenueCat {
 		RCPromotionalOfferSignedData SignedData { get; }
 	}
 
-	// @interface RevenueCat_Swift_2156 (RCPromotionalOffer)
+	// @interface RevenueCat_Swift_2163 (RCPromotionalOffer)
 	[Category]
 	[BaseType (typeof (RCPromotionalOffer))]
-	interface RCPromotionalOffer_RevenueCat_Swift_2156 {
+	interface RCPromotionalOffer_RevenueCat_Swift_2163 {
 	}
 
 	// @interface RCPromotionalOfferSignedData : NSObject
@@ -2044,10 +2040,19 @@ namespace RevenueCat {
 		RCAdTracker AdTracker { get; }
 	}
 
-	// @interface RevenueCat_Swift_3270 (RCPurchases)
+	// @interface RevenueCat_Swift_3277 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3270 {
+	interface RCPurchases_RevenueCat_Swift_3277 {
+		// -(void)overridePreferredUILocale:(NSString * _Nullable)locale;
+		[Export ("overridePreferredUILocale:")]
+		void OverridePreferredUILocale ([NullAllowed] string locale);
+	}
+
+	// @interface RevenueCat_Swift_3288 (RCPurchases)
+	[Category]
+	[BaseType (typeof (RCPurchases))]
+	interface RCPurchases_RevenueCat_Swift_3288 {
 		// -(void)trackCustomPaywallImpression:(RCCustomPaywallImpressionParams * _Nonnull)params __attribute__((availability(watchos, introduced=8.0))) __attribute__((availability(tvos, introduced=15.0))) __attribute__((availability(macos, introduced=12.0))) __attribute__((availability(ios, introduced=15.0)));
 		[Watch (8, 0), TV (15, 0), Mac (12, 0), iOS (15, 0)]
 		[Export ("trackCustomPaywallImpression:")]
@@ -2059,10 +2064,10 @@ namespace RevenueCat {
 		void TrackCustomPaywallImpression ();
 	}
 
-	// @interface RevenueCat_Swift_3289 (RCPurchases)
+	// @interface RevenueCat_Swift_3307 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3289 {
+	interface RCPurchases_RevenueCat_Swift_3307 {
 		// @property (nonatomic, strong, class) RCPlatformInfo * _Nullable platformInfo;
 		[Static]
 		[NullAllowed, Export ("platformInfo", ArgumentSemantic.Strong)]
@@ -2087,12 +2092,12 @@ namespace RevenueCat {
 		nuint Hash { get; }
 	}
 
-	// @interface RevenueCat_Swift_3305 (RCPurchases)
+	// @interface RevenueCat_Swift_3323 (RCPurchases)
 	[Introduced (PlatformName.VisionOS, 2, 0)]
 	[Watch (11, 0), TV (18, 0), Mac (15, 0), iOS (18, 0)]
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3305 {
+	interface RCPurchases_RevenueCat_Swift_3323 {
 		// -(void)eligibleWinBackOffersForProduct:(RCStoreProduct * _Nonnull)product completion:(void (^ _Nonnull)(NSArray<RCWinBackOffer *> * _Nullable, NSError * _Nullable))completion;
 		[Export ("eligibleWinBackOffersForProduct:completion:")]
 		void EligibleWinBackOffersForProduct (RCStoreProduct product, Action<NSArray<RCWinBackOffer>, NSError> completion);
@@ -2104,10 +2109,10 @@ namespace RevenueCat {
 		void EligibleWinBackOffersForPackage (RCPackage package, Action<NSArray<RCWinBackOffer>, NSError> completion);
 	}
 
-	// @interface RevenueCat_Swift_3326 (RCPurchases)
+	// @interface RevenueCat_Swift_3344 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3326 {
+	interface RCPurchases_RevenueCat_Swift_3344 {
 		// -(void)getVirtualCurrenciesWithCompletion:(void (^ _Nonnull)(RCVirtualCurrencies * _Nullable, NSError * _Nullable))completion;
 		[Export ("getVirtualCurrenciesWithCompletion:")]
 		void GetVirtualCurrenciesWithCompletion (Action<RCVirtualCurrencies, NSError> completion);
@@ -2121,10 +2126,10 @@ namespace RevenueCat {
 		void InvalidateVirtualCurrenciesCache ();
 	}
 
-	// @interface RevenueCat_Swift_3332 (RCPurchases)
+	// @interface RevenueCat_Swift_3350 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3332 {
+	interface RCPurchases_RevenueCat_Swift_3350 {
 		// -(void)showStoreMessagesWithCompletion:(void (^ _Nonnull)(void))completion __attribute__((availability(tvos, unavailable))) __attribute__((availability(watchos, unavailable))) __attribute__((availability(macos, unavailable))) __attribute__((availability(ios, introduced=16.0)));
 		[NoWatch, NoTV, NoMac, iOS (16, 0)]
 		[Export ("showStoreMessagesWithCompletion:")]
@@ -2136,10 +2141,10 @@ namespace RevenueCat {
 		void ShowStoreMessagesForTypes (NSSet types, Action completion);
 	}
 
-	// @interface RevenueCat_Swift_3345 (RCPurchases)
+	// @interface RevenueCat_Swift_3363 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3345 {
+	interface RCPurchases_RevenueCat_Swift_3363 {
 		// +(RCPurchases * _Nonnull)configureWithConfiguration:(RCConfiguration * _Nonnull)configuration;
 		[Static]
 		[Export ("configureWithConfiguration:")]
@@ -2166,10 +2171,10 @@ namespace RevenueCat {
 		RCPurchases ConfigureWithAPIKey (string apiKey, [NullAllowed] string appUserID, RCPurchasesAreCompletedBy purchasesAreCompletedBy, RCStoreKitVersion storeKitVersion);
 	}
 
-	// @interface RevenueCat_Swift_3441 (RCPurchases)
+	// @interface RevenueCat_Swift_3459 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3441 {
+	interface RCPurchases_RevenueCat_Swift_3459 {
 		// @property (nonatomic, class) BOOL debugLogsEnabled __attribute__((deprecated("use Purchases.logLevel instead")));
 		[Static]
 		[Export ("debugLogsEnabled")]
@@ -2198,10 +2203,10 @@ namespace RevenueCat {
 		void AddAttributionData (NSDictionary<NSString, NSObject> data, RCAttributionNetwork network, [NullAllowed] string networkUserId);
 	}
 
-	// @interface RevenueCat_Swift_3469 (RCPurchases)
+	// @interface RevenueCat_Swift_3487 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3469 {
+	interface RCPurchases_RevenueCat_Swift_3487 {
 		// -(void)logIn:(NSString * _Nonnull)appUserID completion:(void (^ _Nonnull)(RCCustomerInfo * _Nullable, BOOL, NSError * _Nullable))completion;
 		[Export ("logIn:completion:")]
 		void LogIn (string appUserID, Action<RCCustomerInfo, bool, NSError> completion);
@@ -2236,10 +2241,10 @@ namespace RevenueCat {
 		void GetStorefrontWithCompletionHandler (Action<RCStorefront> completionHandler);
 	}
 
-	// @interface RevenueCat_Swift_3480 (RCPurchases)
+	// @interface RevenueCat_Swift_3498 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3480 {
+	interface RCPurchases_RevenueCat_Swift_3498 {
 		// +(RCWebPurchaseRedemption * _Nullable)parseAsWebPurchaseRedemption:(NSURL * _Nonnull)url __attribute__((warn_unused_result("")));
 		[Static]
 		[Export ("parseAsWebPurchaseRedemption:")]
@@ -2271,10 +2276,10 @@ namespace RevenueCat {
 		RCOfferings CachedOfferings { get; }
 	}
 
-	// @interface RevenueCat_Swift_3493 (RCPurchases)
+	// @interface RevenueCat_Swift_3511 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3493 {
+	interface RCPurchases_RevenueCat_Swift_3511 {
 		// -(void)collectDeviceIdentifiers __attribute__((availability(maccatalyst, deprecated=0.0.1))) __attribute__((availability(macos, deprecated=0.0.1))) __attribute__((availability(watchos, deprecated=0.0.1))) __attribute__((availability(tvos, deprecated=0.0.1))) __attribute__((availability(ios, deprecated=0.0.1)));
 		[Deprecated (PlatformName.MacCatalyst, 0, 0, 1, message: "'collectDeviceIdentifiers' has been renamed to 'attribution.collectDeviceIdentifiers()'")]
 		[Deprecated (PlatformName.MacOSX, 0, 0, 1, message: "'collectDeviceIdentifiers' has been renamed to 'attribution.collectDeviceIdentifiers()'")]
@@ -2483,10 +2488,10 @@ namespace RevenueCat {
 		void Params (RCPurchaseParams @params, Action<RCStoreTransaction, RCCustomerInfo, NSError, bool> completion);
 	}
 
-	// @interface RevenueCat_Swift_3521 (RCPurchases)
+	// @interface RevenueCat_Swift_3539 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3521 {
+	interface RCPurchases_RevenueCat_Swift_3539 {
 		// -(void)restoreTransactionsWithCompletionBlock:(void (^ _Nullable)(RCCustomerInfo * _Nullable, NSError * _Nullable))completion __attribute__((availability(macos, obsoleted=1))) __attribute__((availability(watchos, obsoleted=1))) __attribute__((availability(tvos, obsoleted=1))) __attribute__((availability(ios, obsoleted=1)));
 		[Obsoleted (PlatformName.MacOSX, 1, 0, message: "'restoreTransactions' has been renamed to 'restorePurchasesWithCompletion:'")]
 		[Obsoleted (PlatformName.WatchOS, 1, 0, message: "'restoreTransactions' has been renamed to 'restorePurchasesWithCompletion:'")]
@@ -2669,10 +2674,10 @@ namespace RevenueCat {
 		bool AutomaticAppleSearchAdsAttributionCollection { get; set; }
 	}
 
-	// @interface RevenueCat_Swift_3711 (RCPurchases)
+	// @interface RevenueCat_Swift_3729 (RCPurchases)
 	[Category]
 	[BaseType (typeof (RCPurchases))]
-	interface RCPurchases_RevenueCat_Swift_3711 {
+	interface RCPurchases_RevenueCat_Swift_3729 {
 		// -(void)getCustomerInfoWithCompletion:(void (^ _Nonnull)(RCCustomerInfo * _Nullable, NSError * _Nullable))completion;
 		[Export ("getCustomerInfoWithCompletion:")]
 		void GetCustomerInfoWithCompletion (Action<RCCustomerInfo, NSError> completion);
@@ -2879,10 +2884,10 @@ namespace RevenueCat {
 		RCPurchasesDiagnostics Default_ { [Bind ("default")] get; }
 	}
 
-	// @interface RevenueCat_Swift_3837 (RCPurchasesDiagnostics)
+	// @interface RevenueCat_Swift_3855 (RCPurchasesDiagnostics)
 	[Category]
 	[BaseType (typeof (RCPurchasesDiagnostics))]
-	interface RCPurchasesDiagnostics_RevenueCat_Swift_3837 {
+	interface RCPurchasesDiagnostics_RevenueCat_Swift_3855 {
 		// -(void)testSDKHealthWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completionHandler __attribute__((deprecated("
     Use the `PurchasesDiagnostics.shared.checkSDKHealth()` method instead.
     ")));
@@ -2896,10 +2901,10 @@ namespace RevenueCat {
 	interface PurchasesReceiptParser {
 	}
 
-	// @interface RevenueCat_Swift_3862 (PurchasesReceiptParser)
+	// @interface RevenueCat_Swift_3880 (PurchasesReceiptParser)
 	[Category]
 	[BaseType (typeof (PurchasesReceiptParser))]
-	interface PurchasesReceiptParser_RevenueCat_Swift_3862 {
+	interface PurchasesReceiptParser_RevenueCat_Swift_3880 {
 		// @property (readonly, getter = default, nonatomic, strong, class) PurchasesReceiptParser * _Nonnull default_;
 		[Static]
 		[Export ("default_", ArgumentSemantic.Strong)]
@@ -2914,6 +2919,38 @@ namespace RevenueCat {
 	[Obsoleted (PlatformName.iOS, 1, 0)]
 	[BaseType (typeof (NSObject), Name = "_TtC10RevenueCat21RCPurchasesErrorUtils")]
 	interface RCPurchasesErrorUtils {
+	}
+
+	// @interface RCRevocationReason : NSObject
+	[BaseType (typeof (NSObject))]
+	[DisableDefaultCtor]
+	interface RCRevocationReason {
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull rawValue;
+		[Export ("rawValue")]
+		string RawValue { get; }
+
+		// -(instancetype _Nonnull)initWithRawValue:(NSString * _Nonnull)rawValue __attribute__((objc_designated_initializer));
+		[Export ("initWithRawValue:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (string rawValue);
+
+		// @property (readonly, nonatomic, strong, class) RCRevocationReason * _Nonnull RCDeveloperIssue;
+		[Static]
+		[Export ("RCDeveloperIssue", ArgumentSemantic.Strong)]
+		RCRevocationReason RCDeveloperIssue { get; }
+
+		// @property (readonly, nonatomic, strong, class) RCRevocationReason * _Nonnull RCOther;
+		[Static]
+		[Export ("RCOther", ArgumentSemantic.Strong)]
+		RCRevocationReason RCOther { get; }
+
+		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+		[Export ("isEqual:")]
+		bool IsEqual ([NullAllowed] NSObject @object);
+
+		// @property (readonly, nonatomic) NSUInteger hash;
+		[Export ("hash")]
+		nuint Hash { get; }
 	}
 
 	// @interface RCStoreProduct : NSObject
@@ -2988,16 +3025,16 @@ namespace RevenueCat {
 		RCInstallmentsInfo InstallmentsInfo { get; }
 	}
 
-	// @interface RevenueCat_Swift_3968 (RCStoreProduct)
+	// @interface RevenueCat_Swift_4016 (RCStoreProduct)
 	[Category]
 	[BaseType (typeof (RCStoreProduct))]
-	interface RCStoreProduct_RevenueCat_Swift_3968 {
+	interface RCStoreProduct_RevenueCat_Swift_4016 {
 	}
 
-	// @interface RevenueCat_Swift_4003 (RCStoreProduct)
+	// @interface RevenueCat_Swift_4051 (RCStoreProduct)
 	[Category]
 	[BaseType (typeof (RCStoreProduct))]
-	interface RCStoreProduct_RevenueCat_Swift_4003 {
+	interface RCStoreProduct_RevenueCat_Swift_4051 {
 		// @property (readonly, nonatomic, strong) SWIFT_AVAILABILITY(macos,unavailable,message="'introductoryPrice' has been renamed to 'introductoryDiscount': Use StoreProductDiscount instead") SKProductDiscount * introductoryPrice __attribute__((availability(macos, unavailable))) __attribute__((availability(watchos, unavailable))) __attribute__((availability(tvos, unavailable))) __attribute__((availability(ios, unavailable)));
 		[Unavailable (PlatformName.MacOSX)]
 		[Unavailable (PlatformName.WatchOS)]
@@ -3015,10 +3052,10 @@ namespace RevenueCat {
 		NSLocale PriceLocale { get; }
 	}
 
-	// @interface RevenueCat_Swift_4010 (RCStoreProduct)
+	// @interface RevenueCat_Swift_4058 (RCStoreProduct)
 	[Category]
 	[BaseType (typeof (RCStoreProduct))]
-	interface RCStoreProduct_RevenueCat_Swift_4010 {
+	interface RCStoreProduct_RevenueCat_Swift_4058 {
 		// -(instancetype _Nonnull)initWithSk1Product:(SKProduct * _Nonnull)sk1Product;
 		[Export ("initWithSk1Product:")]
 		NativeHandle Constructor (SKProduct sk1Product);
@@ -3028,10 +3065,10 @@ namespace RevenueCat {
 		SKProduct Sk1Product { get; }
 	}
 
-	// @interface RevenueCat_Swift_4017 (RCStoreProduct)
+	// @interface RevenueCat_Swift_4065 (RCStoreProduct)
 	[Category]
 	[BaseType (typeof (RCStoreProduct))]
-	interface RCStoreProduct_RevenueCat_Swift_4017 {
+	interface RCStoreProduct_RevenueCat_Swift_4065 {
 		// @property (readonly, nonatomic, strong) NSDecimalNumber * _Nonnull price;
 		[Export ("price", ArgumentSemantic.Strong)]
 		NSDecimalNumber Price { get; }
@@ -3126,28 +3163,28 @@ namespace RevenueCat {
 		string Description { get; }
 	}
 
-	// @interface RevenueCat_Swift_4163 (RCStoreProductDiscount)
+	// @interface RevenueCat_Swift_4211 (RCStoreProductDiscount)
 	[Category]
 	[BaseType (typeof (RCStoreProductDiscount))]
-	interface RCStoreProductDiscount_RevenueCat_Swift_4163 {
+	interface RCStoreProductDiscount_RevenueCat_Swift_4211 {
 		// @property (readonly, nonatomic, strong) NSDecimalNumber * _Nonnull price;
 		[Export ("price", ArgumentSemantic.Strong)]
 		NSDecimalNumber Price { get; }
 	}
 
-	// @interface RevenueCat_Swift_4170 (RCStoreProductDiscount)
+	// @interface RevenueCat_Swift_4218 (RCStoreProductDiscount)
 	[Category]
 	[BaseType (typeof (RCStoreProductDiscount))]
-	interface RCStoreProductDiscount_RevenueCat_Swift_4170 {
+	interface RCStoreProductDiscount_RevenueCat_Swift_4218 {
 		// @property (readonly, nonatomic, strong) SKProductDiscount * _Nullable sk1Discount;
 		[NullAllowed, Export ("sk1Discount", ArgumentSemantic.Strong)]
 		SKProductDiscount Sk1Discount { get; }
 	}
 
-	// @interface RevenueCat_Swift_4175 (RCStoreProductDiscount)
+	// @interface RevenueCat_Swift_4223 (RCStoreProductDiscount)
 	[Category]
 	[BaseType (typeof (RCStoreProductDiscount))]
-	interface RCStoreProductDiscount_RevenueCat_Swift_4175 {
+	interface RCStoreProductDiscount_RevenueCat_Swift_4223 {
 		// @property (readonly, nonatomic, strong) SWIFT_AVAILABILITY(watchos,introduced=6.2) NSDecimalNumber * pricePerDay __attribute__((availability(watchos, introduced=6.2))) __attribute__((availability(tvos, introduced=11.2))) __attribute__((availability(macos, introduced=10.13.2))) __attribute__((availability(ios, introduced=11.2)));
 		[Watch (6, 2), TV (11, 2), Mac (10, 13, 2), iOS (11, 2)]
 		[Export ("pricePerDay", ArgumentSemantic.Strong)]
@@ -3193,6 +3230,14 @@ namespace RevenueCat {
 		[NullAllowed, Export ("storefront", ArgumentSemantic.Strong)]
 		RCStorefront Storefront { get; }
 
+		// @property (readonly, copy, nonatomic) NSDate * _Nullable revocationDate;
+		[NullAllowed, Export ("revocationDate", ArgumentSemantic.Copy)]
+		NSDate RevocationDate { get; }
+
+		// @property (readonly, nonatomic, strong) RCRevocationReason * _Nullable revocationReason;
+		[NullAllowed, Export ("revocationReason", ArgumentSemantic.Strong)]
+		RCRevocationReason RevocationReason { get; }
+
 		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 		[Export ("isEqual:")]
 		bool IsEqual ([NullAllowed] NSObject @object);
@@ -3206,10 +3251,10 @@ namespace RevenueCat {
 		string Description { get; }
 	}
 
-	// @interface RevenueCat_Swift_4215 (RCStoreTransaction)
+	// @interface RevenueCat_Swift_4265 (RCStoreTransaction)
 	[Category]
 	[BaseType (typeof (RCStoreTransaction))]
-	interface RCStoreTransaction_RevenueCat_Swift_4215 {
+	interface RCStoreTransaction_RevenueCat_Swift_4265 {
 		// @property (readonly, copy, nonatomic) SWIFT_AVAILABILITY(macos,obsoleted=1,message="'productId' has been renamed to 'productIdentifier'") NSString * productId __attribute__((availability(macos, obsoleted=1))) __attribute__((availability(watchos, obsoleted=1))) __attribute__((availability(tvos, obsoleted=1))) __attribute__((availability(ios, obsoleted=1)));
 		[Obsoleted (PlatformName.MacOSX, 1, 0, message: "'productId' has been renamed to 'productIdentifier'")]
 		[Obsoleted (PlatformName.WatchOS, 1, 0, message: "'productId' has been renamed to 'productIdentifier'")]
@@ -3227,10 +3272,10 @@ namespace RevenueCat {
 		string RevenueCatId { get; }
 	}
 
-	// @interface RevenueCat_Swift_4221 (RCStoreTransaction)
+	// @interface RevenueCat_Swift_4271 (RCStoreTransaction)
 	[Category]
 	[BaseType (typeof (RCStoreTransaction))]
-	interface RCStoreTransaction_RevenueCat_Swift_4221 {
+	interface RCStoreTransaction_RevenueCat_Swift_4271 {
 		// @property (readonly, nonatomic, strong) SKPaymentTransaction * _Nullable sk1Transaction;
 		[NullAllowed, Export ("sk1Transaction", ArgumentSemantic.Strong)]
 		SKPaymentTransaction Sk1Transaction { get; }
@@ -3266,20 +3311,20 @@ namespace RevenueCat {
 		string Description { get; }
 	}
 
-	// @interface RevenueCat_Swift_4247 (RCStorefront)
+	// @interface RevenueCat_Swift_4297 (RCStorefront)
 	[Category]
 	[BaseType (typeof (RCStorefront))]
-	interface RCStorefront_RevenueCat_Swift_4247 {
+	interface RCStorefront_RevenueCat_Swift_4297 {
 		// @property (readonly, nonatomic, strong) SWIFT_AVAILABILITY(maccatalyst,introduced=13.1) SKStorefront * sk1Storefront __attribute__((availability(maccatalyst, introduced=13.1))) __attribute__((availability(watchos, introduced=6.2))) __attribute__((availability(tvos, introduced=13.0))) __attribute__((availability(macos, introduced=10.15))) __attribute__((availability(ios, introduced=13.0)));
 		[Watch (6, 2), TV (13, 0), MacCatalyst (13, 1), Mac (10, 15), iOS (13, 0)]
 		[Export ("sk1Storefront", ArgumentSemantic.Strong)]
 		SKStorefront Sk1Storefront { get; }
 	}
 
-	// @interface RevenueCat_Swift_4252 (RCStorefront)
+	// @interface RevenueCat_Swift_4302 (RCStorefront)
 	[Category]
 	[BaseType (typeof (RCStorefront))]
-	interface RCStorefront_RevenueCat_Swift_4252 {
+	interface RCStorefront_RevenueCat_Swift_4302 {
 		// @property (readonly, nonatomic, strong, class) RCStorefront * _Nullable sk1CurrentStorefront __attribute__((availability(maccatalyst, introduced=13.1))) __attribute__((availability(watchos, introduced=6.2))) __attribute__((availability(tvos, introduced=13.0))) __attribute__((availability(macos, introduced=10.15))) __attribute__((availability(ios, introduced=13.0)));
 		[Watch (6, 2), TV (13, 0), MacCatalyst (13, 1), Mac (10, 15), iOS (13, 0)]
 		[Static]
@@ -3327,6 +3372,10 @@ namespace RevenueCat {
 		[NullAllowed, Export ("gracePeriodExpiresDate", ArgumentSemantic.Copy)]
 		NSDate GracePeriodExpiresDate { get; }
 
+		// @property (readonly, copy, nonatomic) NSDate * _Nullable autoResumeDate;
+		[NullAllowed, Export ("autoResumeDate", ArgumentSemantic.Copy)]
+		NSDate AutoResumeDate { get; }
+
 		// @property (readonly, nonatomic) enum RCPurchaseOwnershipType ownershipType;
 		[Export ("ownershipType")]
 		RCPurchaseOwnershipType OwnershipType { get; }
@@ -3363,6 +3412,10 @@ namespace RevenueCat {
 		[NullAllowed, Export ("managementURL", ArgumentSemantic.Copy)]
 		NSUrl ManagementURL { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable productPlanIdentifier;
+		[NullAllowed, Export ("productPlanIdentifier")]
+		string ProductPlanIdentifier { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull description;
 		[Export ("description")]
 		string Description { get; }
@@ -3389,19 +3442,19 @@ namespace RevenueCat {
 		nuint Hash { get; }
 	}
 
-	// @interface RevenueCat_Swift_4355 (RCSubscriptionPeriod)
+	// @interface RevenueCat_Swift_4411 (RCSubscriptionPeriod)
 	[Category]
 	[BaseType (typeof (RCSubscriptionPeriod))]
-	interface RCSubscriptionPeriod_RevenueCat_Swift_4355 {
+	interface RCSubscriptionPeriod_RevenueCat_Swift_4411 {
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull debugDescription;
 		[Export ("debugDescription")]
 		string DebugDescription { get; }
 	}
 
-	// @interface RevenueCat_Swift_4359 (RCSubscriptionPeriod)
+	// @interface RevenueCat_Swift_4415 (RCSubscriptionPeriod)
 	[Category]
 	[BaseType (typeof (RCSubscriptionPeriod))]
-	interface RCSubscriptionPeriod_RevenueCat_Swift_4359 {
+	interface RCSubscriptionPeriod_RevenueCat_Swift_4415 {
 		// @property (readonly, nonatomic) NSInteger numberOfUnits __attribute__((availability(macos, unavailable))) __attribute__((availability(watchos, unavailable))) __attribute__((availability(tvos, unavailable))) __attribute__((availability(ios, unavailable)));
 		[Unavailable (PlatformName.MacOSX)]
 		[Unavailable (PlatformName.WatchOS)]
@@ -3434,10 +3487,10 @@ namespace RevenueCat {
 		RCVirtualCurrency ObjectForKeyedSubscript (string key);
 	}
 
-	// @interface RevenueCat_Swift_4443 (RCVirtualCurrencies)
+	// @interface RevenueCat_Swift_4499 (RCVirtualCurrencies)
 	[Category]
 	[BaseType (typeof (RCVirtualCurrencies))]
-	interface RCVirtualCurrencies_RevenueCat_Swift_4443 {
+	interface RCVirtualCurrencies_RevenueCat_Swift_4499 {
 		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 		[Export ("isEqual:")]
 		bool IsEqual ([NullAllowed] NSObject @object);
@@ -3464,10 +3517,10 @@ namespace RevenueCat {
 		string ServerDescription { get; }
 	}
 
-	// @interface RevenueCat_Swift_4471 (RCVirtualCurrency)
+	// @interface RevenueCat_Swift_4527 (RCVirtualCurrency)
 	[Category]
 	[BaseType (typeof (RCVirtualCurrency))]
-	interface RCVirtualCurrency_RevenueCat_Swift_4471 {
+	interface RCVirtualCurrency_RevenueCat_Swift_4527 {
 		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
 		[Export ("isEqual:")]
 		bool IsEqual ([NullAllowed] NSObject @object);
