@@ -116,7 +116,8 @@ namespace RevenueCat {
 	public enum RCPurchaseOwnershipType : long {
 		Purchased = 0,
 		FamilyShared = 1,
-		Unknown = 2
+		Unknown = 2,
+		Assigned = 3
 	}
 
 	[Native]

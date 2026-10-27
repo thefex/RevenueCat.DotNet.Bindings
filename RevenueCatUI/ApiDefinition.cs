@@ -248,6 +248,27 @@ namespace RevenueCatUI {
 		void PerformRestoreWithCompletion (Action<bool, NSError> completion);
 	}
 
+	// @interface RCPaywallInteractionEvent : NSObject
+	[BaseType (typeof (NSObject))]
+	[DisableDefaultCtor]
+	interface RCPaywallInteractionEvent {
+		// @property (readonly, copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull rawProperties;
+		[Export ("rawProperties", ArgumentSemantic.Copy)]
+		NSDictionary<NSString, NSObject> RawProperties { get; }
+
+		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+		[Export ("isEqual:")]
+		bool IsEqual ([NullAllowed] NSObject @object);
+
+		// @property (readonly, nonatomic) NSUInteger hash;
+		[Export ("hash")]
+		nuint Hash { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull description;
+		[Export ("description")]
+		string Description { get; }
+	}
+
 	// @protocol RCPaywallViewControllerDelegate
 	[TV (15, 0), Mac (12, 0), iOS (15, 0)]
 	[Protocol, Model]
@@ -316,6 +337,10 @@ namespace RevenueCatUI {
 		// @optional -(void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didOpenURL:(NSURL * _Nonnull)url;
 		[Export ("paywallViewController:didOpenURL:")]
 		void PaywallViewController (RCPaywallViewController controller, NSUrl url);
+
+		// @optional -(void)paywallViewController:(RCPaywallViewController * _Nonnull)controller didTrackInteraction:(RCPaywallInteractionEvent * _Nonnull)event;
+		[Export ("paywallViewController:didTrackInteraction:")]
+		void PaywallViewController (RCPaywallViewController controller, RCPaywallInteractionEvent @event);
 	}
 
 	// @interface RevenueCatUI_Swift_705 (RCPurchases) — web checkout paywall presentation (5.84.0)

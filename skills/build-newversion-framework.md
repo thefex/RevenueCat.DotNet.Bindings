@@ -31,7 +31,20 @@ target 'revenuecatbindings' do
   pod 'RevenueCat'
   pod 'RevenueCatUI'
 end
+
+# Xcode 27+ only supports deployment targets 15.0+, but the RevenueCat podspecs
+# default to 13.0 — without this hook every pod target fails to build.
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
 ```
+
+> The resulting frameworks have `MinimumOSVersion 15.0`, so keep
+> `<SupportedOSPlatformVersion>` in both iOS binding csproj files at `15.0`.
 
 Install pods:
 
