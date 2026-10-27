@@ -6,7 +6,7 @@
     <ImplicitUsings>true</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>RevenueCat.DotNet.Android.Bindings</PackageId>
-    <Version>10.17.0</Version>
+    <Version>11.0.0</Version>
     <Authors>Przemysław Raciborski [thefex]</Authors>
     <Description>.net-android bindings for RevenueCat. This package is not affiliated with RevenueCat at all.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -14,21 +14,21 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <Version>10.17.0-rc1</Version>
+    <Version>11.0.0-rc1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Main RevenueCat Android library from Maven Central -->
-    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases" Version="10.17.0" />
+    <AndroidMavenLibrary Include="com.revenuecat.purchases:purchases" Version="11.0.0" />
 
     <!-- No MS NuGet available for poko-annotations -->
-    <AndroidMavenLibrary Include="dev.drewhamilton.poko:poko-annotations" Version="0.17.2" Bind="false" />
+    <AndroidMavenLibrary Include="dev.drewhamilton.poko:poko-annotations" Version="0.20.2" Bind="false" />
   </ItemGroup>
 
   <!--
     MS-maintained NuGet packages — preferred over AndroidMavenLibrary Bind="false".
     The dep verifier requires EXPLICIT PackageReference entries (transitive don't count).
-    Versions are dictated by the NuGet transitive graph — BillingClient 8.3.0 pulls
+    Versions are dictated by the NuGet transitive graph — BillingClient 9.1.0 pulls
     Activity 1.12.4.1 which requires newer lifecycle/coroutines/core-ktx.
     Reference: https://github.com/dotnet/android-libraries/blob/main/config.json
   -->
@@ -46,24 +46,25 @@
 -->
     
     <!-- Kotlin / KotlinX -->
-    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.3.10.1" />
-    <PackageReference Include="Xamarin.Kotlin.Parcelize.Runtime" Version="2.0.21.4" />
-    <PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.10.2.3" />
-    <PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.10.2.3" />
-    <PackageReference Include="Xamarin.KotlinX.Serialization.Json" Version="1.7.3.5" />
-    <PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.7.3.5" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.4.0.1" />
+    <PackageReference Include="Xamarin.Kotlin.Parcelize.Runtime" Version="2.4.0.1" />
+    <PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.11.0.1" />
+    <PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.11.0.1" />
+    <PackageReference Include="Xamarin.KotlinX.Serialization.Json" Version="1.11.0.1" />
+    <PackageReference Include="Xamarin.KotlinX.Serialization.Json.Jvm" Version="1.11.0.1" />
     <!-- Google Crypto / DataTransport / Gson -->
     <PackageReference Include="Xamarin.Google.Crypto.Tink.Android" Version="1.18.0.1" />
     <!-- Google Play Billing and Services -->
-    <PackageReference Include="Xamarin.Android.Google.BillingClient" Version="8.3.0.2" />
+    <PackageReference Include="Xamarin.Android.Google.BillingClient" Version="9.1.0.2" />
     <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="117.0.1.5" />
     <PackageReference Include="Xamarin.GooglePlayServices.Auth.Blockstore" Version="116.4.0.8" />
     <!-- AndroidX — versions resolved by BillingClient->Activity transitive graph -->
-    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.17.0.2" />
-    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.7" />
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.10.0.2" />
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.10.0.2" />
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.10.0.2" />
+    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.19.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.10.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.11.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Startup.StartupRuntime" Version="1.2.0.8" />
   </ItemGroup>
 
   <ItemGroup>
